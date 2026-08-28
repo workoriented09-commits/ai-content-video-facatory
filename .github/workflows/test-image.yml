@@ -1,0 +1,54 @@
+name: Test AI Image
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Python package
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install huggingface_hub pillow
+
+      - name: Generate test image
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from huggingface_hub import InferenceClient
+
+          print("Connecting to Hugging Face...")
+
+          client = InferenceClient(
+              api_key=os.environ["HF_TOKEN"]
+          )
+
+          prompt = """
+          Cinematic vertical scene for a short social media video,
+          dramatic atmosphere, detailed environment, realistic lighting,
+          strong composition, no text, no letters, no logos,
+          suitable for a 9:16 video.
+          """
+
+          print("Generating image...")
+
+          image = client.text_to_image(
+              prompt=prompt,
+              model="black-forest-labs/FLUX.1-schnell"
+          )
+
+          image.save("scene_1.png")
+
+          print("Image generated successfully.")
+          print("Image size:", image.size)
+          PY
+
+      - name: Upload generated image
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-ai-image
+          path: scene_1.png
