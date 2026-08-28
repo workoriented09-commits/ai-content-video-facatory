@@ -136,7 +136,7 @@ jobs:
 
           done
 
-            - name: Join scenes
+             - name: Join scenes
         run: |
           ffmpeg \
             -y \
