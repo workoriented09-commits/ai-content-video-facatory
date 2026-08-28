@@ -1,0 +1,174 @@
+name: Generate AI Scenes
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-scenes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Python packages
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install huggingface_hub pillow
+
+      - name: Get READY content from Google Sheet
+        env:
+          GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }}
+          FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
+
+        run: |
+          python3 - <<'PY'
+          import os
+          import json
+          import urllib.request
+
+          url = os.environ["GOOGLE_SCRIPT_URL"]
+          secret = os.environ["FACTORY_SECRET"]
+
+          payload = json.dumps({
+              "secret": secret
+          }).encode("utf-8")
+
+          request = urllib.request.Request(
+              url,
+              data=payload,
+              headers={
+                  "Content-Type": "application/json"
+              },
+              method="POST"
+          )
+
+          print("Getting READY content...")
+
+          with urllib.request.urlopen(request) as response:
+              result = response.read().decode("utf-8")
+
+          data = json.loads(result)
+
+          if not data.get("success"):
+              raise Exception(
+                  data.get("error", "Unknown error")
+              )
+
+          content = data["content"]
+
+          os.makedirs("content", exist_ok=True)
+
+          with open(
+              "content/ready_content.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
+              json.dump(
+                  content,
+                  f,
+                  ensure_ascii=False,
+                  indent=2
+              )
+
+          print("READY content received.")
+
+          for i in range(1, 6):
+              print(
+                  f"SCENE_{i}:",
+                  content.get(f"SCENE_{i}", "")[:120]
+              )
+          PY
+
+      - name: Generate five photorealistic images
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
+        run: |
+          python3 - <<'PY'
+          import os
+          import json
+          import time
+          from huggingface_hub import InferenceClient
+
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+              content = json.load(f)
+
+          os.makedirs("images", exist_ok=True)
+
+          client = InferenceClient(
+              api_key=os.environ["HF_TOKEN"]
+          )
+
+          style = """
+          Photorealistic cinematic photograph,
+          captured with a professional digital cinema camera,
+          realistic natural lighting,
+          physically realistic materials and textures,
+          realistic depth of field,
+          realistic lens characteristics,
+          subtle cinematic film grain,
+          highly detailed,
+          natural colors,
+          believable real-world environment,
+          vertical 9:16 composition.
+
+          Do not create illustrations.
+          Do not create cartoons.
+          Do not create anime.
+          Do not create 3D renders.
+          Do not include text.
+          Do not include captions.
+          Do not include logos.
+          Do not include watermarks.
+          """
+
+          for i in range(1, 6):
+
+              scene = str(
+                  content.get(f"SCENE_{i}", "")
+              ).strip()
+
+              if not scene:
+                  scene = f"Cinematic realistic environment for scene {i}"
+
+              prompt = f"""
+              {style}
+
+              Create a realistic photograph that visually represents
+              the following scene:
+
+              {scene}
+              """
+
+              print("")
+              print("==============================")
+              print(f"GENERATING SCENE {i}")
+              print("==============================")
+              print(scene)
+
+              image = client.text_to_image(
+                  prompt=prompt,
+                  model="black-forest-labs/FLUX.1-schnell"
+              )
+
+              filename = f"images/scene_{i}.png"
+
+              image.save(filename)
+
+              print(f"Scene {i} saved: {filename}")
+
+              time.sleep(2)
+
+          print("")
+          print("==============================")
+          print("ALL FIVE IMAGES GENERATED")
+          print("==============================")
+          PY
+
+      - name: Upload AI images
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-scene-images
+          path: images/
