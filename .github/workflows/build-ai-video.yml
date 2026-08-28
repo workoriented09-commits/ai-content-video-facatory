@@ -9,13 +9,17 @@ jobs:
 
     steps:
 
+      # ==================================================
+      # CHECKOUT
+      # ==================================================
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
 
-      # --------------------------------------------------
+      # ==================================================
       # GET READY CONTENT FROM GOOGLE SHEET
-      # --------------------------------------------------
+      # ==================================================
 
       - name: Get READY content
         env:
@@ -76,9 +80,9 @@ jobs:
           PY
 
 
-      # --------------------------------------------------
-      # GENERATE FIVE AI IMAGES
-      # --------------------------------------------------
+      # ==================================================
+      # GENERATE FIVE PHOTOREALISTIC AI IMAGES
+      # ==================================================
 
       - name: Generate five AI images
         env:
@@ -119,9 +123,14 @@ jobs:
           highly detailed real-world photography,
           vertical 9:16 composition.
 
-          No illustration, no cartoon, no anime,
-          no 3D render, no text, no captions,
-          no logos, no watermark.
+          No illustration,
+          no cartoon,
+          no anime,
+          no 3D render,
+          no text,
+          no captions,
+          no logos,
+          no watermark.
           """
 
           for i in range(1, 6):
@@ -164,9 +173,9 @@ jobs:
               time.sleep(2)
 
 
-      # --------------------------------------------------
+      # ==================================================
       # INSTALL FFMPEG
-      # --------------------------------------------------
+      # ==================================================
 
       - name: Install FFmpeg
         run: |
@@ -174,9 +183,9 @@ jobs:
           sudo apt-get install -y ffmpeg
 
 
-      # --------------------------------------------------
+      # ==================================================
       # CREATE SCENE TEXT FILES
-      # --------------------------------------------------
+      # ==================================================
 
       - name: Create scene text files
         run: |
@@ -212,9 +221,9 @@ jobs:
           print("Scene text files created.")
 
 
-      # --------------------------------------------------
-      # CREATE FIVE ANIMATED VIDEO SCENES
-      # --------------------------------------------------
+      # ==================================================
+      # CREATE FIVE 5-SECOND VIDEO SCENES
+      # ==================================================
 
       - name: Create video scenes
         run: |
@@ -229,8 +238,8 @@ jobs:
               -y \
               -loop 1 \
               -i "images/scene_${i}.png" \
-              -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.0008,1.08)':d=90:s=1080x1920:fps=30,drawtext=textfile=scene_text/scene_${i}.txt:fontcolor=white:fontsize=38:borderw=3:bordercolor=black:line_spacing=15:x=(w-text_w)/2:y=1550" \
-              -t 3 \
+              -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.0005,1.10)':d=150:s=1080x1920:fps=30,drawtext=textfile=scene_text/scene_${i}.txt:fontcolor=white:fontsize=38:borderw=3:bordercolor=black:line_spacing=15:x=(w-text_w)/2:y=1550" \
+              -t 5 \
               -an \
               -c:v libx264 \
               -preset veryfast \
@@ -241,9 +250,9 @@ jobs:
           done
 
 
-      # --------------------------------------------------
-      # JOIN FIVE SCENES
-      # --------------------------------------------------
+      # ==================================================
+      # JOIN FIVE SCENES = 25 SECONDS
+      # ==================================================
 
       - name: Join scenes
         run: |
@@ -264,9 +273,9 @@ jobs:
             output/video_without_voice.mp4
 
 
-      # --------------------------------------------------
+      # ==================================================
       # GENERATE AI VOICE
-      # --------------------------------------------------
+      # ==================================================
 
       - name: Generate AI voice
         env:
@@ -287,17 +296,16 @@ jobs:
           ) as f:
               content = json.load(f)
 
-          # Use SCRIPT if available.
-          # Otherwise combine the five scene texts.
-
           script = str(
               content.get("SCRIPT", "")
           ).strip()
 
           if not script:
+
               scenes = []
 
               for i in range(1, 6):
+
                   text = str(
                       content.get(f"SCENE_{i}", "")
                   ).strip()
@@ -309,7 +317,7 @@ jobs:
 
           if not script:
               raise Exception(
-                  "No SCRIPT or scene text found for voice narration."
+                  "No SCRIPT or scene text found."
               )
 
           print("Generating AI voice...")
@@ -329,13 +337,14 @@ jobs:
               "output/narration.flac"
           ).write_bytes(audio)
 
-          print("AI voice generated successfully.")
-          PY
+          print(
+              "AI voice generated successfully."
+          )
 
 
-      # --------------------------------------------------
-      # ADD VOICE TO FINAL VIDEO
-      # --------------------------------------------------
+      # ==================================================
+      # ADD AI VOICE TO 25-SECOND VIDEO
+      # ==================================================
 
       - name: Add AI voice to video
         run: |
@@ -347,19 +356,18 @@ jobs:
             -filter_complex "[1:a]apad[audio]" \
             -map 0:v \
             -map "[audio]" \
-            -t 15 \
+            -t 25 \
             -c:v copy \
             -c:a aac \
             -b:a 128k \
-            -shortest \
             output/final_ai_video.mp4
 
-          echo "Final video with AI voice created."
+          echo "Final 25-second video with AI voice created."
 
 
-      # --------------------------------------------------
+      # ==================================================
       # UPLOAD FINAL VIDEO
-      # --------------------------------------------------
+      # ==================================================
 
       - name: Upload final video
         uses: actions/upload-artifact@v4
