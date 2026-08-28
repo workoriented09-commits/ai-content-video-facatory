@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-sheet-connection:
+  prepare-content:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Read READY content from Google Sheet
+      - name: Get READY content from Google Sheet
         env:
           GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }}
           FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
@@ -42,38 +42,43 @@ jobs:
 
           with urllib.request.urlopen(request) as response:
               result = response.read().decode("utf-8")
-              data = json.loads(result)
 
-          print("Response received from Google Apps Script:")
-          print(data)
+          data = json.loads(result)
 
           if not data.get("success"):
-              print(
-                  "Received secret length:",
-                  data.get("receivedLength")
-              )
-              print(
-                  "Stored secret length:",
-                  data.get("storedLength")
-              )
-
               raise Exception(
                   data.get("error", "Unknown error")
               )
 
           content = data["content"]
 
-          print("")
-          print("================================")
-          print("GOOGLE SHEET CONNECTION SUCCESS")
-          print("================================")
-          print("")
-          print("Sheet row:", content.get("sheetRow"))
+          print("READY content received.")
+          print("Row:", content.get("sheetRow"))
           print("Status:", content.get("STATUS"))
           print("Topic:", content.get("TOPIC"))
-          print("Category:", content.get("CATEGORY"))
           print("Score:", content.get("SCORE"))
-          print("")
-          print("READY content successfully received.")
-          print("================================")
+
+          os.makedirs("content", exist_ok=True)
+
+          with open("content/ready_content.json", "w", encoding="utf-8") as file:
+              json.dump(
+                  content,
+                  file,
+                  ensure_ascii=False,
+                  indent=2
+              )
+
+          print("Content saved to content/ready_content.json")
           PY
+
+      - name: Show extracted content
+        run: |
+          echo "========== READY CONTENT =========="
+          cat content/ready_content.json
+          echo "==================================="
+
+      - name: Upload content
+        uses: actions/upload-artifact@v4
+        with:
+          name: ready-content
+          path: content/ready_content.json
