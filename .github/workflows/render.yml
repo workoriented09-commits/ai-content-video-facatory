@@ -4,11 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-content-video:
+  create-scene-video:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -70,6 +69,12 @@ jobs:
           print("READY content received.")
           print("Topic:", content.get("TOPIC"))
           print("Score:", content.get("SCORE"))
+
+          for i in range(1, 6):
+              print(
+                  f"SCENE_{i}:",
+                  content.get(f"SCENE_{i}", "")[:100]
+              )
           PY
 
       - name: Install FFmpeg
@@ -77,10 +82,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Create text file
+      - name: Create scene text files
         run: |
           python3 - <<'PY'
           import json
+          import os
 
           with open(
               "content/ready_content.json",
@@ -89,44 +95,67 @@ jobs:
           ) as f:
               content = json.load(f)
 
-          topic = str(content.get("TOPIC", ""))
-          script = str(content.get("SCRIPT", ""))
-          title = str(content.get("TITLE", ""))
+          os.makedirs("content/scenes", exist_ok=True)
 
-          text = (
-              title
-              + "\n\n"
-              + topic
-              + "\n\n"
-              + script
-          )
+          for i in range(1, 6):
+              scene = str(
+                  content.get(f"SCENE_{i}", "")
+              ).strip()
 
-          with open(
-              "content/video_text.txt",
-              "w",
-              encoding="utf-8"
-          ) as f:
-              f.write(text)
+              if not scene:
+                  scene = f"Scene {i}"
 
-          print("Video text created.")
+              with open(
+                  f"content/scenes/scene_{i}.txt",
+                  "w",
+                  encoding="utf-8"
+              ) as f:
+                  f.write(scene)
+
+              print(f"Created scene {i}")
+
           PY
 
-      - name: Create video
+      - name: Create five scene videos
         run: |
-          mkdir -p output
+          mkdir -p output/scenes
+
+          for i in 1 2 3 4 5
+          do
+            echo "Creating scene $i..."
+
+            ffmpeg \
+              -y \
+              -f lavfi \
+              -i "color=c=black:s=1080x1920:r=30" \
+              -vf "drawtext=text='SCENE $i':fontcolor=white:fontsize=72:x=(w-text_w)/2:y=250,drawtext=textfile=content/scenes/scene_${i}.txt:fontcolor=white:fontsize=42:line_spacing=18:x=(w-text_w)/2:y=650" \
+              -t 3 \
+              -c:v libx264 \
+              -pix_fmt yuv420p \
+              "output/scenes/scene_${i}.mp4"
+
+          done
+
+      - name: Join scenes
+        run: |
+          printf "file '%s'\n" \
+            output/scenes/scene_1.mp4 \
+            output/scenes/scene_2.mp4 \
+            output/scenes/scene_3.mp4 \
+            output/scenes/scene_4.mp4 \
+            output/scenes/scene_5.mp4 \
+            > output/concat.txt
 
           ffmpeg \
             -y \
-            -f lavfi \
-            -i "color=c=black:s=1080x1920:r=30" \
-            -vf "drawtext=textfile=content/video_text.txt:fontcolor=white:fontsize=48:line_spacing=15:x=(w-text_w)/2:y=(h-text_h)/2" \
-            -t 15 \
-            -c:v libx264 \
-            -pix_fmt yuv420p \
-            output/ai_video.mp4
+            -f concat \
+            -safe 0 \
+            -i output/concat.txt \
+            -c copy \
+            output/ai_video_scenes.mp4
 
-      - name: Upload video
+      - name: Upload final video
         uses: actions/upload-artifact@v4
         with:
-          name: ai-video-with-content
-          path: output/ai_video.mp4
+          name: ai-video-scenes
+          path: output/ai_video_scenes.mp4
