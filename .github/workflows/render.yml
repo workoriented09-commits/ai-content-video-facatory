@@ -1,11 +1,11 @@
-name: AI Video Renderer
+name: AI Content Factory
 
 on:
   workflow_dispatch:
 
 jobs:
 
-  render:
+  test-sheet-connection:
 
     runs-on: ubuntu-latest
 
@@ -14,21 +14,58 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install FFmpeg
+      - name: Read READY content from Google Sheet
+        env:
+          GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }}
+          FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          python3 - <<'PY'
+          import os
+          import json
+          import urllib.request
 
-      - name: Show FFmpeg version
-        run: |
-          ffmpeg -version
+          url = os.environ["GOOGLE_SCRIPT_URL"]
+          secret = os.environ["FACTORY_SECRET"]
 
-      - name: Render test video
-        run: |
-          python3 render.py
+          payload = json.dumps({
+              "secret": secret
+          }).encode("utf-8")
 
-      - name: Upload rendered video
-        uses: actions/upload-artifact@v4
-        with:
-          name: rendered-video
-          path: output/test_video.mp4
+          request = urllib.request.Request(
+              url,
+              data=payload,
+              headers={
+                  "Content-Type": "application/json"
+              },
+              method="POST"
+          )
+
+          print("Connecting to Google Sheet...")
+
+          with urllib.request.urlopen(request) as response:
+
+              result = response.read().decode("utf-8")
+
+          data = json.loads(result)
+
+          if not data.get("success"):
+              raise Exception(
+                  data.get("error", "Unknown error")
+              )
+
+          content = data["content"]
+
+          print("")
+          print("================================")
+          print("GOOGLE SHEET CONNECTION SUCCESS")
+          print("================================")
+          print("")
+          print("Sheet row:", content.get("sheetRow"))
+          print("Status:", content.get("STATUS"))
+          print("Topic:", content.get("TOPIC"))
+          print("Category:", content.get("CATEGORY"))
+          print("Score:", content.get("SCORE"))
+          print("")
+          print("READY content successfully received.")
+          print("================================")
+          PY
