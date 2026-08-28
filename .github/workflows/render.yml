@@ -4,10 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-video:
+  create-content-video:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -76,6 +77,40 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
+      - name: Create text file
+        run: |
+          python3 - <<'PY'
+          import json
+
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+              content = json.load(f)
+
+          topic = str(content.get("TOPIC", ""))
+          script = str(content.get("SCRIPT", ""))
+          title = str(content.get("TITLE", ""))
+
+          text = (
+              title
+              + "\n\n"
+              + topic
+              + "\n\n"
+              + script
+          )
+
+          with open(
+              "content/video_text.txt",
+              "w",
+              encoding="utf-8"
+          ) as f:
+              f.write(text)
+
+          print("Video text created.")
+          PY
+
       - name: Create video
         run: |
           mkdir -p output
@@ -84,7 +119,8 @@ jobs:
             -y \
             -f lavfi \
             -i "color=c=black:s=1080x1920:r=30" \
-            -t 10 \
+            -vf "drawtext=textfile=content/video_text.txt:fontcolor=white:fontsize=48:line_spacing=15:x=(w-text_w)/2:y=(h-text_h)/2" \
+            -t 15 \
             -c:v libx264 \
             -pix_fmt yuv420p \
             output/ai_video.mp4
@@ -92,5 +128,5 @@ jobs:
       - name: Upload video
         uses: actions/upload-artifact@v4
         with:
-          name: ai-video
+          name: ai-video-with-content
           path: output/ai_video.mp4
