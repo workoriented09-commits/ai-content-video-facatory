@@ -24,16 +24,12 @@ jobs:
           url = os.environ["GOOGLE_SCRIPT_URL"]
           secret = os.environ["FACTORY_SECRET"]
 
-          payload = json.dumps({
-              "secret": secret
-          }).encode("utf-8")
+          payload = json.dumps({"secret": secret}).encode("utf-8")
 
           request = urllib.request.Request(
               url,
               data=payload,
-              headers={
-                  "Content-Type": "application/json"
-              },
+              headers={"Content-Type": "application/json"},
               method="POST"
           )
 
@@ -45,9 +41,7 @@ jobs:
           data = json.loads(result)
 
           if not data.get("success"):
-              raise Exception(
-                  data.get("error", "Unknown error")
-              )
+              raise Exception(data.get("error", "Unknown error"))
 
           content = data["content"]
 
@@ -120,58 +114,23 @@ jobs:
 
           for i in 1 2 3 4 5
           do
-            echo "Creating animated scene $i..."
-
-            case $i in
-              1)
-                START_X=100
-                START_Y=200
-                END_X=900
-                END_Y=1600
-                ;;
-              2)
-                START_X=900
-                START_Y=1600
-                END_X=100
-                END_Y=300
-                ;;
-              3)
-                START_X=500
-                START_Y=100
-                END_X=500
-                END_Y=1700
-                ;;
-              4)
-                START_X=100
-                START_Y=1500
-                END_X=900
-                END_Y=300
-                ;;
-              5)
-                START_X=900
-                START_Y=300
-                END_X=100
-                END_Y=1500
-                ;;
-            esac
+            echo "Creating scene $i..."
 
             ffmpeg \
               -y \
               -f lavfi \
-              -i "nullsrc=s=1080x1920:r=30" \
-              -vf "\
-              geq=\
-              r='35+35*sin((X+$START_X*2)/180+(T*0.8))+20*sin((Y+$START_Y)/240)',\
-              g='10+20*sin((Y+$START_Y)/210+(T*0.6))+15*sin((X+$START_X)/300)',\
-              b='55+45*sin((X+$START_X)/230+(Y+$START_Y)/260+T*0.5)',\
-              drawtext=text='SCENE $i':fontcolor=white:fontsize=72:x=(w-text_w)/2:y=230,\
-              drawtext=textfile=content/scenes/scene_${i}.txt:fontcolor=white:fontsize=42:line_spacing=18:x=(w-text_w)/2:y=650" \
+              -i "color=c=black:s=1080x1920:r=30" \
+              -vf "noise=alls=25:allf=t+u,eq=brightness=0.05:saturation=1.5,drawtext=text='SCENE $i':fontcolor=white:fontsize=72:x=(w-text_w)/2:y=250,drawtext=textfile=content/scenes/scene_${i}.txt:fontcolor=white:fontsize=42:line_spacing=18:x=(w-text_w)/2:y=650" \
               -t 3 \
+              -an \
               -c:v libx264 \
+              -preset veryfast \
               -pix_fmt yuv420p \
               -r 30 \
               "output/scenes/scene_${i}.mp4"
 
+            test -f "output/scenes/scene_${i}.mp4"
+            echo "Scene $i created successfully."
           done
 
       - name: Join scenes
@@ -185,7 +144,9 @@ jobs:
             -i output/scenes/scene_5.mp4 \
             -filter_complex "[0:v][1:v][2:v][3:v][4:v]concat=n=5:v=1:a=0[outv]" \
             -map "[outv]" \
+            -an \
             -c:v libx264 \
+            -preset veryfast \
             -pix_fmt yuv420p \
             -r 30 \
             output/ai_video_scenes.mp4
