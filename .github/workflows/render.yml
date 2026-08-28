@@ -4,13 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
-
   test-sheet-connection:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -18,6 +15,7 @@ jobs:
         env:
           GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }}
           FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
+
         run: |
           python3 - <<'PY'
           import os
@@ -43,19 +41,25 @@ jobs:
           print("Connecting to Google Sheet...")
 
           with urllib.request.urlopen(request) as response:
-
               result = response.read().decode("utf-8")
               data = json.loads(result)
-                 print("Response received from Google Apps Script:")
-                 print(data)
 
-if not data.get("success"):
-    print("Received secret length:", data.get("receivedLength"))
-    print("Stored secret length:", data.get("storedLength"))
+          print("Response received from Google Apps Script:")
+          print(data)
 
-    raise Exception(
-        data.get("error", "Unknown error")
-    )
+          if not data.get("success"):
+              print(
+                  "Received secret length:",
+                  data.get("receivedLength")
+              )
+              print(
+                  "Stored secret length:",
+                  data.get("storedLength")
+              )
+
+              raise Exception(
+                  data.get("error", "Unknown error")
+              )
 
           content = data["content"]
 
