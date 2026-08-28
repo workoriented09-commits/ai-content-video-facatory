@@ -8,13 +8,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
+
+
+      # --------------------------------------------------
+      # GET READY CONTENT FROM GOOGLE SHEET
+      # --------------------------------------------------
 
       - name: Get READY content
         env:
           GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }}
           FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
+
         run: |
           python3 - <<'PY'
           import os
@@ -36,6 +43,8 @@ jobs:
               },
               method="POST"
           )
+
+          print("Getting READY content...")
 
           with urllib.request.urlopen(request) as response:
               data = json.loads(
@@ -62,10 +71,19 @@ jobs:
               )
 
           print("READY content received.")
+          print("Topic:", data["content"].get("TOPIC"))
+          print("Score:", data["content"].get("SCORE"))
+          PY
+
+
+      # --------------------------------------------------
+      # GENERATE FIVE AI IMAGES
+      # --------------------------------------------------
 
       - name: Generate five AI images
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
         run: |
           python3 -m pip install --upgrade pip
           pip install huggingface_hub pillow
@@ -74,6 +92,7 @@ jobs:
           import os
           import json
           import time
+
           from huggingface_hub import InferenceClient
 
           with open(
@@ -144,10 +163,20 @@ jobs:
 
               time.sleep(2)
 
+
+      # --------------------------------------------------
+      # INSTALL FFMPEG
+      # --------------------------------------------------
+
       - name: Install FFmpeg
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
+
+
+      # --------------------------------------------------
+      # CREATE SCENE TEXT FILES
+      # --------------------------------------------------
 
       - name: Create scene text files
         run: |
@@ -182,6 +211,11 @@ jobs:
 
           print("Scene text files created.")
 
+
+      # --------------------------------------------------
+      # CREATE FIVE ANIMATED VIDEO SCENES
+      # --------------------------------------------------
+
       - name: Create video scenes
         run: |
           mkdir -p output/scenes
@@ -206,6 +240,11 @@ jobs:
 
           done
 
+
+      # --------------------------------------------------
+      # JOIN FIVE SCENES
+      # --------------------------------------------------
+
       - name: Join scenes
         run: |
           ffmpeg \
@@ -222,10 +261,109 @@ jobs:
             -preset veryfast \
             -pix_fmt yuv420p \
             -r 30 \
+            output/video_without_voice.mp4
+
+
+      # --------------------------------------------------
+      # GENERATE AI VOICE
+      # --------------------------------------------------
+
+      - name: Generate AI voice
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
+        run: |
+          python3 - <<'PY'
+          import os
+          import json
+          from pathlib import Path
+
+          from huggingface_hub import InferenceClient
+
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+              content = json.load(f)
+
+          # Use SCRIPT if available.
+          # Otherwise combine the five scene texts.
+
+          script = str(
+              content.get("SCRIPT", "")
+          ).strip()
+
+          if not script:
+              scenes = []
+
+              for i in range(1, 6):
+                  text = str(
+                      content.get(f"SCENE_{i}", "")
+                  ).strip()
+
+                  if text:
+                      scenes.append(text)
+
+              script = " ".join(scenes)
+
+          if not script:
+              raise Exception(
+                  "No SCRIPT or scene text found for voice narration."
+              )
+
+          print("Generating AI voice...")
+          print("Narration text:")
+          print(script)
+
+          client = InferenceClient(
+              api_key=os.environ["HF_TOKEN"]
+          )
+
+          audio = client.text_to_speech(
+              text=script,
+              model="hexgrad/Kokoro-82M"
+          )
+
+          Path(
+              "output/narration.flac"
+          ).write_bytes(audio)
+
+          print("AI voice generated successfully.")
+          PY
+
+
+      # --------------------------------------------------
+      # ADD VOICE TO FINAL VIDEO
+      # --------------------------------------------------
+
+      - name: Add AI voice to video
+        run: |
+
+          ffmpeg \
+            -y \
+            -i output/video_without_voice.mp4 \
+            -i output/narration.flac \
+            -filter_complex "[1:a]apad[audio]" \
+            -map 0:v \
+            -map "[audio]" \
+            -t 15 \
+            -c:v copy \
+            -c:a aac \
+            -b:a 128k \
+            -shortest \
             output/final_ai_video.mp4
+
+          echo "Final video with AI voice created."
+
+
+      # --------------------------------------------------
+      # UPLOAD FINAL VIDEO
+      # --------------------------------------------------
 
       - name: Upload final video
         uses: actions/upload-artifact@v4
+
         with:
           name: final-ai-video
           path: output/final_ai_video.mp4
