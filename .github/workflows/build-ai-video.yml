@@ -24,24 +24,36 @@ jobs:
           url = os.environ["GOOGLE_SCRIPT_URL"]
           secret = os.environ["FACTORY_SECRET"]
 
-          payload = json.dumps({"secret": secret}).encode("utf-8")
+          payload = json.dumps({
+              "secret": secret
+          }).encode("utf-8")
 
           request = urllib.request.Request(
               url,
               data=payload,
-              headers={"Content-Type": "application/json"},
+              headers={
+                  "Content-Type": "application/json"
+              },
               method="POST"
           )
 
           with urllib.request.urlopen(request) as response:
-              data = json.loads(response.read().decode("utf-8"))
+              data = json.loads(
+                  response.read().decode("utf-8")
+              )
 
           if not data.get("success"):
-              raise Exception(data.get("error", "Unknown error"))
+              raise Exception(
+                  data.get("error", "Unknown error")
+              )
 
           os.makedirs("content", exist_ok=True)
 
-          with open("content/ready_content.json", "w", encoding="utf-8") as f:
+          with open(
+              "content/ready_content.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
               json.dump(
                   data["content"],
                   f,
@@ -50,7 +62,6 @@ jobs:
               )
 
           print("READY content received.")
-          PY
 
       - name: Generate five AI images
         env:
@@ -65,7 +76,11 @@ jobs:
           import time
           from huggingface_hub import InferenceClient
 
-          with open("content/ready_content.json", "r", encoding="utf-8") as f:
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
               content = json.load(f)
 
           os.makedirs("images", exist_ok=True)
@@ -91,9 +106,16 @@ jobs:
           """
 
           for i in range(1, 6):
+
               scene = str(
                   content.get(f"SCENE_{i}", "")
               ).strip()
+
+              if not scene:
+                  scene = (
+                      f"Cinematic realistic environment "
+                      f"for scene {i}"
+                  )
 
               prompt = f"""
               {style}
@@ -103,18 +125,24 @@ jobs:
               {scene}
               """
 
-              print(f"Generating scene {i}...")
+              print(
+                  f"Generating AI image for scene {i}..."
+              )
 
               image = client.text_to_image(
                   prompt=prompt,
                   model="black-forest-labs/FLUX.1-schnell"
               )
 
-              image.save(f"images/scene_{i}.png")
+              image.save(
+                  f"images/scene_{i}.png"
+              )
 
-              print(f"Scene {i} saved.")
+              print(
+                  f"Scene {i} image saved."
+              )
+
               time.sleep(2)
-          PY
 
       - name: Install FFmpeg
         run: |
@@ -127,12 +155,17 @@ jobs:
           import json
           import os
 
-          with open("content/ready_content.json", "r", encoding="utf-8") as f:
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
               content = json.load(f)
 
           os.makedirs("scene_text", exist_ok=True)
 
           for i in range(1, 6):
+
               text = str(
                   content.get(f"SCENE_{i}", "")
               ).strip()
@@ -148,7 +181,6 @@ jobs:
                   f.write(text)
 
           print("Scene text files created.")
-          PY
 
       - name: Create video scenes
         run: |
@@ -156,13 +188,14 @@ jobs:
 
           for i in 1 2 3 4 5
           do
+
             echo "Building video scene $i..."
 
             ffmpeg \
               -y \
               -loop 1 \
               -i "images/scene_${i}.png" \
-              -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.0008,1.08)':d=90:s=1080x1920:fps=30,drawtext=text='SCENE $i':fontcolor=white:fontsize=64:borderw=3:bordercolor=black:x=(w-text_w)/2:y=220,drawtext=textfile=scene_text/scene_${i}.txt:fontcolor=white:fontsize=38:borderw=3:bordercolor=black:line_spacing=15:x=(w-text_w)/2:y=1550" \
+              -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.0008,1.08)':d=90:s=1080x1920:fps=30,drawtext=textfile=scene_text/scene_${i}.txt:fontcolor=white:fontsize=38:borderw=3:bordercolor=black:line_spacing=15:x=(w-text_w)/2:y=1550" \
               -t 3 \
               -an \
               -c:v libx264 \
