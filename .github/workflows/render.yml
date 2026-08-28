@@ -46,12 +46,18 @@ jobs:
 
               result = response.read().decode("utf-8")
 
-          data = json.loads(result)
+        data = json.loads(result)
 
-          if not data.get("success"):
-              raise Exception(
-                  data.get("error", "Unknown error")
-              )
+print("Response received from Google Apps Script:")
+print(data)
+
+if not data.get("success"):
+    print("Received secret length:", data.get("receivedLength"))
+    print("Stored secret length:", data.get("storedLength"))
+
+    raise Exception(
+        data.get("error", "Unknown error")
+    )
 
           content = data["content"]
 
