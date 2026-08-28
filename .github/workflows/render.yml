@@ -15,7 +15,6 @@ jobs:
         env:
           GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }}
           FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
-
         run: |
           python3 - <<'PY'
           import os
@@ -113,7 +112,6 @@ jobs:
                   f.write(scene)
 
               print(f"Created scene {i}")
-
           PY
 
       - name: Create five scene videos
@@ -133,10 +131,9 @@ jobs:
               -c:v libx264 \
               -pix_fmt yuv420p \
               "output/scenes/scene_${i}.mp4"
-
           done
 
-             - name: Join scenes
+      - name: Join scenes
         run: |
           ffmpeg \
             -y \
@@ -145,13 +142,13 @@ jobs:
             -i output/scenes/scene_3.mp4 \
             -i output/scenes/scene_4.mp4 \
             -i output/scenes/scene_5.mp4 \
-            -filter_complex "\
-            [0:v][1:v][2:v][3:v][4:v]concat=n=5:v=1:a=0[outv]" \
+            -filter_complex "[0:v][1:v][2:v][3:v][4:v]concat=n=5:v=1:a=0[outv]" \
             -map "[outv]" \
             -c:v libx264 \
             -pix_fmt yuv420p \
             -r 30 \
             output/ai_video_scenes.mp4
+
       - name: Upload final video
         uses: actions/upload-artifact@v4
         with:
