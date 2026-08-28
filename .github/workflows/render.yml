@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  prepare-content:
+  create-video:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Get READY content from Google Sheet
+      - name: Get READY content
         env:
           GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }}
           FACTORY_SECRET: ${{ secrets.FACTORY_SECRET }}
@@ -38,7 +38,7 @@ jobs:
               method="POST"
           )
 
-          print("Connecting to Google Sheet...")
+          print("Getting READY content...")
 
           with urllib.request.urlopen(request) as response:
               result = response.read().decode("utf-8")
@@ -52,15 +52,13 @@ jobs:
 
           content = data["content"]
 
-          print("READY content received.")
-          print("Row:", content.get("sheetRow"))
-          print("Status:", content.get("STATUS"))
-          print("Topic:", content.get("TOPIC"))
-          print("Score:", content.get("SCORE"))
-
           os.makedirs("content", exist_ok=True)
 
-          with open("content/ready_content.json", "w", encoding="utf-8") as file:
+          with open(
+              "content/ready_content.json",
+              "w",
+              encoding="utf-8"
+          ) as file:
               json.dump(
                   content,
                   file,
@@ -68,17 +66,31 @@ jobs:
                   indent=2
               )
 
-          print("Content saved to content/ready_content.json")
+          print("READY content received.")
+          print("Topic:", content.get("TOPIC"))
+          print("Score:", content.get("SCORE"))
           PY
 
-      - name: Show extracted content
+      - name: Install FFmpeg
         run: |
-          echo "========== READY CONTENT =========="
-          cat content/ready_content.json
-          echo "==================================="
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
 
-      - name: Upload content
+      - name: Create video
+        run: |
+          mkdir -p output
+
+          ffmpeg \
+            -y \
+            -f lavfi \
+            -i "color=c=black:s=1080x1920:r=30" \
+            -t 10 \
+            -c:v libx264 \
+            -pix_fmt yuv420p \
+            output/ai_video.mp4
+
+      - name: Upload video
         uses: actions/upload-artifact@v4
         with:
-          name: ready-content
-          path: content/ready_content.json
+          name: ai-video
+          path: output/ai_video.mp4
