@@ -1,0 +1,52 @@
+name: Test AI Voice
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-voice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Python
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install huggingface_hub
+
+      - name: Generate test voice
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          from huggingface_hub import InferenceClient
+
+          text = """
+          Sometimes the moment you trust someone
+          is the exact moment everything changes.
+          """
+
+          print("Connecting to Hugging Face...")
+          print("Generating voice...")
+
+          client = InferenceClient(
+              api_key=os.environ["HF_TOKEN"]
+          )
+
+          audio = client.text_to_speech(
+              text=text,
+              model="hexgrad/Kokoro-82M"
+          )
+
+          Path("test_voice.flac").write_bytes(audio)
+
+          print("Voice generated successfully.")
+          print("Audio saved as test_voice.flac")
+          PY
+
+      - name: Upload voice
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-ai-voice
+          path: test_voice.flac
