@@ -18,7 +18,7 @@ jobs:
 
 
       # ==================================================
-      # GET READY CONTENT FROM GOOGLE SHEET
+      # GET READY CONTENT
       # ==================================================
 
       - name: Get READY content
@@ -81,7 +81,7 @@ jobs:
 
 
       # ==================================================
-      # INSTALL IMAGE GENERATION LIBRARIES
+      # INSTALL IMAGE TOOLS
       # ==================================================
 
       - name: Install image tools
@@ -91,10 +91,10 @@ jobs:
 
 
       # ==================================================
-      # TRY NEW AI IMAGES
+      # TRY NEW IMAGES
       #
-      # IF HUGGING FACE FAILS:
-      # USE EXISTING IMAGES FROM /images/
+      # FALLBACK:
+      # ROOT scene_1.png ... scene_5.png
       # ==================================================
 
       - name: Generate new images with fallback
@@ -107,6 +107,7 @@ jobs:
           import json
           import time
           import shutil
+          from pathlib import Path
 
           from PIL import Image
           from huggingface_hub import InferenceClient
@@ -141,59 +142,107 @@ jobs:
           no watermark.
           """
 
-          hf_available = bool(os.environ.get("HF_TOKEN"))
+          client = None
 
-          if hf_available:
+          if os.environ.get("HF_TOKEN"):
+
               try:
                   client = InferenceClient(
                       api_key=os.environ["HF_TOKEN"]
                   )
-                  print("Hugging Face image generation is available.")
+
+                  print(
+                      "Hugging Face image generation is available."
+                  )
+
               except Exception as e:
-                  client = None
-                  print("Could not initialize Hugging Face.")
+
+                  print(
+                      "Could not initialize Hugging Face."
+                  )
                   print("Reason:", str(e))
+
           else:
-              client = None
-              print("HF_TOKEN is not available.")
-              print("Using existing images.")
+
+              print(
+                  "HF_TOKEN not available."
+              )
 
           for i in range(1, 6):
 
-              output_file = f"images/scene_{i}.png"
+              final_file = Path(
+                  f"images/scene_{i}.png"
+              )
 
-              scene = str(
-                  content.get(f"SCENE_{i}", "")
-              ).strip()
+              old_file = Path(
+                  f"scene_{i}.png"
+              )
 
-              if not scene:
-                  scene = (
-                      f"Cinematic realistic environment "
-                      f"for scene {i}"
-                  )
+              temp_file = Path(
+                  f"images/scene_{i}_new.png"
+              )
 
               new_image_created = False
 
               # ------------------------------------------
-              # TRY NEW IMAGE
+              # FIRST: COPY EXISTING ROOT IMAGE
+              # ------------------------------------------
+
+              if old_file.exists():
+
+                  try:
+
+                      with Image.open(old_file) as check:
+                          check.verify()
+
+                      shutil.copy2(
+                          old_file,
+                          final_file
+                      )
+
+                      print(
+                          f"Existing image found for scene {i}."
+                      )
+
+                  except Exception as e:
+
+                      print(
+                          f"Existing image for scene {i} "
+                          f"is invalid: {e}"
+                      )
+
+              # ------------------------------------------
+              # TRY TO GENERATE NEW IMAGE
               # ------------------------------------------
 
               if client is not None:
 
+                  scene = str(
+                      content.get(
+                          f"SCENE_{i}",
+                          ""
+                      )
+                  ).strip()
+
+                  if not scene:
+                      scene = (
+                          f"Cinematic realistic environment "
+                          f"for scene {i}"
+                      )
+
+                  prompt = f"""
+                  {style}
+
+                  Visually represent this scene:
+
+                  {scene}
+                  """
+
                   try:
-
-                      prompt = f"""
-                      {style}
-
-                      Visually represent this scene:
-
-                      {scene}
-                      """
 
                       print("")
                       print(
-                          f"Trying to generate NEW image "
-                          f"for scene {i}..."
+                          f"Trying NEW image for scene {i}..."
                       )
 
                       image = client.text_to_image(
@@ -201,22 +250,19 @@ jobs:
                           model="black-forest-labs/FLUX.1-schnell"
                       )
 
-                      # Validate image before replacing
-                      # the existing image.
-                      image.verify()
+                      image.save(temp_file)
 
-                      # Re-open because verify() closes
-                      # the image internally.
-                      image = client.text_to_image(
-                          prompt=prompt,
-                          model="black-forest-labs/FLUX.1-schnell"
-                      )
-
-                      image.save(output_file)
-
-                      # Final validation
-                      with Image.open(output_file) as check:
+                      # Validate the newly generated image
+                      with Image.open(temp_file) as check:
                           check.verify()
+
+                      # Only replace the old image AFTER
+                      # the new image has been successfully
+                      # created and validated.
+                      shutil.move(
+                          temp_file,
+                          final_file
+                      )
 
                       print(
                           f"NEW image created for scene {i}."
@@ -238,52 +284,33 @@ jobs:
                           str(e)
                       )
                       print(
-                          "Falling back to existing image..."
+                          "Using existing image instead."
                       )
 
+                      if temp_file.exists():
+                          temp_file.unlink()
+
               # ------------------------------------------
-              # FALLBACK TO EXISTING IMAGE
+              # FINAL FALLBACK CHECK
               # ------------------------------------------
 
-              if not new_image_created:
+              if not final_file.exists():
 
-                  if os.path.isfile(output_file):
+                  raise Exception(
+                      f"Scene {i} has no usable image. "
+                      f"Neither a new image nor "
+                      f"scene_{i}.png exists."
+                  )
 
-                      try:
-
-                          with Image.open(output_file) as check:
-                              check.verify()
-
-                          print(
-                              f"Using existing image "
-                              f"for scene {i}."
-                          )
-
-                      except Exception as e:
-
-                          raise Exception(
-                              f"Existing image for scene {i} "
-                              f"is invalid: {e}"
-                          )
-
-                  else:
-
-                      raise Exception(
-                          f"No new image could be generated "
-                          f"and no existing image exists for "
-                          f"scene {i}."
-                      )
+              print(
+                  f"Scene {i} ready:"
+                  f" {final_file}"
+              )
 
           print("")
           print("====================================")
           print("IMAGE STAGE COMPLETED")
           print("====================================")
-          print("")
-
-          for i in range(1, 6):
-              print(
-                  f"images/scene_{i}.png"
-              )
           PY
 
 
@@ -298,7 +325,7 @@ jobs:
 
 
       # ==================================================
-      # CREATE SCENE TEXT FILES
+      # CREATE SCENE TEXT
       # ==================================================
 
       - name: Create scene text files
@@ -314,12 +341,18 @@ jobs:
           ) as f:
               content = json.load(f)
 
-          os.makedirs("scene_text", exist_ok=True)
+          os.makedirs(
+              "scene_text",
+              exist_ok=True
+          )
 
           for i in range(1, 6):
 
               text = str(
-                  content.get(f"SCENE_{i}", "")
+                  content.get(
+                      f"SCENE_{i}",
+                      ""
+                  )
               ).strip()
 
               if not text:
@@ -332,11 +365,14 @@ jobs:
               ) as f:
                   f.write(text)
 
-          print("Scene text files created.")
+          print(
+              "Scene text files created."
+          )
+          PY
 
 
       # ==================================================
-      # CREATE FIVE 5-SECOND VIDEO SCENES
+      # CREATE FIVE 5-SECOND SCENES
       # TOTAL = 25 SECONDS
       # ==================================================
 
@@ -367,7 +403,6 @@ jobs:
 
       # ==================================================
       # JOIN FIVE SCENES
-      # TOTAL = 25 SECONDS
       # ==================================================
 
       - name: Join scenes
@@ -390,13 +425,10 @@ jobs:
 
 
       # ==================================================
-      # GENERATE AI VOICE
-      #
-      # IF HUGGING FACE FAILS:
-      # USE FREE LOCAL VOICE
+      # GENERATE VOICE
       # ==================================================
 
-      - name: Generate voice with fallback
+      - name: Generate voice
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
@@ -418,7 +450,10 @@ jobs:
               content = json.load(f)
 
           script = str(
-              content.get("SCRIPT", "")
+              content.get(
+                  "SCRIPT",
+                  ""
+              )
           ).strip()
 
           if not script:
@@ -428,7 +463,10 @@ jobs:
               for i in range(1, 6):
 
                   text = str(
-                      content.get(f"SCENE_{i}", "")
+                      content.get(
+                          f"SCENE_{i}",
+                          ""
+                      )
                   ).strip()
 
                   if text:
@@ -442,10 +480,6 @@ jobs:
               )
 
           voice_created = False
-
-          # ------------------------------------------
-          # TRY HUGGING FACE AI VOICE
-          # ------------------------------------------
 
           if os.environ.get("HF_TOKEN"):
 
@@ -471,7 +505,7 @@ jobs:
                   ).write_bytes(audio)
 
                   print(
-                      "Hugging Face AI voice created."
+                      "AI voice created."
                   )
 
                   voice_created = True
@@ -479,33 +513,20 @@ jobs:
               except Exception as e:
 
                   print(
-                      "Hugging Face voice failed."
+                      "AI voice unavailable."
                   )
                   print(
                       "Reason:",
                       str(e)
                   )
-                  print(
-                      "Falling back to local voice."
-                  )
-
-          # ------------------------------------------
-          # FREE LOCAL VOICE FALLBACK
-          # ------------------------------------------
 
           if not voice_created:
 
               print(
-                  "Installing free local speech engine..."
+                  "Using free local voice."
               )
 
-              os.system(
-                  "sudo apt-get update -qq"
-              )
-
-              os.system(
-                  "sudo apt-get install -y espeak-ng"
-              )
+              import subprocess
 
               Path(
                   "output/narration.txt"
@@ -514,32 +535,54 @@ jobs:
                   encoding="utf-8"
               )
 
-              result = os.system(
-                  "espeak-ng "
-                  "-v en-us "
-                  "-s 145 "
-                  "-p 45 "
-                  "-a 150 "
-                  "-f output/narration.txt "
-                  "-w output/narration.wav"
+              subprocess.run(
+                  [
+                      "sudo",
+                      "apt-get",
+                      "update",
+                      "-qq"
+                  ],
+                  check=True
               )
 
-              if result != 0:
-                  raise Exception(
-                      "Local voice generation failed."
-                  )
+              subprocess.run(
+                  [
+                      "sudo",
+                      "apt-get",
+                      "install",
+                      "-y",
+                      "espeak-ng"
+                  ],
+                  check=True
+              )
+
+              subprocess.run(
+                  [
+                      "espeak-ng",
+                      "-v",
+                      "en-us",
+                      "-s",
+                      "145",
+                      "-p",
+                      "45",
+                      "-a",
+                      "150",
+                      "-f",
+                      "output/narration.txt",
+                      "-w",
+                      "output/narration.wav"
+                  ],
+                  check=True
+              )
 
               print(
                   "Free local voice created."
               )
-
-          print("")
-          print("VOICE STAGE COMPLETED.")
           PY
 
 
       # ==================================================
-      # ADD VOICE TO 25-SECOND VIDEO
+      # ADD VOICE
       # ==================================================
 
       - name: Add voice to video
