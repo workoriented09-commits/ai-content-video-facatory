@@ -3,6 +3,21 @@ name: Build AI Video
 on:
   workflow_dispatch:
 
+  # Run automatically every day at 9:00 AM IST
+  # 9:00 AM IST = 3:30 AM UTC
+  schedule:
+    - cron: "30 3 * * *"
+
+# Required so the workflow can save duplicate-content history
+# back into the repository.
+permissions:
+  contents: write
+
+# Prevent two video builds from running at the same time.
+concurrency:
+  group: ai-video-factory
+  cancel-in-progress: false
+
 jobs:
   build-video:
     runs-on: ubuntu-latest
@@ -15,10 +30,12 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
 
       # ==================================================
-      # 2. GET READY CONTENT FROM GOOGLE SHEETS
+      # 2. GET READY CONTENT
       # ==================================================
 
       - name: Get READY content
@@ -57,10 +74,16 @@ jobs:
 
           if not data.get("success"):
               raise Exception(
-                  data.get("error", "Unknown error")
+                  data.get(
+                      "error",
+                      "Unknown error"
+                  )
               )
 
-          os.makedirs("content", exist_ok=True)
+          os.makedirs(
+              "content",
+              exist_ok=True
+          )
 
           with open(
               "content/ready_content.json",
@@ -74,16 +97,214 @@ jobs:
                   indent=2
               )
 
+          print("")
           print("READY content received.")
+
           print(
               "Topic:",
-              data["content"].get("TOPIC", "")
+              data["content"].get(
+                  "TOPIC",
+                  ""
+              )
+          )
+
+          print(
+              "Title:",
+              data["content"].get(
+                  "TITLE",
+                  ""
+              )
           )
           PY
 
 
       # ==================================================
-      # 3. INSTALL PYTHON IMAGE TOOLS
+      # 3. CHECK DUPLICATE CONTENT
+      #
+      # The workflow creates a fingerprint from the
+      # actual content.
+      #
+      # If that fingerprint already exists in
+      # content_history.json, the video is NOT generated.
+      # ==================================================
+
+      - name: Check duplicate content
+        run: |
+          python3 - <<'PY'
+          import json
+          import hashlib
+          import os
+
+          CONTENT_FILE = (
+              "content/ready_content.json"
+          )
+
+          HISTORY_FILE = (
+              "content_history.json"
+          )
+
+          with open(
+              CONTENT_FILE,
+              "r",
+              encoding="utf-8"
+          ) as f:
+              content = json.load(f)
+
+          # ------------------------------------------
+          # Build a stable fingerprint from the actual
+          # creative content.
+          # ------------------------------------------
+
+          important_fields = {
+              "TOPIC": content.get(
+                  "TOPIC",
+                  ""
+              ),
+
+              "TITLE": content.get(
+                  "TITLE",
+                  ""
+              ),
+
+              "SCRIPT": content.get(
+                  "SCRIPT",
+                  ""
+              ),
+
+              "SCENE_1": content.get(
+                  "SCENE_1",
+                  ""
+              ),
+
+              "SCENE_2": content.get(
+                  "SCENE_2",
+                  ""
+              ),
+
+              "SCENE_3": content.get(
+                  "SCENE_3",
+                  ""
+              ),
+
+              "SCENE_4": content.get(
+                  "SCENE_4",
+                  ""
+              ),
+
+              "SCENE_5": content.get(
+                  "SCENE_5",
+                  ""
+              )
+          }
+
+          canonical = json.dumps(
+              important_fields,
+              ensure_ascii=False,
+              sort_keys=True
+          )
+
+          fingerprint = hashlib.sha256(
+              canonical.encode("utf-8")
+          ).hexdigest()
+
+          print("")
+          print(
+              "Content fingerprint:"
+          )
+          print(fingerprint)
+
+          # ------------------------------------------
+          # Load history
+          # ------------------------------------------
+
+          if os.path.exists(HISTORY_FILE):
+
+              with open(
+                  HISTORY_FILE,
+                  "r",
+                  encoding="utf-8"
+              ) as f:
+
+                  try:
+                      history = json.load(f)
+
+                  except json.JSONDecodeError:
+
+                      history = []
+
+          else:
+
+              history = []
+
+          if not isinstance(
+              history,
+              list
+          ):
+
+              history = []
+
+          # ------------------------------------------
+          # DUPLICATE CHECK
+          # ------------------------------------------
+
+          if fingerprint in history:
+
+              print("")
+              print(
+                  "======================================"
+              )
+              print(
+                  "DUPLICATE CONTENT DETECTED"
+              )
+              print(
+                  "======================================"
+              )
+
+              print(
+                  "This content has already been "
+                  "processed."
+              )
+
+              print(
+                  "The workflow will stop instead "
+                  "of creating the same video again."
+              )
+
+              raise SystemExit(1)
+
+          # ------------------------------------------
+          # Save fingerprint temporarily.
+          #
+          # It will only be permanently added to
+          # history AFTER the video succeeds.
+          # ------------------------------------------
+
+          os.makedirs(
+              "content",
+              exist_ok=True
+          )
+
+          with open(
+              "content/current_fingerprint.txt",
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              f.write(fingerprint)
+
+          print("")
+          print(
+              "NEW content confirmed."
+          )
+
+          print(
+              "Video generation can continue."
+          )
+          PY
+
+
+      # ==================================================
+      # 4. INSTALL PYTHON TOOLS
       # ==================================================
 
       - name: Install Python tools
@@ -93,14 +314,12 @@ jobs:
 
 
       # ==================================================
-      # 4. GENERATE NEW IMAGES WITH FALLBACK
+      # 5. GENERATE IMAGES WITH FALLBACK
       #
-      # If new image generation works:
-      #     use NEW image
+      # Try new image first.
       #
-      # If it fails:
-      #     use existing scene_X.png
-      #
+      # If Hugging Face fails:
+      # use existing scene image.
       # ==================================================
 
       - name: Generate new images with fallback
@@ -125,15 +344,23 @@ jobs:
           ) as f:
               content = json.load(f)
 
-          os.makedirs("images", exist_ok=True)
+          os.makedirs(
+              "images",
+              exist_ok=True
+          )
 
           client = None
 
-          if os.environ.get("HF_TOKEN"):
+          if os.environ.get(
+              "HF_TOKEN"
+          ):
 
               try:
+
                   client = InferenceClient(
-                      api_key=os.environ["HF_TOKEN"]
+                      api_key=os.environ[
+                          "HF_TOKEN"
+                      ]
                   )
 
                   print(
@@ -142,15 +369,23 @@ jobs:
                   )
 
               except Exception as e:
+
                   print(
-                      "Could not initialize Hugging Face."
+                      "Could not initialize "
+                      "Hugging Face."
                   )
-                  print("Reason:", str(e))
+
+                  print(
+                      "Reason:",
+                      str(e)
+                  )
 
           else:
+
               print(
                   "HF_TOKEN is not available."
               )
+
               print(
                   "Existing images will be used."
               )
@@ -190,17 +425,20 @@ jobs:
                   f"images/scene_{i}_new.png"
               )
 
-              # ------------------------------------------
-              # FIRST: CHECK EXISTING IMAGE
-              # ------------------------------------------
-
               existing_is_valid = False
+
+              # ------------------------------------------
+              # CHECK EXISTING IMAGE
+              # ------------------------------------------
 
               if old_file.exists():
 
                   try:
 
-                      with Image.open(old_file) as check:
+                      with Image.open(
+                          old_file
+                      ) as check:
+
                           check.verify()
 
                       existing_is_valid = True
@@ -213,8 +451,8 @@ jobs:
                   except Exception as e:
 
                       print(
-                          f"Existing image for scene {i} "
-                          f"is invalid."
+                          f"Existing image for scene "
+                          f"{i} is invalid."
                       )
 
                       print(
@@ -223,7 +461,7 @@ jobs:
                       )
 
               # ------------------------------------------
-              # TRY TO CREATE A NEW IMAGE
+              # TRY NEW IMAGE
               # ------------------------------------------
 
               new_image_created = False
@@ -238,6 +476,7 @@ jobs:
                   ).strip()
 
                   if not scene:
+
                       scene = (
                           f"Cinematic realistic "
                           f"environment for scene {i}"
@@ -253,8 +492,8 @@ jobs:
 
                   print("")
                   print(
-                      f"Trying to generate NEW "
-                      f"image for scene {i}..."
+                      f"Trying NEW image for "
+                      f"scene {i}..."
                   )
 
                   try:
@@ -274,6 +513,7 @@ jobs:
                       with Image.open(
                           temp_file
                       ) as check:
+
                           check.verify()
 
                       shutil.move(
@@ -306,7 +546,7 @@ jobs:
                           temp_file.unlink()
 
               # ------------------------------------------
-              # FALLBACK TO EXISTING IMAGE
+              # FALLBACK
               # ------------------------------------------
 
               if not new_image_created:
@@ -326,13 +566,12 @@ jobs:
                   else:
 
                       raise Exception(
-                          f"No new image could be generated "
-                          f"and no existing image exists "
+                          f"No usable image exists "
                           f"for scene {i}."
                       )
 
               # ------------------------------------------
-              # FINAL VALIDATION
+              # FINAL CHECK
               # ------------------------------------------
 
               if not final_file.exists():
@@ -353,7 +592,7 @@ jobs:
 
 
       # ==================================================
-      # 5. INSTALL FFMPEG
+      # 6. INSTALL FFMPEG
       # ==================================================
 
       - name: Install FFmpeg
@@ -363,7 +602,7 @@ jobs:
 
 
       # ==================================================
-      # 6. CREATE CAPTION FILES
+      # 7. CREATE CAPTIONS
       # ==================================================
 
       - name: Create scene text files
@@ -395,7 +634,10 @@ jobs:
               ).strip()
 
               if not text:
-                  text = f"Scene {i}"
+
+                  text = (
+                      f"Scene {i}"
+                  )
 
               wrapped_lines = []
 
@@ -409,9 +651,16 @@ jobs:
                   )
 
                   if lines:
-                      wrapped_lines.extend(lines)
+
+                      wrapped_lines.extend(
+                          lines
+                      )
+
                   else:
-                      wrapped_lines.append("")
+
+                      wrapped_lines.append(
+                          ""
+                      )
 
               with open(
                   f"scene_text/scene_{i}.txt",
@@ -420,7 +669,9 @@ jobs:
               ) as f:
 
                   f.write(
-                      "\n".join(wrapped_lines)
+                      "\n".join(
+                          wrapped_lines
+                      )
                   )
 
               print(
@@ -434,14 +685,13 @@ jobs:
 
 
       # ==================================================
-      # 7. CREATE FIVE VIDEO SCENES
+      # 8. CREATE FIVE VIDEO SCENES
       #
-      # 248 frames / 30 FPS
-      # = 8.266 seconds per scene
+      # 248 frames / 30fps
+      # ≈ 8.27 seconds each
       #
-      # 5 scenes with four 0.3 sec overlaps
-      # = approximately 40 seconds total
-      #
+      # After transitions:
+      # ≈ 40 seconds total
       # ==================================================
 
       - name: Create video scenes
@@ -477,7 +727,7 @@ jobs:
 
 
       # ==================================================
-      # 8. JOIN SCENES WITH SMOOTH TRANSITIONS
+      # 9. JOIN SCENES WITH TRANSITIONS
       # ==================================================
 
       - name: Join scenes with transitions
@@ -514,11 +764,10 @@ jobs:
 
 
       # ==================================================
-      # 9. GENERATE VOICE
+      # 10. GENERATE VOICE
       #
-      # Try Hugging Face first.
-      # If unavailable, use free local voice.
-      #
+      # AI voice first.
+      # Free local voice fallback.
       # ==================================================
 
       - name: Generate voice with fallback
@@ -561,9 +810,14 @@ jobs:
                   ).strip()
 
                   if text:
-                      scenes.append(text)
 
-              script = " ".join(scenes)
+                      scenes.append(
+                          text
+                      )
+
+              script = " ".join(
+                  scenes
+              )
 
           if not script:
 
@@ -574,10 +828,12 @@ jobs:
           voice_created = False
 
           # ------------------------------------------
-          # TRY HUGGING FACE VOICE
+          # TRY AI VOICE
           # ------------------------------------------
 
-          if os.environ.get("HF_TOKEN"):
+          if os.environ.get(
+              "HF_TOKEN"
+          ):
 
               try:
 
@@ -586,11 +842,13 @@ jobs:
                   )
 
                   print(
-                      "Trying AI voice generation..."
+                      "Trying AI voice..."
                   )
 
                   client = InferenceClient(
-                      api_key=os.environ["HF_TOKEN"]
+                      api_key=os.environ[
+                          "HF_TOKEN"
+                      ]
                   )
 
                   audio = client.text_to_speech(
@@ -605,7 +863,7 @@ jobs:
                   )
 
                   print(
-                      "AI voice created successfully."
+                      "AI voice created."
                   )
 
                   voice_created = True
@@ -613,7 +871,7 @@ jobs:
               except Exception as e:
 
                   print(
-                      "AI voice generation unavailable."
+                      "AI voice unavailable."
                   )
 
                   print(
@@ -622,14 +880,13 @@ jobs:
                   )
 
           # ------------------------------------------
-          # FREE LOCAL VOICE FALLBACK
+          # LOCAL FALLBACK
           # ------------------------------------------
 
           if not voice_created:
 
-              print("")
               print(
-                  "Using free local voice fallback..."
+                  "Using free local voice."
               )
 
               subprocess.run(
@@ -686,7 +943,7 @@ jobs:
 
 
       # ==================================================
-      # 10. CREATE 40-SECOND BACKGROUND MUSIC
+      # 11. CREATE BACKGROUND MUSIC
       # ==================================================
 
       - name: Create background music
@@ -720,20 +977,28 @@ jobs:
               wav.setsampwidth(2)
               wav.setframerate(sample_rate)
 
-              for n in range(total_samples):
+              for n in range(
+                  total_samples
+              ):
 
-                  t = n / sample_rate
+                  t = (
+                      n / sample_rate
+                  )
 
                   section = min(
                       int(t / 8),
                       4
                   )
 
-                  chord = chords[section]
+                  chord = chords[
+                      section
+                  ]
 
                   value = 0.0
 
-                  for index, freq in enumerate(chord):
+                  for index, freq in enumerate(
+                      chord
+                  ):
 
                       value += (
                           math.sin(
@@ -810,7 +1075,7 @@ jobs:
 
 
       # ==================================================
-      # 11. MIX VOICE + MUSIC
+      # 12. MIX VOICE + MUSIC
       # ==================================================
 
       - name: Mix voice and background music
@@ -873,7 +1138,7 @@ jobs:
 
 
       # ==================================================
-      # 12. CREATE THUMBNAIL
+      # 13. CREATE THUMBNAIL
       # ==================================================
 
       - name: Create thumbnail
@@ -893,7 +1158,7 @@ jobs:
 
 
       # ==================================================
-      # 13. CREATE YOUTUBE UPLOAD INFORMATION
+      # 14. CREATE YOUTUBE UPLOAD INFORMATION
       # ==================================================
 
       - name: Create upload information
@@ -938,6 +1203,7 @@ jobs:
           ).strip()
 
           if not title:
+
               title = topic
 
           title = re.sub(
@@ -947,6 +1213,7 @@ jobs:
           ).strip()
 
           if len(title) > 95:
+
               title = (
                   title[:92].rstrip()
                   + "..."
@@ -967,18 +1234,28 @@ jobs:
                   topic
               )
 
-              tags = ["#Shorts"]
+              tags = [
+                  "#Shorts"
+              ]
 
               for word in words[:4]:
 
                   if len(word) >= 3:
 
-                      tag = "#" + word.lower()
+                      tag = (
+                          "#"
+                          + word.lower()
+                      )
 
                       if tag not in tags:
-                          tags.append(tag)
 
-              hashtags = " ".join(tags)
+                          tags.append(
+                              tag
+                          )
+
+              hashtags = " ".join(
+                  tags
+              )
 
           if "#Shorts" not in description:
 
@@ -1061,7 +1338,7 @@ jobs:
 
 
       # ==================================================
-      # 14. CREATE README
+      # 15. CREATE README
       # ==================================================
 
       - name: Create package README
@@ -1104,7 +1381,7 @@ jobs:
 
 
       # ==================================================
-      # 15. ORGANIZE EVERYTHING INTO A DATED PACKAGE
+      # 16. CREATE DATED PACKAGE
       # ==================================================
 
       - name: Organize dated video package
@@ -1140,6 +1417,9 @@ jobs:
             output/README.txt \
             "output/$PACKAGE_NAME/README.txt"
 
+          FINGERPRINT=$(cat \
+            content/current_fingerprint.txt)
+
           cat > \
             "output/$PACKAGE_NAME/package_info.txt" \
             <<EOF
@@ -1157,6 +1437,9 @@ jobs:
 
           Created:
           $DATE $TIME
+
+          Content fingerprint:
+          $FINGERPRINT
 
           Video:
           final_ai_video.mp4
@@ -1176,14 +1459,233 @@ jobs:
 
           echo ""
           echo "Package successfully organized."
+
           echo ""
           echo "Contents:"
+
           ls -lh \
             "output/$PACKAGE_NAME"
 
 
       # ==================================================
-      # 16. UPLOAD ORGANIZED PACKAGE
+      # 17. SAVE CONTENT TO HISTORY
+      #
+      # This happens ONLY after the video has been
+      # successfully generated.
+      # ==================================================
+
+      - name: Save processed content history
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          HISTORY_FILE = (
+              "content_history.json"
+          )
+
+          fingerprint_file = (
+              "content/current_fingerprint.txt"
+          )
+
+          if not os.path.exists(
+              fingerprint_file
+          ):
+
+              raise Exception(
+                  "Fingerprint file missing."
+              )
+
+          fingerprint = open(
+              fingerprint_file,
+              "r",
+              encoding="utf-8"
+          ).read().strip()
+
+          if os.path.exists(
+              HISTORY_FILE
+          ):
+
+              try:
+
+                  with open(
+                      HISTORY_FILE,
+                      "r",
+                      encoding="utf-8"
+                  ) as f:
+
+                      history = json.load(f)
+
+              except Exception:
+
+                  history = []
+
+          else:
+
+              history = []
+
+          if not isinstance(
+              history,
+              list
+          ):
+
+              history = []
+
+          # Do not add the same fingerprint twice.
+          if fingerprint not in history:
+
+              history.append(
+                  fingerprint
+              )
+
+          # Keep the file manageable.
+          # The newest 500 processed contents
+          # are retained.
+          history = history[-500:]
+
+          with open(
+              HISTORY_FILE,
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              json.dump(
+                  history,
+                  f,
+                  indent=2
+              )
+
+          # Create a human-readable log as well.
+          os.makedirs(
+              "content",
+              exist_ok=True
+          )
+
+          log_file = (
+              "content/processing_log.json"
+          )
+
+          if os.path.exists(
+              log_file
+          ):
+
+              try:
+
+                  with open(
+                      log_file,
+                      "r",
+                      encoding="utf-8"
+                  ) as f:
+
+                      log = json.load(f)
+
+              except Exception:
+
+                  log = []
+
+          else:
+
+              log = []
+
+          if not isinstance(
+              log,
+              list
+          ):
+
+              log = []
+
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+
+              content = json.load(f)
+
+          log.append(
+              {
+                  "fingerprint": fingerprint,
+                  "topic": content.get(
+                      "TOPIC",
+                      ""
+                  ),
+                  "title": content.get(
+                      "TITLE",
+                      ""
+                  ),
+                  "created_at": datetime.now(
+                      timezone.utc
+                  ).isoformat(),
+                  "github_run": "${{ github.run_number }}"
+              }
+          )
+
+          log = log[-500:]
+
+          with open(
+              log_file,
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              json.dump(
+                  log,
+                  f,
+                  ensure_ascii=False,
+                  indent=2
+              )
+
+          print("")
+          print(
+              "Processed content saved."
+          )
+
+          print(
+              "History entries:",
+              len(history)
+          )
+          PY
+
+
+      # ==================================================
+      # 18. COMMIT CONTENT HISTORY TO GITHUB
+      # ==================================================
+
+      - name: Commit content history
+        run: |
+
+          git config user.name \
+            "AI Video Factory"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            content_history.json \
+            content/processing_log.json
+
+          if git diff --cached --quiet; then
+
+            echo "No history changes to commit."
+
+          else
+
+            git commit \
+              -m "Update AI video content history"
+
+            git push \
+              origin \
+              HEAD:${{ github.ref_name }}
+
+            echo ""
+            echo "Content history committed successfully."
+
+          fi
+
+
+      # ==================================================
+      # 19. UPLOAD FINAL ORGANIZED PACKAGE
       # ==================================================
 
       - name: Upload organized video package
