@@ -3,10 +3,6 @@ name: Build AI Video
 on:
   workflow_dispatch:
 
-permissions:
-  contents: read
-  actions: read
-
 jobs:
   build-video:
     runs-on: ubuntu-latest
@@ -85,31 +81,210 @@ jobs:
 
 
       # ==================================================
-      # DOWNLOAD THE FIVE EXISTING AI IMAGES
+      # INSTALL IMAGE GENERATION LIBRARIES
       # ==================================================
 
-      - name: Download existing AI images
-        uses: actions/download-artifact@v4
-        with:
-          name: ai-scene-images
-          path: images
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-          run-id: 33189844568
-
-      - name: Check AI images
+      - name: Install image tools
         run: |
-          echo "Checking downloaded images..."
+          python3 -m pip install --upgrade pip
+          pip install huggingface_hub pillow
 
-          ls -lh images/
 
-          test -f images/scene_1.png
-          test -f images/scene_2.png
-          test -f images/scene_3.png
-          test -f images/scene_4.png
-          test -f images/scene_5.png
+      # ==================================================
+      # TRY NEW AI IMAGES
+      #
+      # IF HUGGING FACE FAILS:
+      # USE EXISTING IMAGES FROM /images/
+      # ==================================================
 
-          echo "All five AI images are ready."
+      - name: Generate new images with fallback
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
+        run: |
+          python3 - <<'PY'
+          import os
+          import json
+          import time
+          import shutil
+
+          from PIL import Image
+          from huggingface_hub import InferenceClient
+
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+              content = json.load(f)
+
+          os.makedirs("images", exist_ok=True)
+
+          style = """
+          Photorealistic cinematic photograph,
+          captured with a professional digital cinema camera,
+          realistic natural lighting,
+          realistic textures and materials,
+          realistic depth of field,
+          realistic lens characteristics,
+          subtle cinematic film grain,
+          highly detailed real-world photography,
+          vertical 9:16 composition.
+
+          No illustration,
+          no cartoon,
+          no anime,
+          no 3D render,
+          no text,
+          no captions,
+          no logos,
+          no watermark.
+          """
+
+          hf_available = bool(os.environ.get("HF_TOKEN"))
+
+          if hf_available:
+              try:
+                  client = InferenceClient(
+                      api_key=os.environ["HF_TOKEN"]
+                  )
+                  print("Hugging Face image generation is available.")
+              except Exception as e:
+                  client = None
+                  print("Could not initialize Hugging Face.")
+                  print("Reason:", str(e))
+          else:
+              client = None
+              print("HF_TOKEN is not available.")
+              print("Using existing images.")
+
+          for i in range(1, 6):
+
+              output_file = f"images/scene_{i}.png"
+
+              scene = str(
+                  content.get(f"SCENE_{i}", "")
+              ).strip()
+
+              if not scene:
+                  scene = (
+                      f"Cinematic realistic environment "
+                      f"for scene {i}"
+                  )
+
+              new_image_created = False
+
+              # ------------------------------------------
+              # TRY NEW IMAGE
+              # ------------------------------------------
+
+              if client is not None:
+
+                  try:
+
+                      prompt = f"""
+                      {style}
+
+                      Visually represent this scene:
+
+                      {scene}
+                      """
+
+                      print("")
+                      print(
+                          f"Trying to generate NEW image "
+                          f"for scene {i}..."
+                      )
+
+                      image = client.text_to_image(
+                          prompt=prompt,
+                          model="black-forest-labs/FLUX.1-schnell"
+                      )
+
+                      # Validate image before replacing
+                      # the existing image.
+                      image.verify()
+
+                      # Re-open because verify() closes
+                      # the image internally.
+                      image = client.text_to_image(
+                          prompt=prompt,
+                          model="black-forest-labs/FLUX.1-schnell"
+                      )
+
+                      image.save(output_file)
+
+                      # Final validation
+                      with Image.open(output_file) as check:
+                          check.verify()
+
+                      print(
+                          f"NEW image created for scene {i}."
+                      )
+
+                      new_image_created = True
+
+                      time.sleep(2)
+
+                  except Exception as e:
+
+                      print("")
+                      print(
+                          f"NEW image generation failed "
+                          f"for scene {i}."
+                      )
+                      print(
+                          "Reason:",
+                          str(e)
+                      )
+                      print(
+                          "Falling back to existing image..."
+                      )
+
+              # ------------------------------------------
+              # FALLBACK TO EXISTING IMAGE
+              # ------------------------------------------
+
+              if not new_image_created:
+
+                  if os.path.isfile(output_file):
+
+                      try:
+
+                          with Image.open(output_file) as check:
+                              check.verify()
+
+                          print(
+                              f"Using existing image "
+                              f"for scene {i}."
+                          )
+
+                      except Exception as e:
+
+                          raise Exception(
+                              f"Existing image for scene {i} "
+                              f"is invalid: {e}"
+                          )
+
+                  else:
+
+                      raise Exception(
+                          f"No new image could be generated "
+                          f"and no existing image exists for "
+                          f"scene {i}."
+                      )
+
+          print("")
+          print("====================================")
+          print("IMAGE STAGE COMPLETED")
+          print("====================================")
+          print("")
+
+          for i in range(1, 6):
+              print(
+                  f"images/scene_{i}.png"
+              )
+          PY
 
 
       # ==================================================
@@ -162,6 +337,7 @@ jobs:
 
       # ==================================================
       # CREATE FIVE 5-SECOND VIDEO SCENES
+      # TOTAL = 25 SECONDS
       # ==================================================
 
       - name: Create video scenes
@@ -190,7 +366,8 @@ jobs:
 
 
       # ==================================================
-      # JOIN FIVE SCENES = 25 SECONDS
+      # JOIN FIVE SCENES
+      # TOTAL = 25 SECONDS
       # ==================================================
 
       - name: Join scenes
@@ -214,13 +391,17 @@ jobs:
 
       # ==================================================
       # GENERATE AI VOICE
+      #
+      # IF HUGGING FACE FAILS:
+      # USE FREE LOCAL VOICE
       # ==================================================
 
-      - name: Generate AI voice
+      - name: Generate voice with fallback
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
         run: |
+
           python3 -m pip install --upgrade pip
           pip install huggingface_hub
 
@@ -228,8 +409,6 @@ jobs:
           import os
           import json
           from pathlib import Path
-
-          from huggingface_hub import InferenceClient
 
           with open(
               "content/ready_content.json",
@@ -262,45 +441,152 @@ jobs:
                   "No SCRIPT or scene text found."
               )
 
-          print("Generating AI voice...")
+          voice_created = False
 
-          client = InferenceClient(
-              api_key=os.environ["HF_TOKEN"]
-          )
+          # ------------------------------------------
+          # TRY HUGGING FACE AI VOICE
+          # ------------------------------------------
 
-          audio = client.text_to_speech(
-              text=script,
-              model="hexgrad/Kokoro-82M"
-          )
+          if os.environ.get("HF_TOKEN"):
 
-          Path(
-              "output/narration.flac"
-          ).write_bytes(audio)
+              try:
 
-          print("AI voice generated successfully.")
+                  from huggingface_hub import InferenceClient
+
+                  print(
+                      "Trying Hugging Face AI voice..."
+                  )
+
+                  client = InferenceClient(
+                      api_key=os.environ["HF_TOKEN"]
+                  )
+
+                  audio = client.text_to_speech(
+                      text=script,
+                      model="hexgrad/Kokoro-82M"
+                  )
+
+                  Path(
+                      "output/narration.flac"
+                  ).write_bytes(audio)
+
+                  print(
+                      "Hugging Face AI voice created."
+                  )
+
+                  voice_created = True
+
+              except Exception as e:
+
+                  print(
+                      "Hugging Face voice failed."
+                  )
+                  print(
+                      "Reason:",
+                      str(e)
+                  )
+                  print(
+                      "Falling back to local voice."
+                  )
+
+          # ------------------------------------------
+          # FREE LOCAL VOICE FALLBACK
+          # ------------------------------------------
+
+          if not voice_created:
+
+              print(
+                  "Installing free local speech engine..."
+              )
+
+              os.system(
+                  "sudo apt-get update -qq"
+              )
+
+              os.system(
+                  "sudo apt-get install -y espeak-ng"
+              )
+
+              Path(
+                  "output/narration.txt"
+              ).write_text(
+                  script,
+                  encoding="utf-8"
+              )
+
+              result = os.system(
+                  "espeak-ng "
+                  "-v en-us "
+                  "-s 145 "
+                  "-p 45 "
+                  "-a 150 "
+                  "-f output/narration.txt "
+                  "-w output/narration.wav"
+              )
+
+              if result != 0:
+                  raise Exception(
+                      "Local voice generation failed."
+                  )
+
+              print(
+                  "Free local voice created."
+              )
+
+          print("")
+          print("VOICE STAGE COMPLETED.")
+          PY
 
 
       # ==================================================
-      # ADD AI VOICE TO 25-SECOND VIDEO
+      # ADD VOICE TO 25-SECOND VIDEO
       # ==================================================
 
-      - name: Add AI voice to video
+      - name: Add voice to video
         run: |
 
-          ffmpeg \
-            -y \
-            -i output/video_without_voice.mp4 \
-            -i output/narration.flac \
-            -filter_complex "[1:a]apad[audio]" \
-            -map 0:v \
-            -map "[audio]" \
-            -t 25 \
-            -c:v copy \
-            -c:a aac \
-            -b:a 128k \
-            output/final_ai_video.mp4
+          if [ -f output/narration.flac ]; then
 
-          echo "Final 25-second video with AI voice created."
+            echo "Using AI voice."
+
+            ffmpeg \
+              -y \
+              -i output/video_without_voice.mp4 \
+              -i output/narration.flac \
+              -filter_complex "[1:a]apad[audio]" \
+              -map 0:v \
+              -map "[audio]" \
+              -t 25 \
+              -c:v copy \
+              -c:a aac \
+              -b:a 128k \
+              output/final_ai_video.mp4
+
+          elif [ -f output/narration.wav ]; then
+
+            echo "Using free local voice."
+
+            ffmpeg \
+              -y \
+              -i output/video_without_voice.mp4 \
+              -i output/narration.wav \
+              -filter_complex "[1:a]apad[audio]" \
+              -map 0:v \
+              -map "[audio]" \
+              -t 25 \
+              -c:v copy \
+              -c:a aac \
+              -b:a 128k \
+              output/final_ai_video.mp4
+
+          else
+
+            echo "No voice file found."
+            exit 1
+
+          fi
+
+          echo "Final 25-second video created."
 
 
       # ==================================================
