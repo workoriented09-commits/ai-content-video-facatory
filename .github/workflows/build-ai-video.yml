@@ -10,7 +10,7 @@ jobs:
     steps:
 
       # ==================================================
-      # CHECKOUT
+      # CHECKOUT REPOSITORY
       # ==================================================
 
       - name: Checkout repository
@@ -142,26 +142,19 @@ jobs:
           client = None
 
           if os.environ.get("HF_TOKEN"):
-
               try:
                   client = InferenceClient(
                       api_key=os.environ["HF_TOKEN"]
                   )
-
                   print(
                       "Hugging Face image generation is available."
                   )
-
               except Exception as e:
-
                   print(
                       "Could not initialize Hugging Face."
                   )
-
                   print("Reason:", str(e))
-
           else:
-
               print("HF_TOKEN not available.")
               print("Existing images will be used.")
 
@@ -203,8 +196,11 @@ jobs:
 
                       print(
                           f"Existing image for scene {i} "
-                          f"is invalid: {e}"
+                          f"is invalid."
                       )
+
+                      print("Reason:", str(e))
+
 
               # ------------------------------------------
               # TRY NEW IMAGE
@@ -220,7 +216,6 @@ jobs:
                   ).strip()
 
                   if not scene:
-
                       scene = (
                           f"Cinematic realistic environment "
                           f"for scene {i}"
@@ -276,6 +271,7 @@ jobs:
 
                       if temp_file.exists():
                           temp_file.unlink()
+
 
               # ------------------------------------------
               # FINAL CHECK
@@ -361,18 +357,21 @@ jobs:
                   "w",
                   encoding="utf-8"
               ) as f:
-
                   f.write(
                       "\n".join(lines)
                   )
 
-          print("Caption files created.")
+              print(
+                  f"Caption prepared for scene {i}."
+              )
+
+          print("All caption files created.")
           PY
 
 
       # ==================================================
       # CREATE FIVE VIDEO SCENES
-      # 5 SECONDS EACH = 25 SECONDS
+      # 5 SECONDS EACH
       # ==================================================
 
       - name: Create video scenes
@@ -404,10 +403,12 @@ jobs:
 
 
       # ==================================================
-      # JOIN SCENES
+      # JOIN SCENES WITH SMOOTH CROSSFADE
+      #
+      # 0.3 SECOND TRANSITION
       # ==================================================
 
-      - name: Join scenes
+      - name: Join scenes with transitions
         run: |
           ffmpeg \
             -y \
@@ -422,7 +423,10 @@ jobs:
           [2:v]setpts=PTS-STARTPTS[v2];\
           [3:v]setpts=PTS-STARTPTS[v3];\
           [4:v]setpts=PTS-STARTPTS[v4];\
-          [v0][v1][v2][v3][v4]concat=n=5:v=1:a=0[outv]" \
+          [v0][v1]xfade=transition=fade:duration=0.3:offset=4.7[v01];\
+          [v01][v2]xfade=transition=fade:duration=0.3:offset=9.4[v012];\
+          [v012][v3]xfade=transition=fade:duration=0.3:offset=14.1[v0123];\
+          [v0123][v4]xfade=transition=fade:duration=0.3:offset=18.8[outv]" \
             -map "[outv]" \
             -an \
             -c:v libx264 \
@@ -515,7 +519,9 @@ jobs:
 
                   Path(
                       "output/narration.flac"
-                  ).write_bytes(audio)
+                  ).write_bytes(
+                      audio
+                  )
 
                   print(
                       "AI voice created."
@@ -594,13 +600,10 @@ jobs:
               print(
                   "Free local voice created."
               )
-          PY
 
 
       # ==================================================
-      # CREATE CINEMATIC BACKGROUND MUSIC
-      #
-      # 25 SECOND ORIGINAL AMBIENT MUSIC
+      # CREATE ORIGINAL CINEMATIC MUSIC
       # ==================================================
 
       - name: Create background music
@@ -612,9 +615,7 @@ jobs:
 
           sample_rate = 44100
           duration = 25
-          channels = 2
 
-          # Soft cinematic chord progression.
           chords = [
               [110.00, 164.81, 220.00],
               [98.00, 146.83, 196.00],
@@ -632,7 +633,7 @@ jobs:
               "w"
           ) as wav:
 
-              wav.setnchannels(channels)
+              wav.setnchannels(2)
               wav.setsampwidth(2)
               wav.setframerate(sample_rate)
 
@@ -651,19 +652,19 @@ jobs:
 
                   for index, freq in enumerate(chord):
 
-                      phase = (
-                          2
-                          * math.pi
-                          * freq
-                          * t
-                      )
-
                       value += (
-                          math.sin(phase)
-                          * (0.16 - index * 0.025)
+                          math.sin(
+                              2
+                              * math.pi
+                              * freq
+                              * t
+                          )
+                          * (
+                              0.16
+                              - index * 0.025
+                          )
                       )
 
-                  # Very slow atmospheric movement
                   movement = (
                       0.65
                       + 0.35
@@ -675,7 +676,6 @@ jobs:
                       )
                   )
 
-                  # Gentle fade in/out
                   fade_in = min(
                       t / 2.0,
                       1.0
@@ -721,16 +721,13 @@ jobs:
                   )
 
           print(
-              "25-second cinematic background music created."
+              "25-second background music created."
           )
           PY
 
 
       # ==================================================
       # MIX VOICE + MUSIC
-      #
-      # VOICE = MAIN
-      # MUSIC = QUIET BACKGROUND
       # ==================================================
 
       - name: Mix voice and background music
@@ -790,10 +787,7 @@ jobs:
 
           fi
 
-          echo ""
-          echo "===================================="
-          echo "FINAL VIDEO WITH MUSIC CREATED"
-          echo "===================================="
+          echo "Final video with transitions, voice and music created."
 
 
       # ==================================================
