@@ -142,19 +142,27 @@ jobs:
           client = None
 
           if os.environ.get("HF_TOKEN"):
+
               try:
+
                   client = InferenceClient(
                       api_key=os.environ["HF_TOKEN"]
                   )
+
                   print(
-                      "Hugging Face image generation is available."
+                      "Hugging Face image generation available."
                   )
+
               except Exception as e:
+
                   print(
                       "Could not initialize Hugging Face."
                   )
+
                   print("Reason:", str(e))
+
           else:
+
               print("HF_TOKEN not available.")
               print("Existing images will be used.")
 
@@ -216,6 +224,7 @@ jobs:
                   ).strip()
 
                   if not scene:
+
                       scene = (
                           f"Cinematic realistic environment "
                           f"for scene {i}"
@@ -357,6 +366,7 @@ jobs:
                   "w",
                   encoding="utf-8"
               ) as f:
+
                   f.write(
                       "\n".join(lines)
                   )
@@ -371,7 +381,8 @@ jobs:
 
       # ==================================================
       # CREATE FIVE VIDEO SCENES
-      # 5 SECONDS EACH
+      #
+      # 8.25 SECONDS EACH
       # ==================================================
 
       - name: Create video scenes
@@ -387,8 +398,8 @@ jobs:
               -y \
               -loop 1 \
               -i "images/scene_${i}.png" \
-              -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.0005,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=150:s=1080x1920:fps=30,drawtext=textfile=scene_text/scene_${i}.txt:fontcolor=white:fontsize=34:borderw=3:bordercolor=black:line_spacing=12:x=(w-text_w)/2:y=h-text_h-180" \
-              -frames:v 150 \
+              -vf "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.0005,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=248:s=1080x1920:fps=30,drawtext=textfile=scene_text/scene_${i}.txt:fontcolor=white:fontsize=34:borderw=3:bordercolor=black:line_spacing=12:x=(w-text_w)/2:y=h-text_h-180" \
+              -frames:v 248 \
               -an \
               -c:v libx264 \
               -preset veryfast \
@@ -399,13 +410,13 @@ jobs:
 
           done
 
-          echo "Five scenes created."
+          echo "Five 8.25-second scenes created."
 
 
       # ==================================================
       # JOIN SCENES WITH SMOOTH CROSSFADE
       #
-      # 0.3 SECOND TRANSITION
+      # FINAL ≈ 40 SECONDS
       # ==================================================
 
       - name: Join scenes with transitions
@@ -423,10 +434,10 @@ jobs:
           [2:v]setpts=PTS-STARTPTS[v2];\
           [3:v]setpts=PTS-STARTPTS[v3];\
           [4:v]setpts=PTS-STARTPTS[v4];\
-          [v0][v1]xfade=transition=fade:duration=0.3:offset=4.7[v01];\
-          [v01][v2]xfade=transition=fade:duration=0.3:offset=9.4[v012];\
-          [v012][v3]xfade=transition=fade:duration=0.3:offset=14.1[v0123];\
-          [v0123][v4]xfade=transition=fade:duration=0.3:offset=18.8[outv]" \
+          [v0][v1]xfade=transition=fade:duration=0.3:offset=7.95[v01];\
+          [v01][v2]xfade=transition=fade:duration=0.3:offset=15.90[v012];\
+          [v012][v3]xfade=transition=fade:duration=0.3:offset=23.85[v0123];\
+          [v0123][v4]xfade=transition=fade:duration=0.3:offset=31.80[outv]" \
             -map "[outv]" \
             -an \
             -c:v libx264 \
@@ -435,6 +446,8 @@ jobs:
             -r 30 \
             -movflags +faststart \
             output/video_without_voice.mp4
+
+          echo "Scene transitions completed."
 
 
       # ==================================================
@@ -486,6 +499,7 @@ jobs:
               script = " ".join(scenes)
 
           if not script:
+
               raise Exception(
                   "No SCRIPT or scene text found."
               )
@@ -504,9 +518,7 @@ jobs:
                       InferenceClient
                   )
 
-                  print(
-                      "Trying AI voice..."
-                  )
+                  print("Trying AI voice...")
 
                   client = InferenceClient(
                       api_key=os.environ["HF_TOKEN"]
@@ -523,9 +535,7 @@ jobs:
                       audio
                   )
 
-                  print(
-                      "AI voice created."
-                  )
+                  print("AI voice created.")
 
                   voice_created = True
 
@@ -539,6 +549,7 @@ jobs:
                       "Reason:",
                       str(e)
                   )
+
 
           # ------------------------------------------
           # FREE LOCAL VOICE
@@ -603,7 +614,7 @@ jobs:
 
 
       # ==================================================
-      # CREATE ORIGINAL CINEMATIC MUSIC
+      # CREATE 40-SECOND ORIGINAL MUSIC
       # ==================================================
 
       - name: Create background music
@@ -614,7 +625,7 @@ jobs:
           import struct
 
           sample_rate = 44100
-          duration = 25
+          duration = 40
 
           chords = [
               [110.00, 164.81, 220.00],
@@ -642,7 +653,7 @@ jobs:
                   t = n / sample_rate
 
                   section = min(
-                      int(t / 5),
+                      int(t / 8),
                       4
                   )
 
@@ -721,7 +732,7 @@ jobs:
                   )
 
           print(
-              "25-second background music created."
+              "40-second background music created."
           )
           PY
 
@@ -745,10 +756,10 @@ jobs:
               -filter_complex "\
           [1:a]apad,volume=1.0[voice];\
           [2:a]volume=0.12[music];\
-          [voice][music]amix=inputs=2:duration=longest:dropout_transition=2[audio]" \
+          [voice][music]amix=inputs=2:duration=first:dropout_transition=2[audio]" \
               -map 0:v \
               -map "[audio]" \
-              -t 25 \
+              -t 40 \
               -c:v copy \
               -c:a aac \
               -b:a 128k \
@@ -768,10 +779,10 @@ jobs:
               -filter_complex "\
           [1:a]apad,volume=1.0[voice];\
           [2:a]volume=0.12[music];\
-          [voice][music]amix=inputs=2:duration=longest:dropout_transition=2[audio]" \
+          [voice][music]amix=inputs=2:duration=first:dropout_transition=2[audio]" \
               -map 0:v \
               -map "[audio]" \
-              -t 25 \
+              -t 40 \
               -c:v copy \
               -c:a aac \
               -b:a 128k \
@@ -787,15 +798,270 @@ jobs:
 
           fi
 
-          echo "Final video with transitions, voice and music created."
+          echo "Final 40-second video created."
 
 
       # ==================================================
-      # UPLOAD FINAL VIDEO
+      # CREATE THUMBNAIL
       # ==================================================
 
-      - name: Upload final video
+      - name: Create thumbnail
+        run: |
+
+          echo "Creating YouTube thumbnail..."
+
+          ffmpeg \
+            -y \
+            -i images/scene_1.png \
+            -vf "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720" \
+            -frames:v 1 \
+            -q:v 2 \
+            output/thumbnail.jpg
+
+          echo "Thumbnail created."
+
+
+      # ==================================================
+      # CREATE UPLOAD INFORMATION
+      # ==================================================
+
+      - name: Create upload information
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+
+          with open(
+              "content/ready_content.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+              content = json.load(f)
+
+          topic = str(
+              content.get(
+                  "TOPIC",
+                  "AI Short"
+              )
+          ).strip()
+
+          title = str(
+              content.get(
+                  "TITLE",
+                  ""
+              )
+          ).strip()
+
+          description = str(
+              content.get(
+                  "DESCRIPTION",
+                  ""
+              )
+          ).strip()
+
+          hashtags = str(
+              content.get(
+                  "HASHTAGS",
+                  ""
+              )
+          ).strip()
+
+          # ------------------------------------------
+          # TITLE FALLBACK
+          # ------------------------------------------
+
+          if not title:
+              title = topic
+
+          title = re.sub(
+              r"\s+",
+              " ",
+              title
+          ).strip()
+
+          if len(title) > 95:
+              title = (
+                  title[:92].rstrip()
+                  + "..."
+              )
+
+
+          # ------------------------------------------
+          # DESCRIPTION FALLBACK
+          # ------------------------------------------
+
+          if not description:
+
+              description = (
+                  f"{topic}\n\n"
+                  "Watch till the end and "
+                  "share your thoughts.\n\n"
+                  "#Shorts"
+              )
+
+
+          # ------------------------------------------
+          # HASHTAGS FALLBACK
+          # ------------------------------------------
+
+          if not hashtags:
+
+              words = re.findall(
+                  r"[A-Za-z0-9]+",
+                  topic
+              )
+
+              clean_words = []
+
+              for word in words:
+
+                  if len(word) >= 3:
+                      clean_words.append(
+                          word.lower()
+                      )
+
+              tags = ["#Shorts"]
+
+              for word in clean_words[:4]:
+
+                  tag = "#" + word
+
+                  if tag not in tags:
+                      tags.append(tag)
+
+              hashtags = " ".join(tags)
+
+
+          # ------------------------------------------
+          # ADD HASHTAGS
+          # ------------------------------------------
+
+          if "#Shorts" not in description:
+
+              description = (
+                  description.rstrip()
+                  + "\n\n"
+                  + hashtags
+              )
+
+
+          # ------------------------------------------
+          # SAVE UPLOAD INFORMATION
+          # ------------------------------------------
+
+          with open(
+              "output/upload_info.txt",
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              f.write(
+                  "YOUTUBE SHORT UPLOAD INFORMATION\n"
+              )
+
+              f.write(
+                  "================================\n\n"
+              )
+
+              f.write(
+                  "TITLE:\n"
+              )
+
+              f.write(
+                  title
+                  + "\n\n"
+              )
+
+              f.write(
+                  "DESCRIPTION:\n"
+              )
+
+              f.write(
+                  description
+                  + "\n\n"
+              )
+
+              f.write(
+                  "HASHTAGS:\n"
+              )
+
+              f.write(
+                  hashtags
+                  + "\n\n"
+              )
+
+              f.write(
+                  "VIDEO:\n"
+              )
+
+              f.write(
+                  "final_ai_video.mp4\n\n"
+              )
+
+              f.write(
+                  "THUMBNAIL:\n"
+              )
+
+              f.write(
+                  "thumbnail.jpg\n"
+              )
+
+
+          print("Upload information created.")
+
+          print("")
+          print("TITLE:")
+          print(title)
+
+          print("")
+          print("HASHTAGS:")
+          print(hashtags)
+          PY
+
+
+      # ==================================================
+      # CREATE PACKAGE README
+      # ==================================================
+
+      - name: Create package manifest
+        run: |
+          cat > output/README.txt <<'EOF'
+          AI VIDEO PACKAGE
+          =================
+
+          final_ai_video.mp4
+          The finished approximately 40-second video.
+
+          thumbnail.jpg
+          Thumbnail image for the video.
+
+          upload_info.txt
+          Suggested YouTube title, description and hashtags.
+
+          The video contains:
+          - Five cinematic scenes
+          - Animated camera movement
+          - Captions
+          - Voice narration
+          - Background music
+          - Smooth scene transitions
+
+          Generated by the AI Content Factory workflow.
+          EOF
+
+          echo "Package manifest created."
+
+
+      # ==================================================
+      # UPLOAD EVERYTHING
+      # ==================================================
+
+      - name: Upload final YouTube package
         uses: actions/upload-artifact@v4
         with:
-          name: final-ai-video
-          path: output/final_ai_video.mp4
+          name: youtube-video-package-40s
+          path: |
+            output/final_ai_video.mp4
+            output/thumbnail.jpg
+            output/upload_info.txt
+            output/README.txt
