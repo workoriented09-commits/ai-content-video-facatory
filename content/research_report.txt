@@ -1,0 +1,77 @@
+AI CONTENT RESEARCH
+===================
+
+SELECTED TOPIC:
+Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth
+
+SCORE: 86/100
+
+SOURCE:
+https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5
+
+TOP 10 CANDIDATES:
+
+1. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+2. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
+3. 82/100 - KAIST develops smartphone-based technology to detect hidden cameras - EurekAlert!
+4. 82/100 - Scientists tracked 4,500 animals and found a surprising human effect - Science Daily
+5. 82/100 - NASA’s new space telescope will reveal the universe like never before - Science News
+6. 82/100 - How to Check Your Search History on iPhone: A Practical Guide 2026 {5ueuvwr} - planetario.buenosaires.gob.ar
+7. 82/100 - Novo Nordisk Selects AWS as Strategic AI Partner for Drug Discovery - The Healthcare Technology Report.
+8. 82/100 - The future of discovery: Keeping it fair for creators and partners - blog.google
+9. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
+10. 81/100 - After failure of private rescue mission, NASA's Swift space telescope will crash back to Earth. But when and where? - Space
+
+FINAL VIDEO BRIEF:
+
+{
+  "created_at": "2026-08-30T07:59:58.628399+00:00",
+  "topic": "Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth",
+  "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5",
+  "research_score": 86,
+  "video_length": "40 seconds",
+  "format": "vertical 9:16",
+  "audience": "General worldwide audience",
+  "style": "Fast, cinematic, intriguing and easy to understand",
+  "goal": "Maximize viewer curiosity and retention",
+  "hook": "Start immediately with the most surprising or curious aspect of the topic. Do not introduce the channel or waste time.",
+  "story_structure": [
+    {
+      "time": "0-3 seconds",
+      "purpose": "Strong curiosity hook"
+    },
+    {
+      "time": "3-10 seconds",
+      "purpose": "Explain what the viewer is seeing"
+    },
+    {
+      "time": "10-20 seconds",
+      "purpose": "Reveal the main information"
+    },
+    {
+      "time": "20-32 seconds",
+      "purpose": "Deliver the strongest surprising detail"
+    },
+    {
+      "time": "32-40 seconds",
+      "purpose": "Memorable conclusion"
+    }
+  ],
+  "visual_direction": "Create five visually distinct photorealistic cinematic scenes. Each scene should represent a different part of the story. Use vertical 9:16 composition, realistic lighting, realistic textures and strong visual variety.",
+  "narration": "Write concise narration suitable for approximately 40 seconds. Use short, natural sentences. Every sentence should add useful information or increase curiosity.",
+  "caption_style": "Short readable captions. Keep text inside safe screen margins. Never display scene labels such as Scene 1 or Scene 2.",
+  "title_strategy": "Create a short curiosity-driven YouTube Shorts title without misleading the viewer.",
+  "thumbnail_strategy": "Use a strong visual moment from the topic. Keep the thumbnail simple and immediately understandable.",
+  "hashtags": [
+    "#Shorts"
+  ],
+  "rules": [
+    "No fake facts",
+    "No unsupported claims",
+    "No long introduction",
+    "No repeated scene descriptions",
+    "No Scene 1/Scene 2 labels",
+    "No text burned into generated images",
+    "Keep the story understandable without sound"
+  ]
+}
