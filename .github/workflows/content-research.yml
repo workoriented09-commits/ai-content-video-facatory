@@ -1,0 +1,924 @@
+name: AI Content Research
+
+on:
+  workflow_dispatch:
+
+  # Every day at 8:00 AM IST
+  # 8:00 AM IST = 2:30 AM UTC
+  schedule:
+    - cron: "30 2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-content-research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ================================================
+      # CHECKOUT
+      # ================================================
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+
+      # ================================================
+      # RESEARCH AND SELECT BEST TOPIC
+      # ================================================
+
+      - name: Research and create final brief
+        run: |
+
+          python3 - <<'PY'
+
+          import json
+          import re
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+
+          # ================================================
+          # NEWS SOURCES
+          # ================================================
+
+          SOURCES = [
+              "https://news.google.com/rss?hl=en-IN&gl=IN&ceid=IN:en",
+
+              "https://news.google.com/rss/search?q=technology&hl=en-IN&gl=IN&ceid=IN:en",
+
+              "https://news.google.com/rss/search?q=AI+artificial+intelligence&hl=en-IN&gl=IN&ceid=IN:en",
+
+              "https://news.google.com/rss/search?q=science&hl=en-IN&gl=IN&ceid=IN:en",
+
+              "https://news.google.com/rss/search?q=space&hl=en-IN&gl=IN&ceid=IN:en",
+
+              "https://news.google.com/rss/search?q=history&hl=en-IN&gl=IN&ceid=IN:en",
+
+              "https://news.google.com/rss/search?q=mystery&hl=en-IN&gl=IN&ceid=IN:en",
+
+              "https://news.google.com/rss/search?q=discovery&hl=en-IN&gl=IN&ceid=IN:en"
+          ]
+
+
+          OUTPUT_DIR = Path("content")
+
+          OUTPUT_DIR.mkdir(
+              parents=True,
+              exist_ok=True
+          )
+
+
+          # ================================================
+          # LOAD OLD CONTENT
+          # ================================================
+
+          used_titles = set()
+
+          history_file = Path(
+              "content_history.json"
+          )
+
+          if history_file.exists():
+
+              try:
+
+                  history = json.loads(
+                      history_file.read_text(
+                          encoding="utf-8"
+                      )
+                  )
+
+                  if not isinstance(
+                      history,
+                      list
+                  ):
+                      history = []
+
+              except Exception:
+
+                  history = []
+
+          else:
+
+              history = []
+
+
+          log_file = Path(
+              "content/processing_log.json"
+          )
+
+          if log_file.exists():
+
+              try:
+
+                  logs = json.loads(
+                      log_file.read_text(
+                          encoding="utf-8"
+                      )
+                  )
+
+                  if isinstance(
+                      logs,
+                      list
+                  ):
+
+                      for item in logs:
+
+                          title = str(
+                              item.get(
+                                  "title",
+                                  ""
+                              )
+                          ).strip().lower()
+
+                          topic = str(
+                              item.get(
+                                  "topic",
+                                  ""
+                              )
+                          ).strip().lower()
+
+                          if title:
+                              used_titles.add(title)
+
+                          if topic:
+                              used_titles.add(topic)
+
+              except Exception:
+
+                  pass
+
+
+          # ================================================
+          # CLEAN TEXT
+          # ================================================
+
+          def clean(text):
+
+              if not text:
+                  return ""
+
+              text = re.sub(
+                  r"<[^>]+>",
+                  " ",
+                  text
+              )
+
+              text = (
+                  text
+                  .replace("&amp;", "&")
+                  .replace("&quot;", '"')
+                  .replace("&#39;", "'")
+                  .replace("&apos;", "'")
+              )
+
+              text = re.sub(
+                  r"\s+",
+                  " ",
+                  text
+              )
+
+              return text.strip()
+
+
+          # ================================================
+          # COLLECT NEWS
+          # ================================================
+
+          candidates = []
+
+
+          for url in SOURCES:
+
+              print(
+                  "Reading:",
+                  url
+              )
+
+              try:
+
+                  request = urllib.request.Request(
+                      url,
+                      headers={
+                          "User-Agent":
+                              "Mozilla/5.0"
+                      }
+                  )
+
+                  with urllib.request.urlopen(
+                      request,
+                      timeout=20
+                  ) as response:
+
+                      data = response.read()
+
+                  root = ET.fromstring(
+                      data
+                  )
+
+                  for item in root.findall(
+                      ".//item"
+                  ):
+
+                      title_node = item.find(
+                          "title"
+                      )
+
+                      link_node = item.find(
+                          "link"
+                      )
+
+                      date_node = item.find(
+                          "pubDate"
+                      )
+
+                      if title_node is None:
+                          continue
+
+                      title = clean(
+                          title_node.text or ""
+                      )
+
+                      if not title:
+                          continue
+
+                      link = ""
+
+                      if link_node is not None:
+
+                          link = (
+                              link_node.text
+                              or ""
+                          ).strip()
+
+                      published = ""
+
+                      if date_node is not None:
+
+                          published = (
+                              date_node.text
+                              or ""
+                          ).strip()
+
+                      candidates.append(
+                          {
+                              "title": title,
+                              "link": link,
+                              "published": published
+                          }
+                      )
+
+              except Exception as error:
+
+                  print(
+                      "Source failed:",
+                      error
+                  )
+
+
+          print(
+              "Collected:",
+              len(candidates),
+              "articles"
+          )
+
+
+          # ================================================
+          # REMOVE EXACT DUPLICATES
+          # ================================================
+
+          unique = {}
+
+          for item in candidates:
+
+              key = re.sub(
+                  r"[^a-z0-9]+",
+                  " ",
+                  item["title"].lower()
+              ).strip()
+
+              if key:
+                  unique[key] = item
+
+
+          candidates = list(
+              unique.values()
+          )
+
+
+          # ================================================
+          # SCORE TOPICS
+          # ================================================
+
+          curiosity_words = [
+              "why",
+              "how",
+              "secret",
+              "hidden",
+              "mystery",
+              "unknown",
+              "revealed",
+              "strange",
+              "shocking",
+              "discovered",
+              "discovery",
+              "truth",
+              "surprising",
+              "never",
+              "actually",
+              "what happens"
+          ]
+
+
+          interest_words = [
+              "ai",
+              "artificial intelligence",
+              "technology",
+              "science",
+              "space",
+              "nasa",
+              "robot",
+              "future",
+              "phone",
+              "computer",
+              "internet",
+              "earth",
+              "ocean",
+              "history",
+              "ancient",
+              "discovery"
+          ]
+
+
+          visual_words = [
+              "space",
+              "planet",
+              "galaxy",
+              "ocean",
+              "animal",
+              "robot",
+              "ai",
+              "technology",
+              "ancient",
+              "city",
+              "volcano",
+              "storm",
+              "science",
+              "future"
+          ]
+
+
+          low_value_words = [
+              "obituary",
+              "funeral",
+              "death toll",
+              "stock market",
+              "earnings",
+              "share price",
+              "election result"
+          ]
+
+
+          scored = []
+
+
+          for item in candidates:
+
+              title = item["title"]
+
+              low = title.lower()
+
+              score = 50
+
+
+              curiosity = sum(
+                  1
+                  for word in curiosity_words
+                  if word in low
+              )
+
+              interest = sum(
+                  1
+                  for word in interest_words
+                  if word in low
+              )
+
+              visual = sum(
+                  1
+                  for word in visual_words
+                  if word in low
+              )
+
+              negative = sum(
+                  1
+                  for word in low_value_words
+                  if word in low
+              )
+
+
+              score += min(
+                  curiosity * 6,
+                  18
+              )
+
+              score += min(
+                  interest * 4,
+                  16
+              )
+
+              score += min(
+                  visual * 4,
+                  12
+              )
+
+              score -= min(
+                  negative * 12,
+                  24
+              )
+
+
+              word_count = len(
+                  title.split()
+              )
+
+
+              if 5 <= word_count <= 16:
+
+                  score += 6
+
+              elif word_count > 24:
+
+                  score -= 6
+
+
+              if "?" in title:
+
+                  score += 7
+
+
+              # ============================================
+              # DUPLICATE PROTECTION
+              # ============================================
+
+              normalized_title = re.sub(
+                  r"[^a-z0-9 ]",
+                  "",
+                  low
+              )
+
+              duplicate = False
+
+              for old in used_titles:
+
+                  normalized_old = re.sub(
+                      r"[^a-z0-9 ]",
+                      "",
+                      old
+                  )
+
+                  if (
+                      normalized_title
+                      == normalized_old
+                  ):
+
+                      duplicate = True
+                      break
+
+
+              if duplicate:
+
+                  score -= 100
+
+
+              score = max(
+                  0,
+                  min(
+                      100,
+                      score
+                  )
+              )
+
+
+              scored.append(
+                  {
+                      **item,
+                      "score": score
+                  }
+              )
+
+
+          # ================================================
+          # SORT
+          # ================================================
+
+          scored.sort(
+              key=lambda x: x["score"],
+              reverse=True
+          )
+
+
+          usable = [
+              item
+              for item in scored
+              if item["score"] >= 55
+          ]
+
+
+          if not usable:
+
+              raise Exception(
+                  "No suitable unused topic found."
+              )
+
+
+          selected = usable[0]
+
+
+          # ================================================
+          # CREATE FINAL VIDEO BRIEF
+          # ================================================
+
+          topic = selected["title"]
+
+
+          topic = re.sub(
+              r"\s*-\s*[^-]+$",
+              "",
+              topic
+          ).strip()
+
+
+          brief = {
+
+              "created_at":
+                  datetime.now(
+                      timezone.utc
+                  ).isoformat(),
+
+              "topic":
+                  topic,
+
+              "source":
+                  selected["link"],
+
+              "research_score":
+                  selected["score"],
+
+              "video_length":
+                  "40 seconds",
+
+              "format":
+                  "vertical 9:16",
+
+              "audience":
+                  "General worldwide audience",
+
+              "style":
+                  "Fast, cinematic, intriguing and easy to understand",
+
+              "goal":
+                  "Maximize viewer curiosity and retention",
+
+              "hook":
+                  (
+                      "Start immediately with the "
+                      "most surprising or curious "
+                      "aspect of the topic. "
+                      "Do not introduce the channel "
+                      "or waste time."
+                  ),
+
+              "story_structure": [
+
+                  {
+                      "time":
+                          "0-3 seconds",
+
+                      "purpose":
+                          "Strong curiosity hook"
+                  },
+
+                  {
+                      "time":
+                          "3-10 seconds",
+
+                      "purpose":
+                          "Explain what the viewer is seeing"
+                  },
+
+                  {
+                      "time":
+                          "10-20 seconds",
+
+                      "purpose":
+                          "Reveal the main information"
+                  },
+
+                  {
+                      "time":
+                          "20-32 seconds",
+
+                      "purpose":
+                          "Deliver the strongest surprising detail"
+                  },
+
+                  {
+                      "time":
+                          "32-40 seconds",
+
+                      "purpose":
+                          "Memorable conclusion"
+                  }
+              ],
+
+              "visual_direction":
+                  (
+                      "Create five visually distinct "
+                      "photorealistic cinematic scenes. "
+                      "Each scene should represent a "
+                      "different part of the story. "
+                      "Use vertical 9:16 composition, "
+                      "realistic lighting, realistic "
+                      "textures and strong visual variety."
+                  ),
+
+              "narration":
+                  (
+                      "Write concise narration suitable "
+                      "for approximately 40 seconds. "
+                      "Use short, natural sentences. "
+                      "Every sentence should add useful "
+                      "information or increase curiosity."
+                  ),
+
+              "caption_style":
+                  (
+                      "Short readable captions. "
+                      "Keep text inside safe screen "
+                      "margins. Never display scene "
+                      "labels such as Scene 1 or Scene 2."
+                  ),
+
+              "title_strategy":
+                  (
+                      "Create a short curiosity-driven "
+                      "YouTube Shorts title without "
+                      "misleading the viewer."
+                  ),
+
+              "thumbnail_strategy":
+                  (
+                      "Use a strong visual moment from "
+                      "the topic. Keep the thumbnail "
+                      "simple and immediately understandable."
+                  ),
+
+              "hashtags":
+                  [
+                      "#Shorts"
+                  ],
+
+              "rules":
+                  [
+                      "No fake facts",
+                      "No unsupported claims",
+                      "No long introduction",
+                      "No repeated scene descriptions",
+                      "No Scene 1/Scene 2 labels",
+                      "No text burned into generated images",
+                      "Keep the story understandable without sound"
+                  ]
+          }
+
+
+          # ================================================
+          # SAVE FINAL BRIEF
+          # ================================================
+
+          brief_file = (
+              OUTPUT_DIR
+              / "selected_brief.json"
+          )
+
+
+          brief_file.write_text(
+              json.dumps(
+                  brief,
+                  ensure_ascii=False,
+                  indent=2
+              ),
+              encoding="utf-8"
+          )
+
+
+          # ================================================
+          # SAVE SHORTLIST
+          # ================================================
+
+          shortlist = []
+
+          for item in scored[:15]:
+
+              shortlist.append(
+                  {
+                      "title":
+                          item["title"],
+
+                      "score":
+                          item["score"],
+
+                      "source":
+                          item["link"]
+                  }
+              )
+
+
+          (
+              OUTPUT_DIR
+              / "research_shortlist.json"
+          ).write_text(
+              json.dumps(
+                  shortlist,
+                  ensure_ascii=False,
+                  indent=2
+              ),
+              encoding="utf-8"
+          )
+
+
+          # ================================================
+          # SAVE HUMAN-READABLE REPORT
+          # ================================================
+
+          report = []
+
+          report.append(
+              "AI CONTENT RESEARCH"
+          )
+
+          report.append(
+              "==================="
+          )
+
+          report.append("")
+
+          report.append(
+              "SELECTED TOPIC:"
+          )
+
+          report.append(
+              topic
+          )
+
+          report.append("")
+
+          report.append(
+              f"SCORE: {selected['score']}/100"
+          )
+
+          report.append("")
+
+          report.append(
+              "SOURCE:"
+          )
+
+          report.append(
+              selected["link"]
+          )
+
+          report.append("")
+
+          report.append(
+              "TOP 10 CANDIDATES:"
+          )
+
+          report.append("")
+
+          for number, item in enumerate(
+              scored[:10],
+              start=1
+          ):
+
+              report.append(
+                  f"{number}. "
+                  f"{item['score']}/100 - "
+                  f"{item['title']}"
+              )
+
+
+          report.append("")
+
+          report.append(
+              "FINAL VIDEO BRIEF:"
+          )
+
+          report.append("")
+
+          report.append(
+              json.dumps(
+                  brief,
+                  ensure_ascii=False,
+                  indent=2
+              )
+          )
+
+
+          (
+              OUTPUT_DIR
+              / "research_report.txt"
+          ).write_text(
+              "\n".join(report),
+              encoding="utf-8"
+          )
+
+
+          print("")
+          print(
+              "========================================"
+          )
+
+          print(
+              "SELECTED TOPIC:"
+          )
+
+          print(
+              topic
+          )
+
+          print(
+              f"SCORE: {selected['score']}/100"
+          )
+
+          print(
+              "========================================"
+          )
+
+          print("")
+          print(
+              "Final content brief created successfully."
+          )
+
+          PY
+
+
+      # ================================================
+      # SAVE RESULTS
+      # ================================================
+
+      - name: Commit research results
+        run: |
+
+          git config user.name \
+            "AI Content Research"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            content/selected_brief.json \
+            content/research_shortlist.json \
+            content/research_report.txt
+
+          if git diff --cached --quiet; then
+
+            echo "Nothing new to commit."
+
+          else
+
+            git commit \
+              -m "Update AI content research"
+
+            git push \
+              origin \
+              HEAD:${{ github.ref_name }}
+
+          fi
+
+
+      # ================================================
+      # SAVE REPORT AS ARTIFACT
+      # ================================================
+
+      - name: Upload research results
+        uses: actions/upload-artifact@v4
+
+        with:
+          name: AI-CONTENT-RESEARCH-${{ github.run_number }}
+
+          path: |
+            content/selected_brief.json
+            content/research_shortlist.json
+            content/research_report.txt
+
+          retention-days: 30
