@@ -2,32 +2,32 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth
+This strange “spacetime crystal” can suddenly become a black hole
 
 SCORE: 86/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE4wR045X28zY3BpOXpRTGpNREZERGFhbjlzeElMSDFFRURNVVFEcGJ3Nm9sVU5ybjgwTUplbVlscFhQeUZlM2xsck1GdXpGdlJRa3ZLRXlubk92Mk5WQ1JxbEpmMFhwZ042WVRNVjBmSQ?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+1. 86/100 - This strange “spacetime crystal” can suddenly become a black hole - Science Daily
 2. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
-3. 82/100 - KAIST develops smartphone-based technology to detect hidden cameras - EurekAlert!
-4. 82/100 - Scientists tracked 4,500 animals and found a surprising human effect - Science Daily
-5. 82/100 - NASA’s new space telescope will reveal the universe like never before - Science News
-6. 82/100 - How to Check Your Search History on iPhone: A Practical Guide 2026 {5ueuvwr} - planetario.buenosaires.gob.ar
-7. 82/100 - Novo Nordisk Selects AWS as Strategic AI Partner for Drug Discovery - The Healthcare Technology Report.
-8. 82/100 - The future of discovery: Keeping it fair for creators and partners - blog.google
-9. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
-10. 81/100 - After failure of private rescue mission, NASA's Swift space telescope will crash back to Earth. But when and where? - Space
+3. 83/100 - Are Samsung, CXMT headed for an international legal showdown over chip secrets? - Korea JoongAng Daily
+4. 83/100 - How does your name taste? The strange science of synaesthesia - Al Jazeera
+5. 83/100 - Brainwaves: Why is the brain such a mystery? | On Point with Meghna Chakrabarti - WBUR
+6. 82/100 - KAIST develops smartphone-based technology to detect hidden cameras - EurekAlert!
+7. 82/100 - Ucore Produces High-Purity Rare Earth Samples, Showcasing RapidSX Technology Versatility - Shanghai Metals Market
+8. 82/100 - Hundreds of hidden earthquakes found at Antarctica’s Doomsday Glacier - Science Daily
+9. 82/100 - Scientists tracked 4,500 animals and found a surprising human effect - Science Daily
+10. 82/100 - NASA’s new space telescope will reveal the universe like never before - Science News
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-08-30T07:59:58.628399+00:00",
-  "topic": "Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth",
-  "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5",
+  "created_at": "2026-08-31T02:34:46.337268+00:00",
+  "topic": "This strange “spacetime crystal” can suddenly become a black hole",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4wR045X28zY3BpOXpRTGpNREZERGFhbjlzeElMSDFFRURNVVFEcGJ3Nm9sVU5ybjgwTUplbVlscFhQeUZlM2xsck1GdXpGdlJRa3ZLRXlubk92Mk5WQ1JxbEpmMFhwZ042WVRNVjBmSQ?oc=5",
   "research_score": 86,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
