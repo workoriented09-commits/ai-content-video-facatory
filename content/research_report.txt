@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-This strange “spacetime crystal” can suddenly become a black hole
+NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets
 
-SCORE: 86/100
+SCORE: 90/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE4wR045X28zY3BpOXpRTGpNREZERGFhbjlzeElMSDFFRURNVVFEcGJ3Nm9sVU5ybjgwTUplbVlscFhQeUZlM2xsck1GdXpGdlJRa3ZLRXlubk92Mk5WQ1JxbEpmMFhwZ042WVRNVjBmSQ?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE1zaGFkdHlTTUpaTXBqOXhlZ2lJSnpCY0hSQWpyVS1jTUlPOXhOS3g2WTdrMEx5cTVGTk93Y1RYeHNEMGhNLXN0bk8tSFJEQnNpU1FZV2NPQUhib0ZFZjZwRzFuV3VLUy1hcGRpNThvSQ?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - This strange “spacetime crystal” can suddenly become a black hole - Science Daily
-2. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
-3. 83/100 - Are Samsung, CXMT headed for an international legal showdown over chip secrets? - Korea JoongAng Daily
-4. 83/100 - How does your name taste? The strange science of synaesthesia - Al Jazeera
-5. 83/100 - Brainwaves: Why is the brain such a mystery? | On Point with Meghna Chakrabarti - WBUR
-6. 82/100 - KAIST develops smartphone-based technology to detect hidden cameras - EurekAlert!
-7. 82/100 - Ucore Produces High-Purity Rare Earth Samples, Showcasing RapidSX Technology Versatility - Shanghai Metals Market
-8. 82/100 - Hundreds of hidden earthquakes found at Antarctica’s Doomsday Glacier - Science Daily
-9. 82/100 - Scientists tracked 4,500 animals and found a surprising human effect - Science Daily
-10. 82/100 - NASA’s new space telescope will reveal the universe like never before - Science News
+1. 90/100 - NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets - Science Daily
+2. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+3. 86/100 - A 250-Year-Old Heat Mystery Leads to a Surprising Discovery About Human Sweat - SciTechDaily
+4. 85/100 - Why do science fiction’s Hugo Awards remain so heavily American and English-language? - The Indian Express
+5. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
+6. 84/100 - NASA's doomed Swift space telescope restarts science work after rescue mission fails - Space
+7. 84/100 - Expedition 75 is Go for Tuesday’s Navigation and Science Maintenance Spacewalk - NASA (.gov)
+8. 83/100 - SpaceX vs. Alphabet: Which Is the Best Artificial Intelligence (AI) Stock to Buy Now? - finance.yahoo.com
+9. 82/100 - The future of discovery: Keeping it fair for creators and partners - blog.google
+10. 81/100 - Could AI-driven consumer discovery reshape women’s health innovation? - NutraIngredients.com
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-08-31T02:34:46.337268+00:00",
-  "topic": "This strange “spacetime crystal” can suddenly become a black hole",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4wR045X28zY3BpOXpRTGpNREZERGFhbjlzeElMSDFFRURNVVFEcGJ3Nm9sVU5ybjgwTUplbVlscFhQeUZlM2xsck1GdXpGdlJRa3ZLRXlubk92Mk5WQ1JxbEpmMFhwZ042WVRNVjBmSQ?oc=5",
-  "research_score": 86,
+  "created_at": "2026-09-01T02:38:23.340802+00:00",
+  "topic": "NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1zaGFkdHlTTUpaTXBqOXhlZ2lJSnpCY0hSQWpyVS1jTUlPOXhOS3g2WTdrMEx5cTVGTk93Y1RYeHNEMGhNLXN0bk8tSFJEQnNpU1FZV2NPQUhib0ZFZjZwRzFuV3VLUy1hcGRpNThvSQ?oc=5",
+  "research_score": 90,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
