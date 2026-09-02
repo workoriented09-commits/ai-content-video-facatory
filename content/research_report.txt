@@ -11,21 +11,21 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTE1zaGFkdHlTTUpaTXBqOXhlZ2lJSnp
 
 TOP 10 CANDIDATES:
 
-1. 90/100 - NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets - Science Daily
+1. 90/100 - NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets - sciencedaily.com
 2. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
-3. 86/100 - A 250-Year-Old Heat Mystery Leads to a Surprising Discovery About Human Sweat - SciTechDaily
-4. 85/100 - Why do science fiction’s Hugo Awards remain so heavily American and English-language? - The Indian Express
-5. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
-6. 84/100 - NASA's doomed Swift space telescope restarts science work after rescue mission fails - Space
-7. 84/100 - Expedition 75 is Go for Tuesday’s Navigation and Science Maintenance Spacewalk - NASA (.gov)
-8. 83/100 - SpaceX vs. Alphabet: Which Is the Best Artificial Intelligence (AI) Stock to Buy Now? - finance.yahoo.com
-9. 82/100 - The future of discovery: Keeping it fair for creators and partners - blog.google
+3. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
+4. 84/100 - NASA's doomed Swift space telescope restarts science work after rescue mission fails - Space
+5. 84/100 - ESA, NASA Astronauts Begin Spacewalk for Navigation, Science Maintenance - NASA (.gov)
+6. 84/100 - Expedition 75 is Go for Tuesday’s Navigation and Science Maintenance Spacewalk - NASA (.gov)
+7. 83/100 - How does your name taste? The strange science of synaesthesia - aljazeera.com
+8. 82/100 - NorthStrive Biosciences Expands AI-Driven Drug Discovery - GlobeNewswire
+9. 81/100 - What Are MotoGP™ Winglets? How They Work, Their History and the Rules Explained - motogp.com
 10. 81/100 - Could AI-driven consumer discovery reshape women’s health innovation? - NutraIngredients.com
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-01T02:38:23.340802+00:00",
+  "created_at": "2026-09-02T02:45:10.467885+00:00",
   "topic": "NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1zaGFkdHlTTUpaTXBqOXhlZ2lJSnpCY0hSQWpyVS1jTUlPOXhOS3g2WTdrMEx5cTVGTk93Y1RYeHNEMGhNLXN0bk8tSFJEQnNpU1FZV2NPQUhib0ZFZjZwRzFuV3VLUy1hcGRpNThvSQ?oc=5",
   "research_score": 90,
