@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets
+Future of leafy green growth shown at Discovery Field Days
 
-SCORE: 90/100
+SCORE: 88/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE1zaGFkdHlTTUpaTXBqOXhlZ2lJSnpCY0hSQWpyVS1jTUlPOXhOS3g2WTdrMEx5cTVGTk93Y1RYeHNEMGhNLXN0bk8tSFJEQnNpU1FZV2NPQUhib0ZFZjZwRzFuV3VLUy1hcGRpNThvSQ?oc=5
+https://news.google.com/rss/articles/CBMirgFBVV95cUxNNGx3VVd0aDZSNkRFSWFoZC1FZVV5SzBSN25tQzFSVS13XzJ1T0hNeld0eWp0RG43VVUyMVdaalFqV1haRlMwMC1wY3JQdjhRa3dVRE9KLUFsY01MSUpQejh6RVhvckVSZFBUMldHYTZUQ3BYQ1NJdm9udmZyc3lsNkFaQ2tEcktlU3M2bDZFVkF6TkNIY2Q4T0F6Sk83Qnplc0ZySVJIR0pILWpUQmc?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 90/100 - NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets - sciencedaily.com
-2. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
-3. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
-4. 84/100 - NASA's doomed Swift space telescope restarts science work after rescue mission fails - Space
-5. 84/100 - ESA, NASA Astronauts Begin Spacewalk for Navigation, Science Maintenance - NASA (.gov)
-6. 84/100 - Expedition 75 is Go for Tuesday’s Navigation and Science Maintenance Spacewalk - NASA (.gov)
-7. 83/100 - How does your name taste? The strange science of synaesthesia - aljazeera.com
-8. 82/100 - NorthStrive Biosciences Expands AI-Driven Drug Discovery - GlobeNewswire
-9. 81/100 - What Are MotoGP™ Winglets? How They Work, Their History and the Rules Explained - motogp.com
-10. 81/100 - Could AI-driven consumer discovery reshape women’s health innovation? - NutraIngredients.com
+1. 88/100 - Future of leafy green growth shown at Discovery Field Days - Vertical Farm Daily
+2. 86/100 - A 250-Year-Old Heat Mystery Leads to a Surprising Discovery About Human Sweat - SciTechDaily
+3. 84/100 - ESA, NASA Astronauts Begin Spacewalk for Navigation, Science Maintenance - NASA (.gov)
+4. 82/100 - AI-driven robotic lab speeds up marine materials discovery - news.cgtn.com
+5. 82/100 - Ono Pharmaceutical joins forces with Aitia for drug discovery in neurology - Pharmaceutical Technology
+6. 82/100 - BenchSci Announces Two-Year Enterprise Agreement with argenx to Advance AI-Driven Preclinical Drug Discovery - BioSpace
+7. 82/100 - Ono Pharma Enters into a Drug Discovery Partnership with Aitia in Neurological Diseases - BioSpace
+8. 80/100 - Caterpillar Collaborates With FieldAI on Industrial Robotics and AI Technology - finance.yahoo.com
+9. 80/100 - Alarming Study Warns AI Could Be Making Humans More Robotic - 2oceansvibe News
+10. 80/100 - Artificial Intelligence | Pros, Cons, Debate, Arguments, Computer Science, & Technology - Britannica
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-02T02:45:10.467885+00:00",
-  "topic": "NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1zaGFkdHlTTUpaTXBqOXhlZ2lJSnpCY0hSQWpyVS1jTUlPOXhOS3g2WTdrMEx5cTVGTk93Y1RYeHNEMGhNLXN0bk8tSFJEQnNpU1FZV2NPQUhib0ZFZjZwRzFuV3VLUy1hcGRpNThvSQ?oc=5",
-  "research_score": 90,
+  "created_at": "2026-09-03T05:16:54.561042+00:00",
+  "topic": "Future of leafy green growth shown at Discovery Field Days",
+  "source": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNGx3VVd0aDZSNkRFSWFoZC1FZVV5SzBSN25tQzFSVS13XzJ1T0hNeld0eWp0RG43VVUyMVdaalFqV1haRlMwMC1wY3JQdjhRa3dVRE9KLUFsY01MSUpQejh6RVhvckVSZFBUMldHYTZUQ3BYQ1NJdm9udmZyc3lsNkFaQ2tEcktlU3M2bDZFVkF6TkNIY2Q4T0F6Sk83Qnplc0ZySVJIR0pILWpUQmc?oc=5",
+  "research_score": 88,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
