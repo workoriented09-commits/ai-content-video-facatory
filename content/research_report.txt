@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Ancient “living fossils” may reveal how complex life began
+Why Is Micron Technology (MU) CEO Being Honored In Taiwan?
 
-SCORE: 86/100
+SCORE: 85/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE5LYS1fclFSR2lXZGh4em12NkVYZ0ZtelZ0MEgxV2ZEQjRqbmQza2V3LWJhM0RJYkk2aFdaaDFxcjZEYmhPNjBSQ3pTSkU0VzByTkh5WUkybmhIRzVZXzhxSHVuM2N5RjdHbXFGNFdZVQ?oc=5
+https://news.google.com/rss/articles/CBMilwFBVV95cUxPSGZEM1N3Z3lBc0hpOEFhSVpvb3A4Qm9rMV9qZEMtXzltbklyOWZMWnU3bWZkNy00XzVNTlZlamRqeUx2aE5wS045UzVOT0k5eWpIdXo2QlN5YkNEcGtmNTVkOVp5UHF2dHRPbnJBRUVjTTRRRjA4djl2bmY5bmZodmNkSFpPUzZYb1B0cmF3aVM1dTRMNFpR?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - Ancient “living fossils” may reveal how complex life began - Science Daily
-2. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - bleepingcomputer.com
-3. 82/100 - AI-driven robotic lab speeds up marine materials discovery - news.cgtn.com
-4. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
-5. 80/100 - Humanoid Robots and China’s Vision of the Future - The Diplomat – Asia-Pacific Current Affairs Magazine
-6. 80/100 - Survey of young researchers raises concerns over future of science in U.S. - Harvard Gazette
-7. 80/100 - NASA Awards 10 Planetary Instrument Technology Development Grants - NASA Science (.gov)
-8. 78/100 - How Connected Technology and AI are Reshaping Wealth Management - Wealth Management
-9. 78/100 - How AI plotted an interstellar journey to Alpha Centauri - technologyreview.com
-10. 78/100 - Dark matter detector finds a strange signal scientists can’t yet explain - Science Daily
+1. 85/100 - Why Is Micron Technology (MU) CEO Being Honored In Taiwan? - Yahoo Finance
+2. 85/100 - Why Is Figure Technology Solutions (FIGR) Expanding Its Blockchain Real Estate Credit Platform? - Yahoo Finance
+3. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
+4. 82/100 - The future of discovery: Keeping it fair for creators and partners - blog.google
+5. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
+6. 81/100 - Faster than Usain Bolt? Here's all the records robot 'athletes' broke at this year's World Humanoid Robot Games in China. - Live Science
+7. 80/100 - Kingfa Science & Technology files FY26 sustainability report with exchanges - scanx.trade
+8. 80/100 - Science, technology and innovation in the age of AI | - UN Trade and Development (UNCTAD)
+9. 80/100 - Survey of young researchers raises concerns over future of science in U.S. - Harvard Gazette
+10. 80/100 - Six Never-Before-Seen Mystery Structures Found Lurking Deep Inside The Earth - ScienceAlert
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-05T02:37:43.339627+00:00",
-  "topic": "Ancient “living fossils” may reveal how complex life began",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5LYS1fclFSR2lXZGh4em12NkVYZ0ZtelZ0MEgxV2ZEQjRqbmQza2V3LWJhM0RJYkk2aFdaaDFxcjZEYmhPNjBSQ3pTSkU0VzByTkh5WUkybmhIRzVZXzhxSHVuM2N5RjdHbXFGNFdZVQ?oc=5",
-  "research_score": 86,
+  "created_at": "2026-09-06T02:37:38.359044+00:00",
+  "topic": "Why Is Micron Technology (MU) CEO Being Honored In Taiwan?",
+  "source": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSGZEM1N3Z3lBc0hpOEFhSVpvb3A4Qm9rMV9qZEMtXzltbklyOWZMWnU3bWZkNy00XzVNTlZlamRqeUx2aE5wS045UzVOT0k5eWpIdXo2QlN5YkNEcGtmNTVkOVp5UHF2dHRPbnJBRUVjTTRRRjA4djl2bmY5bmZodmNkSFpPUzZYb1B0cmF3aVM1dTRMNFpR?oc=5",
+  "research_score": 85,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
