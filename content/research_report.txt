@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth
+To what extent has AI-driven drug discovery actually progressed?
 
-SCORE: 86/100
+SCORE: 87/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5
+https://news.google.com/rss/articles/CBMid0FVX3lxTE41VFdXSFZRRkpCX0s4emlRYVhQcG1RMUpScENHbjVrc1JwYUxKSjlxZGstMmViVWJPajY2b19XdHNrN0d1eUxxMnowb0xHdTNSbDBCaGRJaHJqaWswamZlMU84a1JDY1ZXS3NoTXFqY0V5cVFrcnVR?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
-2. 85/100 - Why Is Micron Technology (MU) CEO Being Honored In Taiwan? - Yahoo Finance
-3. 85/100 - How gross is biting your fingernails? - Popular Science
-4. 85/100 - Can science explain what happens to us after we die? - Colorado Public Radio
-5. 85/100 - AI Is Accelerating Vulnerability Discovery. Can Defenders Keep Up? - BleepingComputer
-6. 82/100 - The future of discovery: Keeping it fair for creators and partners - blog.google
-7. 82/100 - TiVo Expands FAST Channels, AI Discovery with Latest OS Update - TVTechnology
-8. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
-9. 80/100 - Science, technology and innovation in the age of AI | - UN Trade and Development (UNCTAD)
-10. 80/100 - FBR raises $4m to fund commercialisation of robotic welding and bricklaying technology - Business News Australia
+1. 87/100 - To what extent has AI-driven drug discovery actually progressed? - GIGAZINE
+2. 86/100 - Ancient Egyptians Were Putting Some Strange Things into Their Paint - ZME Science
+3. 85/100 - Are there nuclear weapons hidden in space? Why a 60-year ban on space nukes has been impossible to enforce - Live Science
+4. 84/100 - How Art Uncovers the Hidden Pain of Endometriosis - ANU College of Science and Medicine
+5. 84/100 - ‘It should not exist’: Ancient archaeological mystery revealed high in Beartooth Mountains - Montana Free Press
+6. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
+7. 80/100 - India, Luxembourg explore wider cooperation in space, AI and quantum technology - Daily Excelsior
+8. 80/100 - Artificial Intelligence | Pros, Cons, Debate, Arguments, Computer Science, & Technology - Britannica
+9. 80/100 - Survey of young researchers raises concerns over future of science in U.S. - Phys.org
+10. 80/100 - Repairing Relations With Science - Issues in Science and Technology
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-07T02:39:18.664934+00:00",
-  "topic": "Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth",
-  "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5",
-  "research_score": 86,
+  "created_at": "2026-09-08T02:40:13.748826+00:00",
+  "topic": "To what extent has AI-driven drug discovery actually progressed?",
+  "source": "https://news.google.com/rss/articles/CBMid0FVX3lxTE41VFdXSFZRRkpCX0s4emlRYVhQcG1RMUpScENHbjVrc1JwYUxKSjlxZGstMmViVWJPajY2b19XdHNrN0d1eUxxMnowb0xHdTNSbDBCaGRJaHJqaWswamZlMU84a1JDY1ZXS3NoTXFqY0V5cVFrcnVR?oc=5",
+  "research_score": 87,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
