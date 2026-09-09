@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-To what extent has AI-driven drug discovery actually progressed?
+How the lowly egg could help protect future spacecraft
 
-SCORE: 87/100
+SCORE: 86/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMid0FVX3lxTE41VFdXSFZRRkpCX0s4emlRYVhQcG1RMUpScENHbjVrc1JwYUxKSjlxZGstMmViVWJPajY2b19XdHNrN0d1eUxxMnowb0xHdTNSbDBCaGRJaHJqaWswamZlMU84a1JDY1ZXS3NoTXFqY0V5cVFrcnVR?oc=5
+https://news.google.com/rss/articles/CBMic0FVX3lxTE1fbUdyZ2JwbFpiLVI4LXBfamdfVmkzS1B0VUpSMW1JQjVVSG9MNHF4ZlhSZVJkb2MtTGcxcno2ZEVObHFRVWVZVy13Y1ZSc3VFWHFyRGs2NnNWR1R2SnV1NnJpVXdXblEyWmVETUpmZDVvNjg?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 87/100 - To what extent has AI-driven drug discovery actually progressed? - GIGAZINE
-2. 86/100 - Ancient Egyptians Were Putting Some Strange Things into Their Paint - ZME Science
-3. 85/100 - Are there nuclear weapons hidden in space? Why a 60-year ban on space nukes has been impossible to enforce - Live Science
-4. 84/100 - How Art Uncovers the Hidden Pain of Endometriosis - ANU College of Science and Medicine
-5. 84/100 - ‘It should not exist’: Ancient archaeological mystery revealed high in Beartooth Mountains - Montana Free Press
+1. 86/100 - How the lowly egg could help protect future spacecraft - Popular Science
+2. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+3. 84/100 - NASA Invests in Robotic In-Space Welding Technology - Assembly Magazine
+4. 84/100 - ‘It should not exist’: Ancient archaeological mystery revealed high in Beartooth Mountains - Montana Free Press
+5. 82/100 - AI Drug Discovery Hits a New Bottleneck: Experimental Validation - Genetic Engineering and Biotechnology News
 6. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
-7. 80/100 - India, Luxembourg explore wider cooperation in space, AI and quantum technology - Daily Excelsior
-8. 80/100 - Artificial Intelligence | Pros, Cons, Debate, Arguments, Computer Science, & Technology - Britannica
-9. 80/100 - Survey of young researchers raises concerns over future of science in U.S. - Phys.org
-10. 80/100 - Repairing Relations With Science - Issues in Science and Technology
+7. 81/100 - Why were 14 people hospitalized The Chainsmokers concert? Scary details of emergency at Discovery Meadows | Hindustan Times - hindustantimes.com
+8. 81/100 - Too many indies, too many creators: Can PlayIndies solve gaming’s discovery dilemma? - Startup Daily
+9. 80/100 - DIU, Honeywell Aerospace flight-test quantum sensing technology for aircraft navigation - DefenseScoop
+10. 80/100 - Artificial Intelligence | Pros, Cons, Debate, Arguments, Computer Science, & Technology - Britannica
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-08T02:40:13.748826+00:00",
-  "topic": "To what extent has AI-driven drug discovery actually progressed?",
-  "source": "https://news.google.com/rss/articles/CBMid0FVX3lxTE41VFdXSFZRRkpCX0s4emlRYVhQcG1RMUpScENHbjVrc1JwYUxKSjlxZGstMmViVWJPajY2b19XdHNrN0d1eUxxMnowb0xHdTNSbDBCaGRJaHJqaWswamZlMU84a1JDY1ZXS3NoTXFqY0V5cVFrcnVR?oc=5",
-  "research_score": 87,
+  "created_at": "2026-09-09T02:39:40.176353+00:00",
+  "topic": "How the lowly egg could help protect future spacecraft",
+  "source": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fbUdyZ2JwbFpiLVI4LXBfamdfVmkzS1B0VUpSMW1JQjVVSG9MNHF4ZlhSZVJkb2MtTGcxcno2ZEVObHFRVWVZVy13Y1ZSc3VFWHFyRGs2NnNWR1R2SnV1NnJpVXdXblEyWmVETUpmZDVvNjg?oc=5",
+  "research_score": 86,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
