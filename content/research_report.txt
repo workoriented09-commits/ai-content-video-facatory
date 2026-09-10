@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-How the lowly egg could help protect future spacecraft
+How Generative AI Is Reshaping Ecommerce Search and Product Discovery
 
-SCORE: 86/100
+SCORE: 88/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMic0FVX3lxTE1fbUdyZ2JwbFpiLVI4LXBfamdfVmkzS1B0VUpSMW1JQjVVSG9MNHF4ZlhSZVJkb2MtTGcxcno2ZEVObHFRVWVZVy13Y1ZSc3VFWHFyRGs2NnNWR1R2SnV1NnJpVXdXblEyWmVETUpmZDVvNjg?oc=5
+https://news.google.com/rss/articles/CBMirAFBVV95cUxQTlhickxjakJSeHNMZWVRLXlrcjhaRzdaM3lEV183eTZVM1EwZEQ1SjR3VFlwNkdvOVZ0TVdfa192cERxRWF0dFVKN2FRb0N0aFNHblo0OERET0RMTnFmdURUcC1vY18wNTRFdFlCZUhQQjA0MlFobEkyeDFKYkpHV25abmlhS2o5OXd4S0NvUkRienRHVHV4eFhJX3NGa2NVUjdOTDJ0VjdxcGFu?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - How the lowly egg could help protect future spacecraft - Popular Science
-2. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
-3. 84/100 - NASA Invests in Robotic In-Space Welding Technology - Assembly Magazine
-4. 84/100 - ‘It should not exist’: Ancient archaeological mystery revealed high in Beartooth Mountains - Montana Free Press
+1. 88/100 - How Generative AI Is Reshaping Ecommerce Search and Product Discovery - Technology Org
+2. 84/100 - ‘It should not exist’: Ancient archaeological mystery revealed high in Beartooth Mountains - Montana Free Press
+3. 83/100 - Is SpaceX a Top Artificial Intelligence (AI) Stock Pick in September? - The Motley Fool
+4. 83/100 - Is SpaceX a Top Artificial Intelligence (AI) Stock Pick in September? - The Globe and Mail
 5. 82/100 - AI Drug Discovery Hits a New Bottleneck: Experimental Validation - Genetic Engineering and Biotechnology News
 6. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
-7. 81/100 - Why were 14 people hospitalized The Chainsmokers concert? Scary details of emergency at Discovery Meadows | Hindustan Times - hindustantimes.com
-8. 81/100 - Too many indies, too many creators: Can PlayIndies solve gaming’s discovery dilemma? - Startup Daily
-9. 80/100 - DIU, Honeywell Aerospace flight-test quantum sensing technology for aircraft navigation - DefenseScoop
-10. 80/100 - Artificial Intelligence | Pros, Cons, Debate, Arguments, Computer Science, & Technology - Britannica
+7. 81/100 - Some People Stay Well, Others Get Sick: Could Resilience Guide Drug Discovery? - Technology Networks
+8. 80/100 - What OpenAI’s latest controversy tells us about the future of math - MIT Technology Review
+9. 80/100 - Science, technology and innovation in the age of AI | - UN Trade and Development (UNCTAD)
+10. 80/100 - Caffeine may flip an ancient cellular switch linked to slower aging - Science Daily
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-09T02:39:40.176353+00:00",
-  "topic": "How the lowly egg could help protect future spacecraft",
-  "source": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fbUdyZ2JwbFpiLVI4LXBfamdfVmkzS1B0VUpSMW1JQjVVSG9MNHF4ZlhSZVJkb2MtTGcxcno2ZEVObHFRVWVZVy13Y1ZSc3VFWHFyRGs2NnNWR1R2SnV1NnJpVXdXblEyWmVETUpmZDVvNjg?oc=5",
-  "research_score": 86,
+  "created_at": "2026-09-10T02:39:59.985778+00:00",
+  "topic": "How Generative AI Is Reshaping Ecommerce Search and Product Discovery",
+  "source": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTlhickxjakJSeHNMZWVRLXlrcjhaRzdaM3lEV183eTZVM1EwZEQ1SjR3VFlwNkdvOVZ0TVdfa192cERxRWF0dFVKN2FRb0N0aFNHblo0OERET0RMTnFmdURUcC1vY18wNTRFdFlCZUhQQjA0MlFobEkyeDFKYkpHV25abmlhS2o5OXd4S0NvUkRienRHVHV4eFhJX3NGa2NVUjdOTDJ0VjdxcGFu?oc=5",
+  "research_score": 88,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
