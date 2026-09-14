@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-How Much Should Students Use AI? Preferably Not at All
+How AI BioDesign Will Harness Nature’s Principles for Drug Discovery
 
-SCORE: 85/100
+SCORE: 88/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMilwFBVV95cUxQVjJRaVZTS3ZJUUpLLVF6N1c0ZERiaWRtaGdKUGNtVmUycUtsN1dGYXVKbUxWWDE0VkNGMklDb09Ja1JBdmhTMjF6bWQwdEV2ZV9xUmdEWkVxd0lha1dhQlhwWldYUXFzWE1mOWthVWdYQWNHdzhVOXg1Z3RYa05yYV9DX2RSTC1hZFFJR0NrdlYzWll6a1hZ?oc=5
+https://news.google.com/rss/articles/CBMivgFBVV95cUxPaUFEM2tRd3JVQ1I1NEJnM21BRkc2QUt0VF9nMF8yYzE0dFNNY0tKODhKdEo3aTd6M2dzd2kyTnZOR3U0WlB2enVJb1pNMmluVXdxUS16UUZ2OVFTVTR2aklFUk9kQlF1eUNfUEpYSEVoTFFTS3BZRzZNUGc4d0ZOYVo2eEJoY0FZS2JpTmxHSHdFMzh6TDBEZXhIV3AxamRsMHZCQXNvRERwQWVJNjFLYlg4TXE0QzJxWmZOQWx3?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 85/100 - How Much Should Students Use AI? Preferably Not at All - Science and Culture Today
-2. 84/100 - The secret to longer life may be hidden in bat DNA - sciencedaily.com
-3. 82/100 - AI may be denting computer science graduates’ job prospects, UK data shows - The Guardian
-4. 82/100 - AI Accelerates Biomanufacturing from Discovery to Translation - Genetic Engineering and Biotechnology News
-5. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
-6. 80/100 - Science, technology and innovation in the age of AI | - UN Trade and Development (UNCTAD)
-7. 80/100 - AI Perspectives Week showcases AI innovation, debate and discovery - source.washu.edu
-8. 80/100 - Shopping Assistance Chatbot: How AI Is Making Online Product Discovery Easier - Nasscom
+1. 88/100 - How AI BioDesign Will Harness Nature’s Principles for Drug Discovery - Technology Networks
+2. 87/100 - Microsoft lists 974 new vulnerabilities — How has AI accelerated discovery? - TechInformed
+3. 84/100 - The secret to longer life may be hidden in bat DNA - Science Daily
+4. 82/100 - The future of discovery: Keeping it fair for creators and partners - blog.google
+5. 81/100 - After failure of private rescue mission, NASA's Swift space telescope will crash back to Earth. But when and where? - Space
+6. 81/100 - Can AI Agents Do the Work of Drug Discovery? - Scale AI
+7. 80/100 - InvestingPro Fair Value predicted 57% drop in Rackspace Technology By Investing.com - in.investing.com
+8. 80/100 - Global warming is breaking a 400-year climate link between two oceans - Science Daily
 9. 80/100 - How AI, eBay Live, and personalized discovery are shaping eBay - eBay Inc.
-10. 80/100 - Scientists announce discovery of a hidden solar process - Technology Org
+10. 80/100 - Crossed Wires: Farewell Nobel — how AI Is disrupting scientific discovery and ownership - Daily Maverick
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-13T02:37:43.064458+00:00",
-  "topic": "How Much Should Students Use AI? Preferably Not at All",
-  "source": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVjJRaVZTS3ZJUUpLLVF6N1c0ZERiaWRtaGdKUGNtVmUycUtsN1dGYXVKbUxWWDE0VkNGMklDb09Ja1JBdmhTMjF6bWQwdEV2ZV9xUmdEWkVxd0lha1dhQlhwWldYUXFzWE1mOWthVWdYQWNHdzhVOXg1Z3RYa05yYV9DX2RSTC1hZFFJR0NrdlYzWll6a1hZ?oc=5",
-  "research_score": 85,
+  "created_at": "2026-09-14T02:39:35.281450+00:00",
+  "topic": "How AI BioDesign Will Harness Nature’s Principles for Drug Discovery",
+  "source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaUFEM2tRd3JVQ1I1NEJnM21BRkc2QUt0VF9nMF8yYzE0dFNNY0tKODhKdEo3aTd6M2dzd2kyTnZOR3U0WlB2enVJb1pNMmluVXdxUS16UUZ2OVFTVTR2aklFUk9kQlF1eUNfUEpYSEVoTFFTS3BZRzZNUGc4d0ZOYVo2eEJoY0FZS2JpTmxHSHdFMzh6TDBEZXhIV3AxamRsMHZCQXNvRERwQWVJNjFLYlg4TXE0QzJxWmZOQWx3?oc=5",
+  "research_score": 88,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
