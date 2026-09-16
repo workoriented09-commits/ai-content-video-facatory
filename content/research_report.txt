@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMikAFBVV95cUxNLUR6T3RtbWNkQ2ZKS3pFNl9RLXh
 TOP 10 CANDIDATES:
 
 1. 88/100 - How AI LIVE will Explore the Future of AI in Drug Discovery - AI Magazine
-2. 88/100 - How AI BioDesign Will Harness Nature’s Principles for Drug Discovery - Technology Networks
-3. 83/100 - The mystery of the Moroccan transfer window: why are clubs waiting for FIFA's decree? - Goal.com
-4. 82/100 - Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery. - blog.google
-5. 82/100 - ASU students learn about science, sailing and self-discovery - ASU News
-6. 82/100 - SECRET FLIGHT, COVERT RAID: U.S. Marines' MYSTERY Mission In London Sparks Trump-Burnham Showdown - timesofindia.indiatimes.com
-7. 82/100 - Why the Discovery of the First Short-Tailed Tsushima Leopard Cat Worried Researchers - Nautilus | Science Connected
-8. 82/100 - FairJourney Bio Consolidates Antibody Discovery Data with the Sapio Sciences Scientific AI Platform - PR Newswire
-9. 81/100 - Is there a hidden 'Planet 9' in our solar system? - Space
-10. 80/100 - Drones, supersonic aircraft, digital technology, and more at IMTS 2026 - Aerospace Manufacturing and Design
+2. 84/100 - The shape behind the Einstein problem just revealed strange new physics - ScienceDaily
+3. 82/100 - Magnitude Biosciences raises £1.3m to scale drug discovery platform - UKTN
+4. 82/100 - ASU students learn about science, sailing and self-discovery - ASU News
+5. 82/100 - Why the Discovery of the First Short-Tailed Tsushima Leopard Cat Worried Researchers - Nautilus | Science Connected
+6. 81/100 - Hidden Ocean Deep Inside Earth? Scientists Uncover Evidence Of Massive Water Reservoir - NDTV
+7. 80/100 - Space science: Physicists recreate first moments of cosmic rainstorms - dtnext.in
+8. 80/100 - Ocean Science Consulting Release Second Edition of Marine Mammal Observer Handbook - Marine Technology News
+9. 80/100 - Nanobody cocktail shows promise as broad-spectrum antivenom - Drug Discovery News
+10. 80/100 - Donald McDonnell: Why Academic Drug Discovery Still Matters - Oncodaily
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-15T02:40:28.008396+00:00",
+  "created_at": "2026-09-16T02:39:23.351554+00:00",
   "topic": "How AI LIVE will Explore the Future of AI in Drug Discovery",
   "source": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNLUR6T3RtbWNkQ2ZKS3pFNl9RLXhhTGQyLWxoMTN1emY1Wk9lSjdJVGpvS01iMk1Vb2RQdDQ3M1MtR0VmcDBKbkRYZGR6b1BoSUpKN0FienBXeDJPcS1rOW45ZzVWN3paeVNSRTFCdHowS0Q0ZXVZNml4bHlETmZvcTVGX0tWTm42amJmZ1dnOW0?oc=5",
   "research_score": 88,
