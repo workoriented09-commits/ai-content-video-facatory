@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Scientists just discovered why Arctic sea ice moves so strangely
+Scientists “truly astonished” by discovery that challenges Earth’s origin story
 
-SCORE: 90/100
+SCORE: 86/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTFBjNUdJdTFIc3pRdU55eTZFQXhaU3EtNmJVdkotRm9lM2VweWpzVEh4eXh2aktWRFYxR25FYTFsQUIwOVdwUER3eDltWlN4LVJneWIxdnhfUUtrQXFQTTQzcUNzc2ZmZjV1VkQ2MUx1RQ?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0QydWJQeVZ3RUxmTVl2MldqaUE2ZmEwUTBCR0NIYUdUTGxOZWh6ejh6VzVIRGJ6eDhtY0pLekk1TEVDdkdhR0dDZktXV3JERm1LSWxiRjlTOWJGRQ?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 90/100 - Scientists just discovered why Arctic sea ice moves so strangely - ScienceDaily
-2. 87/100 - Why is Discovery Mining stock gaining today? - Investing.com
-3. 86/100 - Why Firan Technology Group (TSX:FTG) Is Gaining Attention in Aerospace and Defence Electronics - kalkine.ca
-4. 86/100 - Scientists “truly astonished” by discovery that challenges Earth’s origin story - ScienceDaily
-5. 86/100 - How Skillionaire Turns Career Discovery Into A Game Kids Actually Want To Play - Forbes
-6. 84/100 - NASA’s Roman Space Telescope could last more than twice as long as planned - ScienceDaily
-7. 83/100 - Marvell Technology (MRVL) Expands AI Chip Capacity, Is The Upside Already Priced In? - simplywall.st
-8. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
-9. 82/100 - Sovereign AI fund in talks to back drug discovery start-up Potential Sciences - Yahoo Finance UK
-10. 82/100 - TWST Jumps As Twist Bioscience Lands Eli Lilly AI Drug Discovery Deal - StocksToTrade
+1. 86/100 - Scientists “truly astonished” by discovery that challenges Earth’s origin story - sciencedaily.com
+2. 85/100 - Why does blond hair tend to darken with age? - livescience.com
+3. 85/100 - Why has the U.S. deployed ‘weapons’ in space? | Explained - The Hindu
+4. 85/100 - Vast hidden ocean beneath Earth’s mantle? Scientists stunned by new discovery - Futura, le média qui explore le monde
+5. 84/100 - NASA’s Roman Space Telescope could last more than twice as long as planned - sciencedaily.com
+6. 84/100 - Hidden gut defect that may explain why IBD keeps coming back - sciencedaily.com
+7. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
+8. 82/100 - An old train schedule solved a mystery about one of history’s first solar storms - Earth.com
+9. 81/100 - DIY Medicine: Can AI Drug Discovery Really Happen in a Garage? - JO24
+10. 80/100 - Anthropic Sets Up Secret Biology Lab To Push AI Into Drug Discovery - ETV Bharat
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-19T02:37:39.767695+00:00",
-  "topic": "Scientists just discovered why Arctic sea ice moves so strangely",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBjNUdJdTFIc3pRdU55eTZFQXhaU3EtNmJVdkotRm9lM2VweWpzVEh4eXh2aktWRFYxR25FYTFsQUIwOVdwUER3eDltWlN4LVJneWIxdnhfUUtrQXFQTTQzcUNzc2ZmZjV1VkQ2MUx1RQ?oc=5",
-  "research_score": 90,
+  "created_at": "2026-09-21T02:39:36.104651+00:00",
+  "topic": "Scientists “truly astonished” by discovery that challenges Earth’s origin story",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0QydWJQeVZ3RUxmTVl2MldqaUE2ZmEwUTBCR0NIYUdUTGxOZWh6ejh6VzVIRGJ6eDhtY0pLekk1TEVDdkdhR0dDZktXV3JERm1LSWxiRjlTOWJGRQ?oc=5",
+  "research_score": 86,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
