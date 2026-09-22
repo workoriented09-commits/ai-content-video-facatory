@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0Q
 TOP 10 CANDIDATES:
 
 1. 86/100 - Scientists “truly astonished” by discovery that challenges Earth’s origin story - sciencedaily.com
-2. 85/100 - Why does blond hair tend to darken with age? - livescience.com
-3. 85/100 - Why has the U.S. deployed ‘weapons’ in space? | Explained - The Hindu
-4. 85/100 - Vast hidden ocean beneath Earth’s mantle? Scientists stunned by new discovery - Futura, le média qui explore le monde
-5. 84/100 - NASA’s Roman Space Telescope could last more than twice as long as planned - sciencedaily.com
-6. 84/100 - Hidden gut defect that may explain why IBD keeps coming back - sciencedaily.com
-7. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
-8. 82/100 - An old train schedule solved a mystery about one of history’s first solar storms - Earth.com
-9. 81/100 - DIY Medicine: Can AI Drug Discovery Really Happen in a Garage? - JO24
-10. 80/100 - Anthropic Sets Up Secret Biology Lab To Push AI Into Drug Discovery - ETV Bharat
+2. 85/100 - Space weapons: what is the US hiding and why won’t they admit it? - futura-sciences.com
+3. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
+4. 83/100 - What are you most excited for NASA's Roman Space Telescope to find? - Live Science
+5. 80/100 - Japan plans AI robot contest on International Space Station - Nikkei Asia
+6. 80/100 - Science Museum Launches Pokémon Space Trail With European Space Agency Partnership - licenseglobal.com
+7. 79/100 - A New Kind of Model for AI Decision-Making? - Towards Data Science
+8. 78/100 - Why Rackspace Technology (RXT) Is Up 15.8% After Joining NVIDIA’s Cloud Partner Program - Yahoo Finance
+9. 78/100 - Black holes of every size follow the same surprising rule - sciencedaily.com
+10. 78/100 - Stanford scientists discover the human brain may actually be two separate organs - sciencedaily.com
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-21T02:39:36.104651+00:00",
+  "created_at": "2026-09-22T02:39:02.323482+00:00",
   "topic": "Scientists “truly astonished” by discovery that challenges Earth’s origin story",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0QydWJQeVZ3RUxmTVl2MldqaUE2ZmEwUTBCR0NIYUdUTGxOZWh6ejh6VzVIRGJ6eDhtY0pLekk1TEVDdkdhR0dDZktXV3JERm1LSWxiRjlTOWJGRQ?oc=5",
   "research_score": 86,
