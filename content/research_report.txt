@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0Q
 TOP 10 CANDIDATES:
 
 1. 86/100 - Scientists “truly astonished” by discovery that challenges Earth’s origin story - sciencedaily.com
-2. 85/100 - Space weapons: what is the US hiding and why won’t they admit it? - futura-sciences.com
-3. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
-4. 83/100 - What are you most excited for NASA's Roman Space Telescope to find? - Live Science
-5. 80/100 - Japan plans AI robot contest on International Space Station - Nikkei Asia
-6. 80/100 - Science Museum Launches Pokémon Space Trail With European Space Agency Partnership - licenseglobal.com
-7. 79/100 - A New Kind of Model for AI Decision-Making? - Towards Data Science
-8. 78/100 - Why Rackspace Technology (RXT) Is Up 15.8% After Joining NVIDIA’s Cloud Partner Program - Yahoo Finance
-9. 78/100 - Black holes of every size follow the same surprising rule - sciencedaily.com
-10. 78/100 - Stanford scientists discover the human brain may actually be two separate organs - sciencedaily.com
+2. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
+3. 83/100 - What are you most excited for NASA's Roman Space Telescope to find? - Live Science
+4. 83/100 - Neurosurgeon: Why Deny the Mystery of the Mind? - mindmatters.ai
+5. 82/100 - Twist Bioscience (TWST) Expands AI Drug Discovery Exposure With Lilly TuneLab Partnership - Yahoo Finance
+6. 80/100 - MIT’s tiny flying robot gets 450% faster with AI - sciencedaily.com
+7. 80/100 - How AI Search Is Changing Beauty Retail Discovery - RETAILBOSS | Substack
+8. 80/100 - Comscore data shows how AI discovery is splintering beyond ChatGPT - Digiday
+9. 79/100 - Is ASE Technology's $10.5B CapEx Plan Key to Capturing AI Demand? - Yahoo Finance Singapore
+10. 79/100 - Is the AI boom getting us any closer to space-based solar? - Latitude Media
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-22T02:39:02.323482+00:00",
+  "created_at": "2026-09-23T02:39:01.442301+00:00",
   "topic": "Scientists “truly astonished” by discovery that challenges Earth’s origin story",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0QydWJQeVZ3RUxmTVl2MldqaUE2ZmEwUTBCR0NIYUdUTGxOZWh6ejh6VzVIRGJ6eDhtY0pLekk1TEVDdkdhR0dDZktXV3JERm1LSWxiRjlTOWJGRQ?oc=5",
   "research_score": 86,
