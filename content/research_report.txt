@@ -11,21 +11,21 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0Q
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - Scientists “truly astonished” by discovery that challenges Earth’s origin story - sciencedaily.com
+1. 86/100 - Scientists “truly astonished” by discovery that challenges Earth’s origin story - ScienceDaily
 2. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
-3. 83/100 - What are you most excited for NASA's Roman Space Telescope to find? - Live Science
-4. 83/100 - Neurosurgeon: Why Deny the Mystery of the Mind? - mindmatters.ai
-5. 82/100 - Twist Bioscience (TWST) Expands AI Drug Discovery Exposure With Lilly TuneLab Partnership - Yahoo Finance
-6. 80/100 - MIT’s tiny flying robot gets 450% faster with AI - sciencedaily.com
-7. 80/100 - How AI Search Is Changing Beauty Retail Discovery - RETAILBOSS | Substack
-8. 80/100 - Comscore data shows how AI discovery is splintering beyond ChatGPT - Digiday
-9. 79/100 - Is ASE Technology's $10.5B CapEx Plan Key to Capturing AI Demand? - Yahoo Finance Singapore
-10. 79/100 - Is the AI boom getting us any closer to space-based solar? - Latitude Media
+3. 83/100 - Neurosurgeon: Why Deny the Mystery of the Mind? - mindmatters.ai
+4. 82/100 - NASA’s New Space Telescope Could Bring Alien Worlds Into View Like Never Before - SciTechDaily
+5. 82/100 - Tautomer-Predictor AI Tool Identifies Stable Molecules for Drug Discovery - Genetic Engineering and Biotechnology News
+6. 82/100 - Transcripta Bio Announces Scientific Advisory Board to Advance High-Certainty Drug Discovery - BioSpace
+7. 82/100 - NIS and Proteos launch TrueCourse Biosciences to support AI drug discovery - Manufacturing Chemist
+8. 80/100 - Truck Of The Future Aim Of New Bosch Technology - Forbes
+9. 80/100 - Minu Pramod to join Indian Institute of Space Science and Technology - whispersinthecorridors.in
+10. 80/100 - Meet the hairy-legged, red-eyed sea spiders new to science - Oceanographic Magazine
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-09-23T02:39:01.442301+00:00",
+  "created_at": "2026-09-24T02:39:30.521868+00:00",
   "topic": "Scientists “truly astonished” by discovery that challenges Earth’s origin story",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFByeWMxQ1VyUDFnUnF4c0tUay1jV0QydWJQeVZ3RUxmTVl2MldqaUE2ZmEwUTBCR0NIYUdUTGxOZWh6ejh6VzVIRGJ6eDhtY0pLekk1TEVDdkdhR0dDZktXV3JERm1LSWxiRjlTOWJGRQ?oc=5",
   "research_score": 86,
