@@ -2,32 +2,32 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Flydubai Attack Mystery: Why Is The Omani Co-Pilotâ€™s Name Still Unknown?
+When can we say AI made a scientific discovery?
 
 SCORE: 89/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdGxxRkN2UTAxMUEzY0dQT3ozNHozX3d0MjRQWWFfS0lUek5jNmNzWFlZczRscEJyVWtYRlJhdjI0MXBxYnJRQXRrcEdrSWxiSTRQa0M3VHllLWh0emxhLWsyc0JhdC1XZ3F0QzFuYVN0R0w3U3dVbVZzaEQ4dng0Y0xiYTduNENYekE1ZjkyNWo2a242NHo1U1l3NDY2VnFva21hUEo4a2tXQQ?oc=5
+https://news.google.com/rss/articles/CBMioAFBVV95cUxQV0FMWXdiTUJ4Tm1Rd2ljV3RlMDBxY3huSW1rUnY5VFhKMEdhVXhfMjU0LUhNeGdseW1BTF83U1hvTWwxRG54LUZhWENPLUZLV2liTVlUNE1TNlo3M0VRR29McXpPZURPRmE0YkV3bjJvNEtpZVZwSDJaNE9NajM2Sm90SzBlZWJyWnY2S19ScGRCZmRvUmlVRWdUbGdoTW9j0gGmAUFVX3lxTE9aMFViOXdveDVjOFp0X043NFkwV1QxbzRjVnBBNy1sV2tRSWUyUWwtekVDLVVBdGhmVkM2MUlVcW9mMkRPMnI3emZJeTFPSndiTjJJbW1teE9RQ1BPMHpzaW5GdUMzWkRyU1ZSOFlyc1E1UWttbFlfRG4tZ3l4eTN2dGMzM3haRGtDTWNBWmtvbTNkVTBEb3F3blpoY2djYlNwakJDelE?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 89/100 - Flydubai Attack Mystery: Why Is The Omani Co-Pilotâ€™s Name Still Unknown? - ndtv.com
-2. 89/100 - When can we say AI made a scientific discovery? - MIT Technology Review
-3. 86/100 - Blood tests reveal why astronauts get constipated in space - ScienceDaily
-4. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - bbc.com
-5. 83/100 - Video | Flydubai Mystery: Why Has The Omani Co-Pilot's Identity Remained Undisclosed? - ndtv.com
-6. 82/100 - Illustration shows AI (Artificial Intelligence) letters and robot hand - The Lufkin Daily News
-7. 82/100 - Sapphire discovery could reshape future brain-inspired electronics - anl.gov
-8. 82/100 - TGS Launches 3D Seismic Reprocessing over PETRONAS Megah Discovery Offshore Malaysia - Ocean News & Technology
-9. 81/100 - AI will transform capitalism – but how? | AI (artificial intelligence) - theguardian.com
-10. 81/100 - How India's women's recurve team made history with Asian Games gold in Aichi-Nagoya? Explained - Livemint
+1. 89/100 - When can we say AI made a scientific discovery? - MIT Technology Review
+2. 89/100 - Flydubai Attack Mystery: Why Is The Omani Co-Pilotâ€™s Name Still Unknown? - ndtv.com
+3. 87/100 - Beijing Zhongke WengeAI Science And Technology (SEHK:1956) Jumped 7%, Is It Fully Priced? - Yahoo Finance
+4. 86/100 - Blood tests reveal why astronauts get constipated in space - ScienceDaily
+5. 86/100 - A Strange Red Sea Discovery Could Reveal How Life Survived Before Oxygen - SciTechDaily
+6. 84/100 - Dr Jitendra launches ‘Swachhata’ campaign across Personnel, Science & Technology, Earth Sciences Ministries - dailyexcelsior.com
+7. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
+8. 83/100 - Video | Flydubai Mystery: Why Has The Omani Co-Pilot's Identity Remained Undisclosed? - ndtv.com
+9. 82/100 - Marvell Technology (MRVL) Showcases 2nm Optical Links And Locks In AI Capacity - Yahoo Finance
+10. 82/100 - Illustration shows AI (Artificial Intelligence) letters and robot hand - The Lufkin Daily News
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-02T08:47:47.288332+00:00",
-  "topic": "Flydubai Attack Mystery: Why Is The Omani Co-Pilotâ€™s Name Still Unknown?",
-  "source": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdGxxRkN2UTAxMUEzY0dQT3ozNHozX3d0MjRQWWFfS0lUek5jNmNzWFlZczRscEJyVWtYRlJhdjI0MXBxYnJRQXRrcEdrSWxiSTRQa0M3VHllLWh0emxhLWsyc0JhdC1XZ3F0QzFuYVN0R0w3U3dVbVZzaEQ4dng0Y0xiYTduNENYekE1ZjkyNWo2a242NHo1U1l3NDY2VnFva21hUEo4a2tXQQ?oc=5",
+  "created_at": "2026-10-03T08:25:04.194509+00:00",
+  "topic": "When can we say AI made a scientific discovery?",
+  "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQV0FMWXdiTUJ4Tm1Rd2ljV3RlMDBxY3huSW1rUnY5VFhKMEdhVXhfMjU0LUhNeGdseW1BTF83U1hvTWwxRG54LUZhWENPLUZLV2liTVlUNE1TNlo3M0VRR29McXpPZURPRmE0YkV3bjJvNEtpZVZwSDJaNE9NajM2Sm90SzBlZWJyWnY2S19ScGRCZmRvUmlVRWdUbGdoTW9j0gGmAUFVX3lxTE9aMFViOXdveDVjOFp0X043NFkwV1QxbzRjVnBBNy1sV2tRSWUyUWwtekVDLVVBdGhmVkM2MUlVcW9mMkRPMnI3emZJeTFPSndiTjJJbW1teE9RQ1BPMHpzaW5GdUMzWkRyU1ZSOFlyc1E1UWttbFlfRG4tZ3l4eTN2dGMzM3haRGtDTWNBWmtvbTNkVTBEb3F3blpoY2djYlNwakJDelE?oc=5",
   "research_score": 89,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
