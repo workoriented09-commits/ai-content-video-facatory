@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth
+Scientists find a surprising clue to why the universe’s expansion doesn’t add up
 
-SCORE: 86/100
+SCORE: 84/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE1GTC1JVWdXcWUyS1pXT1RoTzZlY05WYXNQdURVRzVCdFRyci1Vd3A2UkstQWVOaG5Hb0tnTUNYRVVZTzI1TlowZnUzT2F1VEtmN0YtZ0VSR0RCenQzZFFYY1B4dXMzUThtOTJhdzVWcw?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
-2. 85/100 - Why is Kuaishou Technology stock rallying today? - Investing.com
-3. 84/100 - Scientists find a surprising clue to why the universe’s expansion doesn’t add up - ScienceDaily
-4. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
-5. 83/100 - A Journey to the Depths of Ancient Mars? - NASA Science (.gov)
-6. 82/100 - Sapphire Discovery Could Reshape Future Brain-Inspired Electronics - AZoM
-7. 82/100 - Shift Bioscience Publication Increases Confidence in AI Virtual Cells for Novel Target Discovery - Business Wire
-8. 81/100 - AI will transform capitalism – but how? | AI (artificial intelligence) - The Guardian
-9. 80/100 - Scientists just made a superconductor stronger using “empty space” - ScienceDaily
-10. 80/100 - From Interstellar to Project Hail Mary: Eight space films that imagine a better future - thenationalnews.com
+1. 84/100 - Scientists find a surprising clue to why the universe’s expansion doesn’t add up - ScienceDaily
+2. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
+3. 83/100 - A Journey to the Depths of Ancient Mars? - NASA Science (.gov)
+4. 81/100 - AI will transform capitalism – but how? | AI (artificial intelligence) - The Guardian
+5. 80/100 - UNESCO and partners help shape Ukraine's future through education, culture, science and information - UNESCO
+6. 79/100 - Goodbye joint replacements? Stanford scientists found a way to regrow cartilage and stop arthritis - ScienceDaily
+7. 79/100 - Can AI Run in Space? Google Is About to Find Out - WSJ
+8. 79/100 - Why is Discovery Mining stock sliding today? - Investing.com
+9. 78/100 - Edge AI & Situational Awareness Systems to Showcase at AUSA 2026 - Unmanned Systems Technology
+10. 78/100 - ASELSAN Showcases End-to-End Space Capabilities & LEO Satellite Plans at IAC 2026 - Unmanned Systems Technology
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-06T09:12:20.189020+00:00",
-  "topic": "Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth",
-  "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOXZlMjZxMlBySmppY0xKazNzQjhUX0xnRElrN0pKWEl0U3hqNmROeUM1V251elp6NU9MeFZXSEExSndSM25sOW9UcHVEZFozU1A3bnI2RmRlaEFUcTdSRjU2NXN4WTg0NThBanJzbXU1TC1DQjE4OHBGcExHQzFwcHVrM3o0SWNDbWtwZEdHNXY4WjFXX0VNQ3cxUlUySE1jU01weFZSRU13R3c?oc=5",
-  "research_score": 86,
+  "created_at": "2026-10-07T09:01:51.038896+00:00",
+  "topic": "Scientists find a surprising clue to why the universe’s expansion doesn’t add up",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1GTC1JVWdXcWUyS1pXT1RoTzZlY05WYXNQdURVRzVCdFRyci1Vd3A2UkstQWVOaG5Hb0tnTUNYRVVZTzI1TlowZnUzT2F1VEtmN0YtZ0VSR0RCenQzZFFYY1B4dXMzUThtOTJhdzVWcw?oc=5",
+  "research_score": 84,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
