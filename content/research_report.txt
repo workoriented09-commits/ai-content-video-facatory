@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Scientists find a surprising clue to why the universe’s expansion doesn’t add up
+Why is Shanghai Biren Technology stock sliding today?
 
-SCORE: 84/100
+SCORE: 85/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE1GTC1JVWdXcWUyS1pXT1RoTzZlY05WYXNQdURVRzVCdFRyci1Vd3A2UkstQWVOaG5Hb0tnTUNYRVVZTzI1TlowZnUzT2F1VEtmN0YtZ0VSR0RCenQzZFFYY1B4dXMzUThtOTJhdzVWcw?oc=5
+https://news.google.com/rss/articles/CBMitAFBVV95cUxOZC1zMlVzd0h2WjBEbFd6UVkxTTFyendjcEhpVVF1TWk3elRNYXcwSjNORVB2UW01TmRoTG5NejFwNWZBZnF2NFRHZ3NaUFMwbWE3X1hRcnMzbHk2QXE4ZF8wZUw4cGxhajFTZS1LMkZObDhiTlFtWmlUaVZPS2NYbURYbmVtWGNWQWlqRERMc3k2dU9kWWM2VWJQRDVVUzBlQzdwbjExRFZuN2s4c2g0VmNVbDk?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 84/100 - Scientists find a surprising clue to why the universe’s expansion doesn’t add up - ScienceDaily
-2. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
-3. 83/100 - A Journey to the Depths of Ancient Mars? - NASA Science (.gov)
+1. 85/100 - Why is Shanghai Biren Technology stock sliding today? - Investing.com
+2. 84/100 - Scientists Decode a 12,000-Year-Old Mystery Hidden in Ancient Spear Points - SciTechDaily
+3. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
 4. 81/100 - AI will transform capitalism – but how? | AI (artificial intelligence) - The Guardian
-5. 80/100 - UNESCO and partners help shape Ukraine's future through education, culture, science and information - UNESCO
-6. 79/100 - Goodbye joint replacements? Stanford scientists found a way to regrow cartilage and stop arthritis - ScienceDaily
-7. 79/100 - Can AI Run in Space? Google Is About to Find Out - WSJ
-8. 79/100 - Why is Discovery Mining stock sliding today? - Investing.com
-9. 78/100 - Edge AI & Situational Awareness Systems to Showcase at AUSA 2026 - Unmanned Systems Technology
-10. 78/100 - ASELSAN Showcases End-to-End Space Capabilities & LEO Satellite Plans at IAC 2026 - Unmanned Systems Technology
+5. 81/100 - The oldest known land animal is 194. How did he get so ancient? - Scientific American
+6. 81/100 - What Does Eli Lilly (LLY) Gain From This $870 Million Drug Discovery Deal? - Yahoo Finance
+7. 80/100 - TAAI turns 75, sets sights on technology-led future of Indias travel industry - Daily Excelsior
+8. 80/100 - Earth’s center is moving, and NASA just measured it - ScienceDaily
+9. 80/100 - Birla Institute of Technology and Science Law School Mumbai Admissions 2027-28: Check Full Process - NDTV
+10. 80/100 - Never lose a command again: How to set up unlimited Bash history - How-To Geek
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-07T09:01:51.038896+00:00",
-  "topic": "Scientists find a surprising clue to why the universe’s expansion doesn’t add up",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1GTC1JVWdXcWUyS1pXT1RoTzZlY05WYXNQdURVRzVCdFRyci1Vd3A2UkstQWVOaG5Hb0tnTUNYRVVZTzI1TlowZnUzT2F1VEtmN0YtZ0VSR0RCenQzZFFYY1B4dXMzUThtOTJhdzVWcw?oc=5",
-  "research_score": 84,
+  "created_at": "2026-10-08T09:17:50.363461+00:00",
+  "topic": "Why is Shanghai Biren Technology stock sliding today?",
+  "source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZC1zMlVzd0h2WjBEbFd6UVkxTTFyendjcEhpVVF1TWk3elRNYXcwSjNORVB2UW01TmRoTG5NejFwNWZBZnF2NFRHZ3NaUFMwbWE3X1hRcnMzbHk2QXE4ZF8wZUw4cGxhajFTZS1LMkZObDhiTlFtWmlUaVZPS2NYbURYbmVtWGNWQWlqRERMc3k2dU9kWWM2VWJQRDVVUzBlQzdwbjExRFZuN2s4c2g0VmNVbDk?oc=5",
+  "research_score": 85,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
