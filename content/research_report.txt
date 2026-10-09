@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Why is Shanghai Biren Technology stock sliding today?
+When can we say AI made a scientific discovery?
 
-SCORE: 85/100
+SCORE: 89/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMitAFBVV95cUxOZC1zMlVzd0h2WjBEbFd6UVkxTTFyendjcEhpVVF1TWk3elRNYXcwSjNORVB2UW01TmRoTG5NejFwNWZBZnF2NFRHZ3NaUFMwbWE3X1hRcnMzbHk2QXE4ZF8wZUw4cGxhajFTZS1LMkZObDhiTlFtWmlUaVZPS2NYbURYbmVtWGNWQWlqRERMc3k2dU9kWWM2VWJQRDVVUzBlQzdwbjExRFZuN2s4c2g0VmNVbDk?oc=5
+https://news.google.com/rss/articles/CBMioAFBVV95cUxQV0FMWXdiTUJ4Tm1Rd2ljV3RlMDBxY3huSW1rUnY5VFhKMEdhVXhfMjU0LUhNeGdseW1BTF83U1hvTWwxRG54LUZhWENPLUZLV2liTVlUNE1TNlo3M0VRR29McXpPZURPRmE0YkV3bjJvNEtpZVZwSDJaNE9NajM2Sm90SzBlZWJyWnY2S19ScGRCZmRvUmlVRWdUbGdoTW9j0gGmAUFVX3lxTE9aMFViOXdveDVjOFp0X043NFkwV1QxbzRjVnBBNy1sV2tRSWUyUWwtekVDLVVBdGhmVkM2MUlVcW9mMkRPMnI3emZJeTFPSndiTjJJbW1teE9RQ1BPMHpzaW5GdUMzWkRyU1ZSOFlyc1E1UWttbFlfRG4tZ3l4eTN2dGMzM3haRGtDTWNBWmtvbTNkVTBEb3F3blpoY2djYlNwakJDelE?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 85/100 - Why is Shanghai Biren Technology stock sliding today? - Investing.com
-2. 84/100 - Scientists Decode a 12,000-Year-Old Mystery Hidden in Ancient Spear Points - SciTechDaily
-3. 83/100 - What is AI, how do apps like ChatGPT work and why are there concerns? - BBC
-4. 81/100 - AI will transform capitalism – but how? | AI (artificial intelligence) - The Guardian
-5. 81/100 - The oldest known land animal is 194. How did he get so ancient? - Scientific American
-6. 81/100 - What Does Eli Lilly (LLY) Gain From This $870 Million Drug Discovery Deal? - Yahoo Finance
-7. 80/100 - TAAI turns 75, sets sights on technology-led future of Indias travel industry - Daily Excelsior
+1. 89/100 - When can we say AI made a scientific discovery? - MIT Technology Review
+2. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+3. 84/100 - NASA astronauts splash down after 100 million miles in space - ScienceDaily
+4. 84/100 - Scientists Decode a 12,000-Year-Old Mystery Hidden in Ancient Spear Points - SciTechDaily
+5. 81/100 - AI will transform capitalism – but how? | AI (artificial intelligence) - The Guardian
+6. 81/100 - Could AI Speed Up Pheromone Discovery for Emerging Crop Pests? - SeedWorld
+7. 80/100 - UK and Germany strengthen ties in AI, quantum technology and space - Digital Watch Observatory
 8. 80/100 - Earth’s center is moving, and NASA just measured it - ScienceDaily
-9. 80/100 - Birla Institute of Technology and Science Law School Mumbai Admissions 2027-28: Check Full Process - NDTV
-10. 80/100 - Never lose a command again: How to set up unlimited Bash history - How-To Geek
+9. 80/100 - RAIBO2 robot completes marathon without recharging — Live Science - UA.NEWS
+10. 80/100 - From Diagnosis to Discovery: How AI is Transforming Modern Medicine - Healthcare IT Today
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-08T09:17:50.363461+00:00",
-  "topic": "Why is Shanghai Biren Technology stock sliding today?",
-  "source": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZC1zMlVzd0h2WjBEbFd6UVkxTTFyendjcEhpVVF1TWk3elRNYXcwSjNORVB2UW01TmRoTG5NejFwNWZBZnF2NFRHZ3NaUFMwbWE3X1hRcnMzbHk2QXE4ZF8wZUw4cGxhajFTZS1LMkZObDhiTlFtWmlUaVZPS2NYbURYbmVtWGNWQWlqRERMc3k2dU9kWWM2VWJQRDVVUzBlQzdwbjExRFZuN2s4c2g0VmNVbDk?oc=5",
-  "research_score": 85,
+  "created_at": "2026-10-09T09:24:47.898608+00:00",
+  "topic": "When can we say AI made a scientific discovery?",
+  "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQV0FMWXdiTUJ4Tm1Rd2ljV3RlMDBxY3huSW1rUnY5VFhKMEdhVXhfMjU0LUhNeGdseW1BTF83U1hvTWwxRG54LUZhWENPLUZLV2liTVlUNE1TNlo3M0VRR29McXpPZURPRmE0YkV3bjJvNEtpZVZwSDJaNE9NajM2Sm90SzBlZWJyWnY2S19ScGRCZmRvUmlVRWdUbGdoTW9j0gGmAUFVX3lxTE9aMFViOXdveDVjOFp0X043NFkwV1QxbzRjVnBBNy1sV2tRSWUyUWwtekVDLVVBdGhmVkM2MUlVcW9mMkRPMnI3emZJeTFPSndiTjJJbW1teE9RQ1BPMHpzaW5GdUMzWkRyU1ZSOFlyc1E1UWttbFlfRG4tZ3l4eTN2dGMzM3haRGtDTWNBWmtvbTNkVTBEb3F3blpoY2djYlNwakJDelE?oc=5",
+  "research_score": 89,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
