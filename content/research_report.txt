@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzR
 TOP 10 CANDIDATES:
 
 1. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-2. 82/100 - Scientists find a hidden problem with endless smartphone scrolling - Science Daily
-3. 82/100 - 210-million-year-old dinosaur discovery reveals a lost world in Africa - Science Daily
-4. 82/100 - Zealand taps Generate’s AI discovery engine in $1.2B obesity deal - European Biotechnology Magazine
-5. 82/100 - Equinor & Partners Announce Discovery At Grimsnes Near Oseberg Field - Ocean News & Technology
-6. 80/100 - Shanghai Science and Technology Investment Tower Mixed-Use Development / NBBJ - ArchDaily
-7. 80/100 - Space robotics startup Cosmochute raises $1.5 Mn in pre-seed round - Entrackr
-8. 80/100 - How to Invest in AI Drug Discovery - ETF Database
-9. 80/100 - Apple wins early discovery in trade-secret fight with OpenAI - CNBC
-10. 79/100 - CBA is pushing deeper into AI — could technology reshape Australia’s biggest bank? - Mitrade
+2. 86/100 - SK Hynix Showcases Future AI Memory Technology Designs Beyond HBM - www.marketscreener.com
+3. 86/100 - Innovation@Brown Showcase highlights new science, technology ventures - Brown Daily Herald
+4. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+5. 85/100 - How did Elon Musk's Tesla Roadster jump, flip mid-air and land? Science explained - India Today
+6. 84/100 - Scientists discover a surprising paradox in how our cells age - Science Daily
+7. 83/100 - Is AI Leading to Declining Enrollment in Computer Science? - GovTech
+8. 82/100 - 210-million-year-old dinosaur discovery reveals a lost world in Africa - Science Daily
+9. 82/100 - Zealand Pharma pens $1.2bn AI obesity drug discovery pact with Generate - Pharmaceutical Technology
+10. 80/100 - Space robotics startup Cosmochute raises $1.5 Mn in pre-seed round - Entrackr
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-15T07:38:00.579973+00:00",
+  "created_at": "2026-10-16T07:24:40.968915+00:00",
   "topic": "Scientists make stunning discovery that could help explain why life exists",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5",
   "research_score": 88,
