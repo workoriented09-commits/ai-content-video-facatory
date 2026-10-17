@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzR
 TOP 10 CANDIDATES:
 
 1. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-2. 86/100 - SK Hynix Showcases Future AI Memory Technology Designs Beyond HBM - www.marketscreener.com
-3. 86/100 - Innovation@Brown Showcase highlights new science, technology ventures - Brown Daily Herald
-4. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
-5. 85/100 - How did Elon Musk's Tesla Roadster jump, flip mid-air and land? Science explained - India Today
-6. 84/100 - Scientists discover a surprising paradox in how our cells age - Science Daily
-7. 83/100 - Is AI Leading to Declining Enrollment in Computer Science? - GovTech
-8. 82/100 - 210-million-year-old dinosaur discovery reveals a lost world in Africa - Science Daily
-9. 82/100 - Zealand Pharma pens $1.2bn AI obesity drug discovery pact with Generate - Pharmaceutical Technology
-10. 80/100 - Space robotics startup Cosmochute raises $1.5 Mn in pre-seed round - Entrackr
+2. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
+3. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+4. 85/100 - How could Tesla’s Roadster fly and drive upside down? The science, explained - Firstpost
+5. 84/100 - USC scientists discover how to create a never-ending supply of cancer-fighting cells - Science Daily
+6. 84/100 - Scientists discover a plastic-eating “Pac-Man” enzyme with a surprising secret - Science Daily
+7. 84/100 - Humans were never built for tails. Here’s why. - Popular Science
+8. 82/100 - Companies show off AI technology, new innovation hubs at APTA Expo - Planetizen
+9. 82/100 - Open Call: Automated Scientific Discovery in Materials Science - fundsforNGOs - Grants and Resources for Sustainability
+10. 82/100 - 210-million-year-old dinosaur discovery reveals a lost world in Africa - Science Daily
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-16T07:24:40.968915+00:00",
+  "created_at": "2026-10-17T07:06:23.859266+00:00",
   "topic": "Scientists make stunning discovery that could help explain why life exists",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5",
   "research_score": 88,
