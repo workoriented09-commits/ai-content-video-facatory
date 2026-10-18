@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Scientists make stunning discovery that could help explain why life exists
+When can we say AI made a scientific discovery?
 
-SCORE: 88/100
+SCORE: 89/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5
+https://news.google.com/rss/articles/CBMioAFBVV95cUxQV0FMWXdiTUJ4Tm1Rd2ljV3RlMDBxY3huSW1rUnY5VFhKMEdhVXhfMjU0LUhNeGdseW1BTF83U1hvTWwxRG54LUZhWENPLUZLV2liTVlUNE1TNlo3M0VRR29McXpPZURPRmE0YkV3bjJvNEtpZVZwSDJaNE9NajM2Sm90SzBlZWJyWnY2S19ScGRCZmRvUmlVRWdUbGdoTW9j0gGmAUFVX3lxTE9aMFViOXdveDVjOFp0X043NFkwV1QxbzRjVnBBNy1sV2tRSWUyUWwtekVDLVVBdGhmVkM2MUlVcW9mMkRPMnI3emZJeTFPSndiTjJJbW1teE9RQ1BPMHpzaW5GdUMzWkRyU1ZSOFlyc1E1UWttbFlfRG4tZ3l4eTN2dGMzM3haRGtDTWNBWmtvbTNkVTBEb3F3blpoY2djYlNwakJDelE?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-2. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
-3. 86/100 - Starstruck: NASA Research Shows How Sun’s Ancient History Shaped Earth - NASA Science (.gov)
+1. 89/100 - When can we say AI made a scientific discovery? - MIT Technology Review
+2. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
+3. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
 4. 85/100 - How could Tesla’s Roadster fly and drive upside down? The science, explained - Firstpost
-5. 84/100 - USC scientists discover how to create a never-ending supply of cancer-fighting cells - Science Daily
-6. 84/100 - Scientists discover a plastic-eating “Pac-Man” enzyme with a surprising secret - Science Daily
-7. 84/100 - Humans were never built for tails. Here’s why. - Popular Science
-8. 82/100 - Companies show off AI technology, new innovation hubs at APTA Expo - Planetizen
-9. 82/100 - Open Call: Automated Scientific Discovery in Materials Science - fundsforNGOs - Grants and Resources for Sustainability
-10. 82/100 - 210-million-year-old dinosaur discovery reveals a lost world in Africa - Science Daily
+5. 84/100 - Scientists discover a plastic-eating “Pac-Man” enzyme with a surprising secret - Science Daily
+6. 84/100 - USC scientists discover how to create a never-ending supply of cancer-fighting cells - Science Daily
+7. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
+8. 84/100 - Humans were never built for tails. Here’s why. - Popular Science
+9. 82/100 - NASA discovers hidden fires burning beneath the Amazon rainforest - Science Daily
+10. 82/100 - Zealand Pharma pens $1.2bn AI obesity drug discovery pact with Generate - Pharmaceutical Technology
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-17T07:06:23.859266+00:00",
-  "topic": "Scientists make stunning discovery that could help explain why life exists",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5",
-  "research_score": 88,
+  "created_at": "2026-10-18T07:21:06.212256+00:00",
+  "topic": "When can we say AI made a scientific discovery?",
+  "source": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQV0FMWXdiTUJ4Tm1Rd2ljV3RlMDBxY3huSW1rUnY5VFhKMEdhVXhfMjU0LUhNeGdseW1BTF83U1hvTWwxRG54LUZhWENPLUZLV2liTVlUNE1TNlo3M0VRR29McXpPZURPRmE0YkV3bjJvNEtpZVZwSDJaNE9NajM2Sm90SzBlZWJyWnY2S19ScGRCZmRvUmlVRWdUbGdoTW9j0gGmAUFVX3lxTE9aMFViOXdveDVjOFp0X043NFkwV1QxbzRjVnBBNy1sV2tRSWUyUWwtekVDLVVBdGhmVkM2MUlVcW9mMkRPMnI3emZJeTFPSndiTjJJbW1teE9RQ1BPMHpzaW5GdUMzWkRyU1ZSOFlyc1E1UWttbFlfRG4tZ3l4eTN2dGMzM3haRGtDTWNBWmtvbTNkVTBEb3F3blpoY2djYlNwakJDelE?oc=5",
+  "research_score": 89,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
