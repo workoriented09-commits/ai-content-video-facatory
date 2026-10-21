@@ -13,19 +13,19 @@ TOP 10 CANDIDATES:
 
 1. 94/100 - NASA solves a strange mystery hidden inside asteroid Bennu’s boulders - Science Daily
 2. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-3. 85/100 - As Base Editing Becomes Mainstream, How Should Safety Assessment Keep Pace? - Technology Networks
-4. 85/100 - What Is Physical AI and How Does It Work? Data, World Models, Robots - Pasquale Pillitteri
-5. 84/100 - Digital technology helps protect ancient sites, bring history to life - People's Daily Online
-6. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
-7. 84/100 - NASA astronauts splash down after 100 million miles in space - Science Daily
-8. 82/100 - Omnicom's Ben Hovaness on AI Search, Brand Discovery and the Future of Marketing - Yahoo Finance
-9. 80/100 - Science and technology for the Moon - European Space Agency
-10. 80/100 - Women Face Bigger AI Job Risk, History Shows Why [2026] - https://tech-insider.org/
+3. 86/100 - Sinopia Biosciences Awarded $2.5 Million NIH Grant to Advance AI Drug Discovery - citybiz
+4. 84/100 - Samara claims NASA contract to demonstrate attitude-control technology - SpaceNews
+5. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
+6. 82/100 - 40 Years of Superconductor Science Just Got Turned Upside Down by a Stunning Discovery - SciTechDaily
+7. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+8. 82/100 - Life sciences stocks gain on Citrini AI drug discovery call - Traders Union
+9. 81/100 - Should your game discovery plans change due to AI & decompilation? - The GameDiscoverCo newsletter
+10. 80/100 - Chinese on-orbit servicing startup Space Robot raises funds for constellation plans - SpaceNews
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-20T07:49:21.520099+00:00",
+  "created_at": "2026-10-21T07:53:26.724009+00:00",
   "topic": "NASA solves a strange mystery hidden inside asteroid Bennu’s boulders",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5",
   "research_score": 94,
