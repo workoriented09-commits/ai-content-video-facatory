@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-NASA solves a strange mystery hidden inside asteroid Bennu’s boulders
+How AI is transforming research discovery in Web of Science
 
-SCORE: 94/100
+SCORE: 88/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5
+https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbjF4dE80b0E1UEdQNHFLZnYtbjVsUDJkMUVfSTc4b0Q5RV8xcEZKTy1JWnVLR0Z5RDNtcmV3MHRCMmtkanBuZ2V6b2FEV3NEcU5KYjFySGx4WlVtNTFCZFNVZHlNZXBpNzdnSVJjUi1FX0NQUDF0S1huUnN2dTN6ZXllOVBLLUJtYVMtdHFEbmNCZ0lTTmhLd1dtZlA3X1kycmE2ekFsS0pQeVE?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 94/100 - NASA solves a strange mystery hidden inside asteroid Bennu’s boulders - Science Daily
+1. 88/100 - How AI is transforming research discovery in Web of Science - Clarivate
 2. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-3. 86/100 - Sinopia Biosciences Awarded $2.5 Million NIH Grant to Advance AI Drug Discovery - citybiz
-4. 84/100 - Samara claims NASA contract to demonstrate attitude-control technology - SpaceNews
-5. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
+3. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
+4. 82/100 - Starfighters Space to Participate in NASA’s MAX POWER Airshow at Kennedy Space Center - Business Wire
+5. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
 6. 82/100 - 40 Years of Superconductor Science Just Got Turned Upside Down by a Stunning Discovery - SciTechDaily
-7. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-8. 82/100 - Life sciences stocks gain on Citrini AI drug discovery call - Traders Union
+7. 82/100 - Sinopia Biosciences Secures $2.5 Million NIH Grant For AI Metabolomics Drug Discovery Model - Pulse 2.0
+8. 81/100 - Could overlooked bacterial DNA help explain aggressive prostate cancer? - Drug Discovery News
 9. 81/100 - Should your game discovery plans change due to AI & decompilation? - The GameDiscoverCo newsletter
-10. 80/100 - Chinese on-orbit servicing startup Space Robot raises funds for constellation plans - SpaceNews
+10. 80/100 - Micron Technology Maps AI Memory Future With HBM, DRAM and NAND Roadmap - TradingView
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-21T07:53:26.724009+00:00",
-  "topic": "NASA solves a strange mystery hidden inside asteroid Bennu’s boulders",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5",
-  "research_score": 94,
+  "created_at": "2026-10-22T07:49:16.474297+00:00",
+  "topic": "How AI is transforming research discovery in Web of Science",
+  "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbjF4dE80b0E1UEdQNHFLZnYtbjVsUDJkMUVfSTc4b0Q5RV8xcEZKTy1JWnVLR0Z5RDNtcmV3MHRCMmtkanBuZ2V6b2FEV3NEcU5KYjFySGx4WlVtNTFCZFNVZHlNZXBpNzdnSVJjUi1FX0NQUDF0S1huUnN2dTN6ZXllOVBLLUJtYVMtdHFEbmNCZ0lTTmhLd1dtZlA3X1kycmE2ekFsS0pQeVE?oc=5",
+  "research_score": 88,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
