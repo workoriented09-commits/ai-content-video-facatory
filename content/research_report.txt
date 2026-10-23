@@ -14,18 +14,18 @@ TOP 10 CANDIDATES:
 1. 88/100 - How AI is transforming research discovery in Web of Science - Clarivate
 2. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
 3. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
-4. 82/100 - Starfighters Space to Participate in NASA’s MAX POWER Airshow at Kennedy Space Center - Business Wire
-5. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-6. 82/100 - 40 Years of Superconductor Science Just Got Turned Upside Down by a Stunning Discovery - SciTechDaily
-7. 82/100 - Sinopia Biosciences Secures $2.5 Million NIH Grant For AI Metabolomics Drug Discovery Model - Pulse 2.0
-8. 81/100 - Could overlooked bacterial DNA help explain aggressive prostate cancer? - Drug Discovery News
-9. 81/100 - Should your game discovery plans change due to AI & decompilation? - The GameDiscoverCo newsletter
-10. 80/100 - Micron Technology Maps AI Memory Future With HBM, DRAM and NAND Roadmap - TradingView
+4. 86/100 - UAE mystery smells explained: How reports led to oil spill discovery - Gulf News
+5. 85/100 - Why do we yawn? Discover your brain’s rinse cycle! - Science Friday
+6. 84/100 - City College’s computer science department adapts to AI technology - The Channels
+7. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
+8. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+9. 82/100 - PerturbAI and OpenAI Launch AI Reasoning Agents for Biomedical Discovery - Genetic Engineering and Biotechnology News
+10. 81/100 - How did AI discover the internet's massive cyber-security risk? - BBC
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-22T07:49:16.474297+00:00",
+  "created_at": "2026-10-23T07:48:40.173338+00:00",
   "topic": "How AI is transforming research discovery in Web of Science",
   "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbjF4dE80b0E1UEdQNHFLZnYtbjVsUDJkMUVfSTc4b0Q5RV8xcEZKTy1JWnVLR0Z5RDNtcmV3MHRCMmtkanBuZ2V6b2FEV3NEcU5KYjFySGx4WlVtNTFCZFNVZHlNZXBpNzdnSVJjUi1FX0NQUDF0S1huUnN2dTN6ZXllOVBLLUJtYVMtdHFEbmNCZ0lTTmhLd1dtZlA3X1kycmE2ekFsS0pQeVE?oc=5",
   "research_score": 88,
