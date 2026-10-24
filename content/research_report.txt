@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-How AI is transforming research discovery in Web of Science
+NASA solves a strange mystery hidden inside asteroid Bennu’s boulders
 
-SCORE: 88/100
+SCORE: 94/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbjF4dE80b0E1UEdQNHFLZnYtbjVsUDJkMUVfSTc4b0Q5RV8xcEZKTy1JWnVLR0Z5RDNtcmV3MHRCMmtkanBuZ2V6b2FEV3NEcU5KYjFySGx4WlVtNTFCZFNVZHlNZXBpNzdnSVJjUi1FX0NQUDF0S1huUnN2dTN6ZXllOVBLLUJtYVMtdHFEbmNCZ0lTTmhLd1dtZlA3X1kycmE2ekFsS0pQeVE?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 88/100 - How AI is transforming research discovery in Web of Science - Clarivate
+1. 94/100 - NASA solves a strange mystery hidden inside asteroid Bennu’s boulders - Science Daily
 2. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-3. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
-4. 86/100 - UAE mystery smells explained: How reports led to oil spill discovery - Gulf News
-5. 85/100 - Why do we yawn? Discover your brain’s rinse cycle! - Science Friday
-6. 84/100 - City College’s computer science department adapts to AI technology - The Channels
-7. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
-8. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-9. 82/100 - PerturbAI and OpenAI Launch AI Reasoning Agents for Biomedical Discovery - Genetic Engineering and Biotechnology News
-10. 81/100 - How did AI discover the internet's massive cyber-security risk? - BBC
+3. 88/100 - How AI is transforming research discovery in Web of Science - Clarivate
+4. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
+5. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+6. 82/100 - PerturbAI and OpenAI Launch AI Reasoning Agents for Biomedical Discovery - Genetic Engineering and Biotechnology News
+7. 82/100 - Robots power US AI foundry lab's push for faster alloy discovery - Interesting Engineering
+8. 80/100 - Redmond-based startup develops new robot weeder using AI technology - KUOW
+9. 80/100 - Secretary-General of ASEAN meets with Minister of Education, Culture, Sports, Science and Technology of Japan - ASEAN Main Portal
+10. 80/100 - Rethinking science museums in a future shaped by AI - China Daily Global Edition
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-23T07:48:40.173338+00:00",
-  "topic": "How AI is transforming research discovery in Web of Science",
-  "source": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbjF4dE80b0E1UEdQNHFLZnYtbjVsUDJkMUVfSTc4b0Q5RV8xcEZKTy1JWnVLR0Z5RDNtcmV3MHRCMmtkanBuZ2V6b2FEV3NEcU5KYjFySGx4WlVtNTFCZFNVZHlNZXBpNzdnSVJjUi1FX0NQUDF0S1huUnN2dTN6ZXllOVBLLUJtYVMtdHFEbmNCZ0lTTmhLd1dtZlA3X1kycmE2ekFsS0pQeVE?oc=5",
-  "research_score": 88,
+  "created_at": "2026-10-24T07:30:11.193341+00:00",
+  "topic": "NASA solves a strange mystery hidden inside asteroid Bennu’s boulders",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5",
+  "research_score": 94,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
