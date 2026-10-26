@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzR
 TOP 10 CANDIDATES:
 
 1. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-2. 88/100 - How AI is transforming research discovery in Web of Science - Clarivate
-3. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
-4. 86/100 - UAE mystery smells explained: How reports led to oil spill discovery - Gulf News
-5. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
-6. 84/100 - NASA astronauts splash down after 100 million miles in space - Science Daily
-7. 82/100 - NASA’s asteroid Bennu samples reveal a 4.5-billion-year-old secret - Science Daily
-8. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-9. 81/100 - How did AI discover the internet's massive cyber-security risk? - BBC
-10. 81/100 - Hotel Tech Has a Discovery Problem. Can AI Fix It? - The Recursive
+2. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
+3. 85/100 - Exoskeletons, anyone? China showcases next-gen technology at annual trade fair - South China Morning Post
+4. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
+5. 83/100 - Species unknown to science? Polish team uncovers mystery giraffe skull in Tanzania - TVP World
+6. 82/100 - Illustration shows AI (Artificial Intelligence) letters and robot hand - The Lufkin Daily News
+7. 82/100 - Scientists overcome a hidden obstacle to more powerful quantum computers - Science Daily
+8. 82/100 - Three giant black holes discovered in a galaxy from the dawn of time - Science Daily
+9. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+10. 82/100 - Robots power US AI foundry lab's push for faster alloy discovery - Interesting Engineering
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-25T07:43:45.199470+00:00",
+  "created_at": "2026-10-26T07:59:26.207917+00:00",
   "topic": "Scientists make stunning discovery that could help explain why life exists",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5",
   "research_score": 88,
