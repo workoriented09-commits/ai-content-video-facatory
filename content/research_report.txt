@@ -2,32 +2,32 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Scientists make stunning discovery that could help explain why life exists
+A 2,700-year-old solar eclipse just revealed something surprising about Earth
 
 SCORE: 88/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE8xVFoyZ0FFZjRCbkU5ZUZ4SmpQVGFuZ1pEc1JTZDQyZmQ2MjhqN0pJVXJpMVNaS1NLSEhYRXNOUUliWXRRZmNjUTJUNy10S1pYTk8xbFVEY2NKcmI4X0pGbGFwMU8weEZBMFE4N0d6cw?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-2. 86/100 - SpaceX just delivered some very strange cargo to the International Space Station - Science Daily
-3. 85/100 - Exoskeletons, anyone? China showcases next-gen technology at annual trade fair - South China Morning Post
-4. 84/100 - NASA’s Roman Space Telescope exceeds expectations by nearly 30% - Science Daily
-5. 83/100 - Species unknown to science? Polish team uncovers mystery giraffe skull in Tanzania - TVP World
-6. 82/100 - Illustration shows AI (Artificial Intelligence) letters and robot hand - The Lufkin Daily News
-7. 82/100 - Scientists overcome a hidden obstacle to more powerful quantum computers - Science Daily
-8. 82/100 - Three giant black holes discovered in a galaxy from the dawn of time - Science Daily
-9. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-10. 82/100 - Robots power US AI foundry lab's push for faster alloy discovery - Interesting Engineering
+1. 88/100 - A 2,700-year-old solar eclipse just revealed something surprising about Earth - Science Daily
+2. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
+3. 83/100 - Species unknown to science? Polish team uncovers mystery giraffe skull in Tanzania - TVP World
+4. 82/100 - 'More missions, more often': NASA is overhauling how it selects science missions - Space
+5. 82/100 - 1.9-million-year-old discovery rewrites the story of human evolution - Science Daily
+6. 82/100 - How AI is redefining brand discovery and the future of digital marketing | Kirthiga Reddy - The Economic Times
+7. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+8. 82/100 - AI is reshaping healthcare economics – from drug discovery to patient care - PA Future
+9. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
+10. 80/100 - NASA’s Artemis I Reveals a Surprising Radiation Mystery Near the Moon - SciTechDaily
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-26T07:59:26.207917+00:00",
-  "topic": "Scientists make stunning discovery that could help explain why life exists",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5",
+  "created_at": "2026-10-27T08:10:02.487471+00:00",
+  "topic": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8xVFoyZ0FFZjRCbkU5ZUZ4SmpQVGFuZ1pEc1JTZDQyZmQ2MjhqN0pJVXJpMVNaS1NLSEhYRXNOUUliWXRRZmNjUTJUNy10S1pYTk8xbFVEY2NKcmI4X0pGbGFwMU8weEZBMFE4N0d6cw?oc=5",
   "research_score": 88,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
