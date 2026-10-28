@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-A 2,700-year-old solar eclipse just revealed something surprising about Earth
+NASA solves a strange mystery hidden inside asteroid Bennu’s boulders
 
-SCORE: 88/100
+SCORE: 94/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE8xVFoyZ0FFZjRCbkU5ZUZ4SmpQVGFuZ1pEc1JTZDQyZmQ2MjhqN0pJVXJpMVNaS1NLSEhYRXNOUUliWXRRZmNjUTJUNy10S1pYTk8xbFVEY2NKcmI4X0pGbGFwMU8weEZBMFE4N0d6cw?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 88/100 - A 2,700-year-old solar eclipse just revealed something surprising about Earth - Science Daily
-2. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-3. 83/100 - Species unknown to science? Polish team uncovers mystery giraffe skull in Tanzania - TVP World
-4. 82/100 - 'More missions, more often': NASA is overhauling how it selects science missions - Space
-5. 82/100 - 1.9-million-year-old discovery rewrites the story of human evolution - Science Daily
-6. 82/100 - How AI is redefining brand discovery and the future of digital marketing | Kirthiga Reddy - The Economic Times
-7. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-8. 82/100 - AI is reshaping healthcare economics – from drug discovery to patient care - PA Future
-9. 81/100 - What is generative AI? How artificial intelligence creates content - InfoWorld
-10. 80/100 - NASA’s Artemis I Reveals a Surprising Radiation Mystery Near the Moon - SciTechDaily
+1. 94/100 - NASA solves a strange mystery hidden inside asteroid Bennu’s boulders - Science Daily
+2. 88/100 - A 2,700-year-old solar eclipse just revealed something surprising about Earth - Science Daily
+3. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
+4. 85/100 - Why Is China Restricting AI Exports While Expanding Access to Its Technology? - Modern Diplomacy
+5. 84/100 - Building a Sustainable Future for Life Sciences - Technology Networks
+6. 84/100 - Spacewalk Preps, Robotics Jobs, and Science Duties Fill Tuesday Schedule - NASA (.gov)
+7. 84/100 - Scientists discover a surprising clue to why some brains resist Alzheimer’s - Science Daily
+8. 82/100 - 1.9-million-year-old discovery rewrites the story of human evolution - Science Daily
+9. 82/100 - 'More missions, more often': NASA is overhauling how it selects science missions - Space
+10. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-27T08:10:02.487471+00:00",
-  "topic": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8xVFoyZ0FFZjRCbkU5ZUZ4SmpQVGFuZ1pEc1JTZDQyZmQ2MjhqN0pJVXJpMVNaS1NLSEhYRXNOUUliWXRRZmNjUTJUNy10S1pYTk8xbFVEY2NKcmI4X0pGbGFwMU8weEZBMFE4N0d6cw?oc=5",
-  "research_score": 88,
+  "created_at": "2026-10-28T08:49:30.394348+00:00",
+  "topic": "NASA solves a strange mystery hidden inside asteroid Bennu’s boulders",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5",
+  "research_score": 94,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
