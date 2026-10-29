@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt
 TOP 10 CANDIDATES:
 
 1. 94/100 - NASA solves a strange mystery hidden inside asteroid Bennu’s boulders - Science Daily
-2. 88/100 - A 2,700-year-old solar eclipse just revealed something surprising about Earth - Science Daily
-3. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-4. 85/100 - Why Is China Restricting AI Exports While Expanding Access to Its Technology? - Modern Diplomacy
-5. 84/100 - Building a Sustainable Future for Life Sciences - Technology Networks
-6. 84/100 - Spacewalk Preps, Robotics Jobs, and Science Duties Fill Tuesday Schedule - NASA (.gov)
-7. 84/100 - Scientists discover a surprising clue to why some brains resist Alzheimer’s - Science Daily
-8. 82/100 - 1.9-million-year-old discovery rewrites the story of human evolution - Science Daily
-9. 82/100 - 'More missions, more often': NASA is overhauling how it selects science missions - Space
-10. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+2. 90/100 - Earth's ice ages may have been driven by a hidden ocean chain reaction - Science Daily
+3. 88/100 - A 2,700-year-old solar eclipse just revealed something surprising about Earth - Science Daily
+4. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
+5. 86/100 - 🌀 Discovery of a galaxy containing no stars - Techno-Science
+6. 84/100 - Scientists discover a hidden reason why muscles weaken with age - Science Daily
+7. 84/100 - Why (and How to) Do Science in an Age of AI - AMS Headlines
+8. 84/100 - Spacewalk Preps, Robotics Jobs, and Science Duties Fill Tuesday Schedule - NASA (.gov)
+9. 84/100 - Scientists discover a surprising clue to why some brains resist Alzheimer’s - Science Daily
+10. 83/100 - Could next-gen artificial intelligence help map out future space outposts? - Ohio State News
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-28T08:49:30.394348+00:00",
+  "created_at": "2026-10-29T08:44:21.654467+00:00",
   "topic": "NASA solves a strange mystery hidden inside asteroid Bennu’s boulders",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5",
   "research_score": 94,
