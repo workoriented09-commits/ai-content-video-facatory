@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMixgFBVV95cUxNa3ZmeHJMYlhYS1AxRHNvcVNIdHp
 TOP 10 CANDIDATES:
 
 1. 90/100 - MARVEL-AI: Accelerating Advanced Materials Innovation From Discovery To Deployment - Agency for Science, Technology and Research
-2. 85/100 - China’s secret spaceplane? US military catches photo of aircraft - NewsNation
-3. 84/100 - New Microscope Technology Captures the Hidden World Inside Living Cells Like Never Before - SciTechDaily
-4. 82/100 - Scientists discover a hidden oxygen reservoir deep inside Earth - Science Daily
-5. 82/100 - 1.9-million-year-old discovery rewrites the story of human evolution - Science Daily
-6. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-7. 81/100 - Could PMOS affect the brain? - Drug Discovery News
-8. 81/100 - ‘It’s just a computer, right?’ How AI is tearing Gen Z in two - The Age
-9. 80/100 - Hesai Technology Targets Robotics Motion and 3D World Data Engines - Gasgoo
-10. 80/100 - NASA discovers Jupiter’s invisible shield is more complex than Earth’s - Science Daily
+2. 88/100 - A surprising vitamin A discovery is changing what scientists know about vision - Science Daily
+3. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
+4. 83/100 - How to Solve the Mystery of AI Defense in Depth? - Security Boulevard
+5. 82/100 - Scientists discover a hidden oxygen reservoir deep inside Earth - Science Daily
+6. 82/100 - SebastianStrong Foundation Discovery Science Award 2027 - Oncodaily
+7. 80/100 - Scientists Have Built a Robot Dog Powered by Human Brain Cells - ScienceAlert
+8. 80/100 - Astronauts just gave the International Space Station a powerful upgrade - Science Daily
+9. 80/100 - 60,000-Year-Old Discovery in South Africa Reveals a Surprising Clue About Early Humans - SciTechDaily
+10. 79/100 - The Future of Wearable Technology: What's New in 2026? - Investment Guru India
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-10-30T08:50:32.302690+00:00",
+  "created_at": "2026-10-31T08:38:27.526973+00:00",
   "topic": "MARVEL-AI: Accelerating Advanced Materials Innovation From Discovery To Deployment",
   "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNa3ZmeHJMYlhYS1AxRHNvcVNIdHprZnVwQjN3U3hGVUZkVnhielpxNEU0Tnlscm9JcmliOG9nR3V6cDljdURYcFN0Y1gwY0Y3bjhmMVVrUXkzNTYtUmJrWVRCYmV3YzNVSEYtNUtmU1EyTjNqNUszdE5Wc1BuSk5QbGFyWDY2NEFYbkdablRiR2tfb2dUdFNzRlgzSkpsdmFLVWdvQmxlbnlEMHJ6d1VNV1VXYU9RNlF3RlFGVGI4TWhjWDBDaWc?oc=5",
   "research_score": 90,
