@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-A surprising vitamin A discovery is changing what scientists know about vision
+NASA solves a strange mystery hidden inside asteroid Bennu’s boulders
 
-SCORE: 88/100
+SCORE: 94/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE1SVVpHaXFLa0lHd3pSY05yY1VpMFdwSkdpWjI4NTZfbUctbm9CcmRxRU1vNXhJc0FnN3ZjeTVpQS1OVkJkYkcxMjRLWkdoNUhUejhCelBNRHc4amV6MTFGU1N2Y1N6THU2ZEcxVmUzbw?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 88/100 - A surprising vitamin A discovery is changing what scientists know about vision - Science Daily
-2. 86/100 - Elon Musk says future AI computing will be 100% in space, here's why - India Today
-3. 84/100 - Ancient human DNA discovered in soil, unraveling 22,000-year-old mystery - RBC-Ukraine
-4. 82/100 - Artificial Intelligence In Africa : Majority Of Businesses Adopt AI Technology-Report Shows - pan african visions
-5. 82/100 - Variational AI Enters Collaboration with Merck to Apply Generative AI to Drug Discovery - BioSpace
-6. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
-7. 82/100 - 1.9-million-year-old discovery rewrites the story of human evolution - Science Daily
-8. 81/100 - Discovery and Innovation: AI talks weather. But is it accurate? - UVA Today
-9. 80/100 - India’s AI future cannot depend on technology it does not own - Firstpost
-10. 80/100 - Mysterious 2,600-year-old Egyptian building discovered from space — and it could be an ancient tomb or shrine - Live Science
+1. 94/100 - NASA solves a strange mystery hidden inside asteroid Bennu’s boulders - Science Daily
+2. 88/100 - A surprising vitamin A discovery is changing what scientists know about vision - Science Daily
+3. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
+4. 87/100 - How Are Biomarkers Enabling Drug Discovery and Development in Neuroscience? - Evotec
+5. 86/100 - Elon Drone Day showcases emerging technology, explores future of AI - Elon University
+6. 84/100 - A 50-year-old mystery of vanishing frogs reveals a hidden killer - Science Daily
+7. 84/100 - Scientists discover a surprising clue to autism's origins hidden in the placenta - Science Daily
+8. 84/100 - NASA's Hubble and Webb discover ancient worlds that remember their past - Science Daily
+9. 83/100 - Why does Betelgeuse keep fading? The mystery of Orion's giant star - Space
+10. 82/100 - Scientists discover a hidden oxygen reservoir deep inside Earth - Science Daily
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-03T09:49:21.281279+00:00",
-  "topic": "A surprising vitamin A discovery is changing what scientists know about vision",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1SVVpHaXFLa0lHd3pSY05yY1VpMFdwSkdpWjI4NTZfbUctbm9CcmRxRU1vNXhJc0FnN3ZjeTVpQS1OVkJkYkcxMjRLWkdoNUhUejhCelBNRHc4amV6MTFGU1N2Y1N6THU2ZEcxVmUzbw?oc=5",
-  "research_score": 88,
+  "created_at": "2026-11-04T09:37:17.926568+00:00",
+  "topic": "NASA solves a strange mystery hidden inside asteroid Bennu’s boulders",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1oRjh4YWZ5WS1iRFV5TVBUckhkRGt3S2NnaGdTZmowY2NSTm56Y0RUS3dGS2luMlktOG1lODhsVDhVczBZdkRYX21jU1RPTndJLTlzUC0tUGgwNWt4Q0xlYlczMkhNajJfTnAwY2RxOA?oc=5",
+  "research_score": 94,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
