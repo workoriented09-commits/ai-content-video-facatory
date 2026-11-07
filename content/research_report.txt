@@ -14,18 +14,18 @@ TOP 10 CANDIDATES:
 1. 88/100 - A surprising vitamin A discovery is changing what scientists know about vision - Science Daily
 2. 88/100 - A surprising discovery could help aging muscles repair themselves - Science Daily
 3. 88/100 - Scientists make stunning discovery that could help explain why life exists - Science Daily
-4. 84/100 - Scientists solve 30-year-old mystery and discover a hidden defense against inflammation - Science Daily
-5. 84/100 - NASA is racing against time to save the Hubble Space Telescope - Science Daily
-6. 84/100 - California Science Center, NASA JPL bring decades of space exploration to new exhibit - Daily Trojan
+4. 84/100 - Spacewalk Cleanup, Biomedical Science, and Maintenance Wrap Up Week - NASA (.gov)
+5. 84/100 - Scientists solve 30-year-old mystery and discover a hidden defense against inflammation - Science Daily
+6. 84/100 - NASA’s Swift telescope falls to Earth after nearly 22 years in space - Science Daily
 7. 84/100 - A 50-year-old mystery of vanishing frogs reveals a hidden killer - Science Daily
-8. 84/100 - Hand Over Your Phone: How Corporations Weaponize E-Discovery Against Class Action Plaintiffs - Public Justice
-9. 83/100 - Why does Betelgeuse keep fading? The mystery of Orion's giant star - Space
-10. 82/100 - Nottingham Launches AI-Driven Robotic Lab for Coating Discovery - European Coatings
+8. 83/100 - Is the AI bubble going to burst? Why the world is panicking about the future of artificial intelligence - The Independent
+9. 82/100 - Max Power: NASA hosting its 1st air show this weekend on Florida's Space Coast - Space
+10. 82/100 - MAX POWER aerospace expo, airshow coming to Space Coast, NASA says - WESH
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-06T09:37:09.642229+00:00",
+  "created_at": "2026-11-07T09:01:25.025269+00:00",
   "topic": "A surprising vitamin A discovery is changing what scientists know about vision",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1SVVpHaXFLa0lHd3pSY05yY1VpMFdwSkdpWjI4NTZfbUctbm9CcmRxRU1vNXhJc0FnN3ZjeTVpQS1OVkJkYkcxMjRLWkdoNUhUejhCelBNRHc4amV6MTFGU1N2Y1N6THU2ZEcxVmUzbw?oc=5",
   "research_score": 88,
