@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-A hidden limit of space and time could unlock electronics 100,000 times faster
+India’s Aditya-L1 unlocks Sun's secrets: How new discovery could help predict solar storms that threaten Earth
 
-SCORE: 86/100
+SCORE: 80/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTFB3Yml5MlpPUlc1dHZqMHFRWGJiaU8tY2dxcEcxZUt3ZExCSTItOEJBdHNuYkcwVThjMGlMZkYycWZwN25YT1hyNVhIcUdqaFA2RFVyTHBPV296Z1dDcF95NldlOUc2cVdmOVdJS1JFSQ?oc=5
+https://news.google.com/rss/articles/CBMiiAJBVV95cUxPSHI1SmhHZmtHLWZjV0dhbjBJNEFMRTNCOC1oQmxpRlpzdVVsS0QtSnNjSGZwa2FPQWxkaUlQY1g4eW1rajhBQ3hBQnc0MVFSRU4xZEpoeHVJcXdKXzc1enJhT3ZqVzlmTEZnSDZ4ZXotZjFUc2lucHBtby10OVNWXzFLWGt0VFVmRUxBNmRZRUtGVFFWS2U2ZVNTdkp3Q1pjcW1DdXVpdjJQNC1nNWtheFJJdU05UkNtWWVwakNWVG1oTWFGanJGTzl5RXFvaTdYSFhDUU5SbDNHR2wzVTBmZzNlRXByZlZFQXFTWGVjNmJPUlZILTQ3NF9VN1pwQmVKNElqM01JQm4?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - A hidden limit of space and time could unlock electronics 100,000 times faster - Science Daily
-2. 86/100 - Quantum Discovery Reveals Why More Powerful Lasers Can Actually Slow Atoms Down - SciTechDaily
-3. 85/100 - Why Did Rackspace Technology's (NASDAQ:RXT) Revenue Fall 9.3% While Losses Narrowed? - Kalkine
-4. 84/100 - Caltech robot makes history by building a structure in space - Science Daily
-5. 83/100 - Wanna join a NASA science team? Marc Kuchner will explain how – Rhody Today - The University of Rhode Island
-6. 83/100 - Is this the shocking conclusion to the Galaxy S27 Ultra processor mystery? - PhoneArena
-7. 82/100 - Pierre Fabre Taps XtalPi’s AI and Robotics for Drug Discovery - Unite.AI
-8. 80/100 - MBRL and National Space Science and Technology Centre explore new horizons for collaboration - Zawya
-9. 80/100 - Asking More of Science: How Daiichi Sankyo Is Challenging Assumptions About the Future of Cancer Care - Fierce Pharma
-10. 80/100 - Scientists discover Europe's ancient forests were nothing like we imagined - Science Daily
+1. 80/100 - India’s Aditya-L1 unlocks Sun's secrets: How new discovery could help predict solar storms that threaten Earth - The Times of India
+2. 70/100 - VisionQuest Ending & Post-Credits Scenes Explained: How It All Connects to Avengers: Doomsday & Secret Wars - ComicBook.com
+3. 64/100 - Air India Flight Issues Hijack Alert Just Before Take-Off At Kolkata Airport - NDTV
+4. 64/100 - Several coaches of Sairang-Kolkata Express train derail at Digaru in Assam - The Hindu
+5. 64/100 - ‘I pay $500 for 5 square metres’: Spain’s protesters, in their own words - Al Jazeera
+6. 64/100 - Nvidia CEO's Affair With 'Spy' Helped China Buy $7 Billion Chips: Report - NDTV
+7. 64/100 - Adobe expands AI assistant into creative workflows - SiliconANGLE
+8. 62/100 - Why you are not losing weight despite eating less and exercising regularly - Firstpost
+9. 60/100 - Samsung Galaxy S27 series dummy units surface in new leak - GSMArena.com news - GSMArena.com
+10. 57/100 - Don’t Have 210 Spare GBs? ‘GTA VI’ Is Coming to Xbox Cloud Gaming (and the Xbox One) at Launch - The Hollywood Reporter
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-10T10:12:12.556546+00:00",
-  "topic": "A hidden limit of space and time could unlock electronics 100,000 times faster",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB3Yml5MlpPUlc1dHZqMHFRWGJiaU8tY2dxcEcxZUt3ZExCSTItOEJBdHNuYkcwVThjMGlMZkYycWZwN25YT1hyNVhIcUdqaFA2RFVyTHBPV296Z1dDcF95NldlOUc2cVdmOVdJS1JFSQ?oc=5",
-  "research_score": 86,
+  "created_at": "2026-11-11T09:42:10.946234+00:00",
+  "topic": "India’s Aditya-L1 unlocks Sun's secrets: How new discovery could help predict solar storms that threaten Earth",
+  "source": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPSHI1SmhHZmtHLWZjV0dhbjBJNEFMRTNCOC1oQmxpRlpzdVVsS0QtSnNjSGZwa2FPQWxkaUlQY1g4eW1rajhBQ3hBQnc0MVFSRU4xZEpoeHVJcXdKXzc1enJhT3ZqVzlmTEZnSDZ4ZXotZjFUc2lucHBtby10OVNWXzFLWGt0VFVmRUxBNmRZRUtGVFFWS2U2ZVNTdkp3Q1pjcW1DdXVpdjJQNC1nNWtheFJJdU05UkNtWWVwakNWVG1oTWFGanJGTzl5RXFvaTdYSFhDUU5SbDNHR2wzVTBmZzNlRXByZlZFQXFTWGVjNmJPUlZILTQ3NF9VN1pwQmVKNElqM01JQm4?oc=5",
+  "research_score": 80,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
