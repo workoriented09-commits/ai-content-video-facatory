@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-India’s Aditya-L1 unlocks Sun's secrets: How new discovery could help predict solar storms that threaten Earth
+Where are all the males? Ancient human fossils reveal a startling mystery
 
-SCORE: 80/100
+SCORE: 93/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiiAJBVV95cUxPSHI1SmhHZmtHLWZjV0dhbjBJNEFMRTNCOC1oQmxpRlpzdVVsS0QtSnNjSGZwa2FPQWxkaUlQY1g4eW1rajhBQ3hBQnc0MVFSRU4xZEpoeHVJcXdKXzc1enJhT3ZqVzlmTEZnSDZ4ZXotZjFUc2lucHBtby10OVNWXzFLWGt0VFVmRUxBNmRZRUtGVFFWS2U2ZVNTdkp3Q1pjcW1DdXVpdjJQNC1nNWtheFJJdU05UkNtWWVwakNWVG1oTWFGanJGTzl5RXFvaTdYSFhDUU5SbDNHR2wzVTBmZzNlRXByZlZFQXFTWGVjNmJPUlZILTQ3NF9VN1pwQmVKNElqM01JQm4?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTFBWb3RaYUtGYlQzZ0xrNnY0MVJiazB1ZFNOOGRPeGpjbFhLUDhPR0FTUV90STNncG5ERUZ1c29CejE3YlNLWl9Ja0tHUV96WE5LQURMbHh5YjUyZnB3SFdSWnEyekt0RS1idndpSG5zdw?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 80/100 - India’s Aditya-L1 unlocks Sun's secrets: How new discovery could help predict solar storms that threaten Earth - The Times of India
-2. 70/100 - VisionQuest Ending & Post-Credits Scenes Explained: How It All Connects to Avengers: Doomsday & Secret Wars - ComicBook.com
-3. 64/100 - Air India Flight Issues Hijack Alert Just Before Take-Off At Kolkata Airport - NDTV
-4. 64/100 - Several coaches of Sairang-Kolkata Express train derail at Digaru in Assam - The Hindu
-5. 64/100 - ‘I pay $500 for 5 square metres’: Spain’s protesters, in their own words - Al Jazeera
-6. 64/100 - Nvidia CEO's Affair With 'Spy' Helped China Buy $7 Billion Chips: Report - NDTV
-7. 64/100 - Adobe expands AI assistant into creative workflows - SiliconANGLE
-8. 62/100 - Why you are not losing weight despite eating less and exercising regularly - Firstpost
-9. 60/100 - Samsung Galaxy S27 series dummy units surface in new leak - GSMArena.com news - GSMArena.com
-10. 57/100 - Don’t Have 210 Spare GBs? ‘GTA VI’ Is Coming to Xbox Cloud Gaming (and the Xbox One) at Launch - The Hollywood Reporter
+1. 93/100 - Where are all the males? Ancient human fossils reveal a startling mystery - Science Daily
+2. 84/100 - NASA awards Moon Base transportation, technology, science projects - Aerospace Manufacturing and Design
+3. 84/100 - The mystery of how hair knows where to grow may finally be solved - Science Daily
+4. 84/100 - Scientists uncover a 192-year-old mystery hidden in a mangled silver coin - Science Daily
+5. 83/100 - Should You Forget SpaceX and Buy These 2 Artificial Intelligence (AI) Stocks Instead? - Yahoo Finance
+6. 82/100 - ScienceOS: AI Research Assistant & Discovery Guide - CASRAI
+7. 82/100 - Discovery Institute Launches AI Research Assistant - Science and Culture Today
+8. 81/100 - NASA’s secret weapon in the lunar space race may be … procurement reform? - Ars Technica
+9. 80/100 - A distant exoplanet mysteriously vanished from sight. Astronomers just discovered why - Space
+10. 80/100 - India’s Aditya-L1 unlocks Sun's secrets: How new discovery could help predict solar storms that threaten Earth - The Times of India
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-11T09:42:10.946234+00:00",
-  "topic": "India’s Aditya-L1 unlocks Sun's secrets: How new discovery could help predict solar storms that threaten Earth",
-  "source": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPSHI1SmhHZmtHLWZjV0dhbjBJNEFMRTNCOC1oQmxpRlpzdVVsS0QtSnNjSGZwa2FPQWxkaUlQY1g4eW1rajhBQ3hBQnc0MVFSRU4xZEpoeHVJcXdKXzc1enJhT3ZqVzlmTEZnSDZ4ZXotZjFUc2lucHBtby10OVNWXzFLWGt0VFVmRUxBNmRZRUtGVFFWS2U2ZVNTdkp3Q1pjcW1DdXVpdjJQNC1nNWtheFJJdU05UkNtWWVwakNWVG1oTWFGanJGTzl5RXFvaTdYSFhDUU5SbDNHR2wzVTBmZzNlRXByZlZFQXFTWGVjNmJPUlZILTQ3NF9VN1pwQmVKNElqM01JQm4?oc=5",
-  "research_score": 80,
+  "created_at": "2026-11-12T10:01:54.852702+00:00",
+  "topic": "Where are all the males? Ancient human fossils reveal a startling mystery",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBWb3RaYUtGYlQzZ0xrNnY0MVJiazB1ZFNOOGRPeGpjbFhLUDhPR0FTUV90STNncG5ERUZ1c29CejE3YlNLWl9Ja0tHUV96WE5LQURMbHh5YjUyZnB3SFdSWnEyekt0RS1idndpSG5zdw?oc=5",
+  "research_score": 93,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
