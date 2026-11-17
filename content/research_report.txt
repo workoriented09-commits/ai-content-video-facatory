@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Brainwaves: Enzyme transitions: how the invisible step may be key to future drug discovery
+Dark Comet or Soviet Probe? Mystery Over Origin of Unexplained Space Object
 
-SCORE: 88/100
+SCORE: 85/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaXIza2E2WVB0SEJvU04zVzZoQ3F3b2RjSEVGblVXeTRaZUszM0NYZUVkSTkyV3g3bDkwSEhNNlIybUpUY2ZMUjFMTWZFVl9wY0ZDT1FLc3NISHZoVXJUOXp0R1ZCOW5zTVRlbTZEa1hhTGMwNXZwOEg2ZktYQ0hIT3poem5KUHdpekc2RVJzazFFXzU1T0M0aU9pRWhDblE2YzlJQXcwYVRBaFlIME96YkVFTDNkczZneU1qRVNLandPV0U?oc=5
+https://news.google.com/rss/articles/CBMirAFBVV95cUxOcEdVeWptVHVGWk42NjkxRk9fWERGRWNoVS0tdFV6QnlCVjRLVUxHcGtSN1N2Z19qajZ2ZlpuZlBRNmM2MFdVZTNldTcxdzA0YjN0V2pEZm84Z3owRks1YzN4OHFhX1NpMXdnTGdnbnNtOUVFeW1OQnA1cU1OSTVhVFRFUl9qNnNnVUVkaDN6eXVpbFRkMlFnSGw5Q1daaExkWEJrM1ZSNXp3WkVE?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 88/100 - Brainwaves: Enzyme transitions: how the invisible step may be key to future drug discovery - Stuff.co.nz
+1. 85/100 - Dark Comet or Soviet Probe? Mystery Over Origin of Unexplained Space Object - Newsweek
 2. 83/100 - Who Is Avril Lavigne’s Baby’s Dad? New Details Revealed About Her Mystery Partner - IMDb
-3. 82/100 - Sino Biological Launches 4RISE™ High-Throughput Wet-Lab Services to Accelerate AI-Driven Drug Discovery - BioSpace
-4. 82/100 - Science Week 2026: A celebration of science, creativity and discovery - Kuwait Times
-5. 82/100 - The Virtual Biotech: A multi-agent AI framework for therapeutic discovery and development - Science | AAAS
-6. 81/100 - Is AI replacing traditional digital search? The evolution of online discovery - IndulgExpress
-7. 80/100 - NordAmps’ semiconductor technology for future satellite communications gains international recognition - TradingView
-8. 80/100 - "Still Feels Like Science Fiction": Sundar Pichai Congratulates SpaceX After Historic Starship Catch - NDTV
-9. 80/100 - Integrating AI and Robotics for Persistent Materials Science Research Systems - AZoM
-10. 80/100 - Starship capture thrills space fans! And SpaceX makes spaceflight history (again) - EarthSky
+3. 82/100 - Hidden ecosystem: Scientists discover 245 animals living inside a single deep-sea rock - Science Daily
+4. 82/100 - Nvidia launches Nemotron for Science to help researchers build AI agents for discovery - t2ONLINE
+5. 82/100 - Telesis Bio Announces Strategic Focus on AI-Native Drug Discovery and Launches New Website - BioSpace
+6. 82/100 - Sino Biological Launches 4RISE™ High-Throughput Wet-Lab Services to Accelerate AI-Driven Drug Discovery - BioSpace
+7. 82/100 - Twist Bioscience: Long-Term 'Buy' On AI Discovery For Biotech (NASDAQ:TWST) - Seeking Alpha
+8. 80/100 - Secure satellite communications and sustainable space exploration - Technology Org
+9. 80/100 - Ultra-thin pipes solve space constraints on platforms - Technology Org
+10. 80/100 - How Built In Tracks AI Employer Visibility for Candidate Discovery - Built In
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-16T09:59:56.730488+00:00",
-  "topic": "Brainwaves: Enzyme transitions: how the invisible step may be key to future drug discovery",
-  "source": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPaXIza2E2WVB0SEJvU04zVzZoQ3F3b2RjSEVGblVXeTRaZUszM0NYZUVkSTkyV3g3bDkwSEhNNlIybUpUY2ZMUjFMTWZFVl9wY0ZDT1FLc3NISHZoVXJUOXp0R1ZCOW5zTVRlbTZEa1hhTGMwNXZwOEg2ZktYQ0hIT3poem5KUHdpekc2RVJzazFFXzU1T0M0aU9pRWhDblE2YzlJQXcwYVRBaFlIME96YkVFTDNkczZneU1qRVNLandPV0U?oc=5",
-  "research_score": 88,
+  "created_at": "2026-11-17T10:56:37.856670+00:00",
+  "topic": "Dark Comet or Soviet Probe? Mystery Over Origin of Unexplained Space Object",
+  "source": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcEdVeWptVHVGWk42NjkxRk9fWERGRWNoVS0tdFV6QnlCVjRLVUxHcGtSN1N2Z19qajZ2ZlpuZlBRNmM2MFdVZTNldTcxdzA0YjN0V2pEZm84Z3owRks1YzN4OHFhX1NpMXdnTGdnbnNtOUVFeW1OQnA1cU1OSTVhVFRFUl9qNnNnVUVkaDN6eXVpbFRkMlFnSGw5Q1daaExkWEJrM1ZSNXp3WkVE?oc=5",
+  "research_score": 85,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
