@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Nirmala Bhoo Pathy: What Happens When Science Takes You Outside Your Comfort Zone?
+More than a billion years of Earth's history vanished. Scientists may finally know why
 
-SCORE: 85/100
+SCORE: 86/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiZEFVX3lxTE5YUWtWR1Z6QW1oU0tNcGlUNS14bVhrVnFmb2RmY1VoUmpFVUlQOUVMQXhGVEpERjU4alZ3eERPc0NfNVVrS0M3TFpvX1dWTjN0YVhNOEQxR3BPMl9HbzdjZTlweko?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE4yOHZCazdCYkxWaXZPRHlVRDhxZTlLSzhtMFZDd0daVEhxTU9FYUdsZGdvcUdEdUhNWWxZcmw3VUtOREdTTnpfLTBnaGZHSzY1eGxKbnFoZFJvcTBVSC1aRXZLTXkteHFKUkM4OV85Zw?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 85/100 - Nirmala Bhoo Pathy: What Happens When Science Takes You Outside Your Comfort Zone? - Oncodaily
-2. 82/100 - Hidden ecosystem: Scientists discover 245 animals living inside a single deep-sea rock - Science Daily
-3. 82/100 - BTS 2026: AI poised to transform drug discovery and biotechnology research - BioSpectrum India
-4. 81/100 - Malpractice Insurance for AI Errors? | EDRM - Electronic Discovery Reference Model - JD Supra
-5. 81/100 - Breaking the record for single-round financing in AI-driven drug discovery! Why has Isomorphic Labs attracted top-tier investors? - Moomoo
-6. 80/100 - SEALSQ’s Quantum Sovereign Vertical Stack Integrates Miraex Technology,Connecting Quantum Processors, Networks and Space - AiThority
-7. 80/100 - Future Horizons warns AI boom risks repeating historical technology cycles - New Electronics
-8. 80/100 - ‘Rigorously Curated’ film festival explores sentience, technology and the ‘sad robot’ - Brown Daily Herald
-9. 80/100 - More than a billion years of Earth's history vanished. Scientists may finally know why - Science Daily
-10. 80/100 - Why the same pain can have different biological causes - Drug Discovery News
+1. 86/100 - More than a billion years of Earth's history vanished. Scientists may finally know why - ScienceDaily
+2. 84/100 - Mystery Science Theater 3000 returns to Southern California with new show - Los Angeles Daily News
+3. 83/100 - What does the shift towards conversational discovery and AI-generated answers tell us about the future of sports platforms? - SportsPro
+4. 82/100 - Hidden ecosystem: Scientists discover 245 animals living inside a single deep-sea rock - ScienceDaily
+5. 82/100 - Discovery of previously unknown Gondwana Supermountains found under Antarctic Ice - ANU College of Science and Medicine
+6. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - ScienceDaily
+7. 82/100 - Chen Institute Symposium Explores AI’s Role in Drug Discovery, Mathematics and Neuroscience - HPCwire
+8. 81/100 - 'A shotgun marriage': Why are NASA's SkyFall Mars helicopters riding on a nuclear rocket? - Space
+9. 81/100 - Where’s the paperwork? Ilhan Omar marriage history remains a mystery waiting to be solved - News24
+10. 80/100 - Space technology for Antarctic expeditions - Airbus
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-18T10:28:25.433327+00:00",
-  "topic": "Nirmala Bhoo Pathy: What Happens When Science Takes You Outside Your Comfort Zone?",
-  "source": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5YUWtWR1Z6QW1oU0tNcGlUNS14bVhrVnFmb2RmY1VoUmpFVUlQOUVMQXhGVEpERjU4alZ3eERPc0NfNVVrS0M3TFpvX1dWTjN0YVhNOEQxR3BPMl9HbzdjZTlweko?oc=5",
-  "research_score": 85,
+  "created_at": "2026-11-19T10:35:25.199632+00:00",
+  "topic": "More than a billion years of Earth's history vanished. Scientists may finally know why",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4yOHZCazdCYkxWaXZPRHlVRDhxZTlLSzhtMFZDd0daVEhxTU9FYUdsZGdvcUdEdUhNWWxZcmw3VUtOREdTTnpfLTBnaGZHSzY1eGxKbnFoZFJvcTBVSC1aRXZLTXkteHFKUkM4OV85Zw?oc=5",
+  "research_score": 86,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
