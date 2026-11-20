@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTE4yOHZCazdCYkxWaXZPRHlVRDhxZTl
 TOP 10 CANDIDATES:
 
 1. 86/100 - More than a billion years of Earth's history vanished. Scientists may finally know why - ScienceDaily
-2. 84/100 - Mystery Science Theater 3000 returns to Southern California with new show - Los Angeles Daily News
-3. 83/100 - What does the shift towards conversational discovery and AI-generated answers tell us about the future of sports platforms? - SportsPro
-4. 82/100 - Hidden ecosystem: Scientists discover 245 animals living inside a single deep-sea rock - ScienceDaily
-5. 82/100 - Discovery of previously unknown Gondwana Supermountains found under Antarctic Ice - ANU College of Science and Medicine
-6. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - ScienceDaily
-7. 82/100 - Chen Institute Symposium Explores AI’s Role in Drug Discovery, Mathematics and Neuroscience - HPCwire
-8. 81/100 - 'A shotgun marriage': Why are NASA's SkyFall Mars helicopters riding on a nuclear rocket? - Space
-9. 81/100 - Where’s the paperwork? Ilhan Omar marriage history remains a mystery waiting to be solved - News24
-10. 80/100 - Space technology for Antarctic expeditions - Airbus
+2. 85/100 - How Is DXC Technology (NYSE:DXC) Integrating Cisco's AI Into Enterprise IT Operations Through OASIS? - Kalkine
+3. 85/100 - Why did Kuaishou Technology stock hit a record low today? By Investing.com - Investing.com India
+4. 83/100 - Who is mystery figure hidden in martyr's portrait? - Yahoo
+5. 83/100 - What does the shift towards conversational discovery and AI-generated answers tell us about the future of sports platforms? - SportsPro
+6. 82/100 - A vanished bird from Haiti may help solve an ancient Pacific mystery - Earth.com
+7. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - ScienceDaily
+8. 82/100 - China-based AI robotics biotech firm MegaRobo raises $200M to accelerate scientific discovery - SiliconANGLE
+9. 81/100 - 'A shotgun marriage': Why are NASA's SkyFall Mars helicopters riding on a nuclear rocket? - Space
+10. 81/100 - Can a WT1 cancer vaccine succeed where others failed? - Drug Discovery News
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-19T10:35:25.199632+00:00",
+  "created_at": "2026-11-20T10:16:56.445143+00:00",
   "topic": "More than a billion years of Earth's history vanished. Scientists may finally know why",
   "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4yOHZCazdCYkxWaXZPRHlVRDhxZTlLSzhtMFZDd0daVEhxTU9FYUdsZGdvcUdEdUhNWWxZcmw3VUtOREdTTnpfLTBnaGZHSzY1eGxKbnFoZFJvcTBVSC1aRXZLTXkteHFKUkM4OV85Zw?oc=5",
   "research_score": 86,
