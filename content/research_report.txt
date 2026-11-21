@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-More than a billion years of Earth's history vanished. Scientists may finally know why
+What Exactly Is AI? A Computer Science Professor Unpacks the Mystery
 
-SCORE: 86/100
+SCORE: 89/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMib0FVX3lxTE4yOHZCazdCYkxWaXZPRHlVRDhxZTlLSzhtMFZDd0daVEhxTU9FYUdsZGdvcUdEdUhNWWxZcmw3VUtOREdTTnpfLTBnaGZHSzY1eGxKbnFoZFJvcTBVSC1aRXZLTXkteHFKUkM4OV85Zw?oc=5
+https://news.google.com/rss/articles/CBMingFBVV95cUxNNWYtWGRjcHc2M1V1RmpDYk9UbEFzbkF5ZjNzMURkTVFQbm8yODZLWl8zQTlkMmh6Q2d1ZzBLU3M3UVdEVXI0NkhFaThhQkNhckpFcFZVeWs1ckpuZGg0a1d1cTZyM29NdVhIRUVGajluUVlZZm9JaGwwQ0JscklZODRRNGRSa3RRTWRBTDYtRENIQXgtODBhSC1rQVdldw?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - More than a billion years of Earth's history vanished. Scientists may finally know why - ScienceDaily
-2. 85/100 - How Is DXC Technology (NYSE:DXC) Integrating Cisco's AI Into Enterprise IT Operations Through OASIS? - Kalkine
-3. 85/100 - Why did Kuaishou Technology stock hit a record low today? By Investing.com - Investing.com India
-4. 83/100 - Who is mystery figure hidden in martyr's portrait? - Yahoo
-5. 83/100 - What does the shift towards conversational discovery and AI-generated answers tell us about the future of sports platforms? - SportsPro
-6. 82/100 - A vanished bird from Haiti may help solve an ancient Pacific mystery - Earth.com
-7. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - ScienceDaily
-8. 82/100 - China-based AI robotics biotech firm MegaRobo raises $200M to accelerate scientific discovery - SiliconANGLE
-9. 81/100 - 'A shotgun marriage': Why are NASA's SkyFall Mars helicopters riding on a nuclear rocket? - Space
-10. 81/100 - Can a WT1 cancer vaccine succeed where others failed? - Drug Discovery News
+1. 89/100 - What Exactly Is AI? A Computer Science Professor Unpacks the Mystery - Pomona College
+2. 88/100 - Scientists make stunning discovery that could help explain why life exists - ScienceDaily
+3. 86/100 - More than a billion years of Earth's history vanished. Scientists may finally know why - ScienceDaily
+4. 84/100 - Microplastics may be more dangerous than we thought. Scientists just discovered why - ScienceDaily
+5. 83/100 - Could an ancient solar eclipse rewrite Egyptian history? - Space
+6. 83/100 - What does the shift towards conversational discovery and AI-generated answers tell us about the future of sports platforms? - SportsPro
+7. 82/100 - A decades-old mystery about light could hold the key to faster internet - ScienceDaily
+8. 82/100 - A vanished bird from Haiti may help solve an ancient Pacific mystery - Earth.com
+9. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - ScienceDaily
+10. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-20T10:16:56.445143+00:00",
-  "topic": "More than a billion years of Earth's history vanished. Scientists may finally know why",
-  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4yOHZCazdCYkxWaXZPRHlVRDhxZTlLSzhtMFZDd0daVEhxTU9FYUdsZGdvcUdEdUhNWWxZcmw3VUtOREdTTnpfLTBnaGZHSzY1eGxKbnFoZFJvcTBVSC1aRXZLTXkteHFKUkM4OV85Zw?oc=5",
-  "research_score": 86,
+  "created_at": "2026-11-21T10:01:22.423928+00:00",
+  "topic": "What Exactly Is AI? A Computer Science Professor Unpacks the Mystery",
+  "source": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNWYtWGRjcHc2M1V1RmpDYk9UbEFzbkF5ZjNzMURkTVFQbm8yODZLWl8zQTlkMmh6Q2d1ZzBLU3M3UVdEVXI0NkhFaThhQkNhckpFcFZVeWs1ckpuZGg0a1d1cTZyM29NdVhIRUVGajluUVlZZm9JaGwwQ0JscklZODRRNGRSa3RRTWRBTDYtRENIQXgtODBhSC1rQVdldw?oc=5",
+  "research_score": 89,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
