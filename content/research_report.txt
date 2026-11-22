@@ -12,20 +12,20 @@ https://news.google.com/rss/articles/CBMingFBVV95cUxNNWYtWGRjcHc2M1V1RmpDYk9UbEF
 TOP 10 CANDIDATES:
 
 1. 89/100 - What Exactly Is AI? A Computer Science Professor Unpacks the Mystery - Pomona College
-2. 88/100 - Scientists make stunning discovery that could help explain why life exists - ScienceDaily
-3. 86/100 - More than a billion years of Earth's history vanished. Scientists may finally know why - ScienceDaily
-4. 84/100 - Microplastics may be more dangerous than we thought. Scientists just discovered why - ScienceDaily
-5. 83/100 - Could an ancient solar eclipse rewrite Egyptian history? - Space
-6. 83/100 - What does the shift towards conversational discovery and AI-generated answers tell us about the future of sports platforms? - SportsPro
-7. 82/100 - A decades-old mystery about light could hold the key to faster internet - ScienceDaily
-8. 82/100 - A vanished bird from Haiti may help solve an ancient Pacific mystery - Earth.com
-9. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - ScienceDaily
-10. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+2. 85/100 - Why study Cognitive Science in the age of AI? - The Hindu
+3. 84/100 - AgiBot Deploys G2 Robots on Lens Technology’s Smartphone Test Lines - Pandaily
+4. 84/100 - Microplastics may be more dangerous than we thought. Scientists just discovered why - Science Daily
+5. 82/100 - A vanished bird from Haiti may help solve an ancient Pacific mystery - Earth.com
+6. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - Science Daily
+7. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+8. 82/100 - The Virtual Biotech: A multi-agent AI framework for therapeutic discovery and development - Science | AAAS
+9. 81/100 - Can a WT1 cancer vaccine succeed where others failed? - Drug Discovery News
+10. 81/100 - Could AI’s discovery of software flaws lead to more outages? - WBAL-TV
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-21T10:01:22.423928+00:00",
+  "created_at": "2026-11-22T10:03:00.717017+00:00",
   "topic": "What Exactly Is AI? A Computer Science Professor Unpacks the Mystery",
   "source": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNWYtWGRjcHc2M1V1RmpDYk9UbEFzbkF5ZjNzMURkTVFQbm8yODZLWl8zQTlkMmh6Q2d1ZzBLU3M3UVdEVXI0NkhFaThhQkNhckpFcFZVeWs1ckpuZGg0a1d1cTZyM29NdVhIRUVGajluUVlZZm9JaGwwQ0JscklZODRRNGRSa3RRTWRBTDYtRENIQXgtODBhSC1rQVdldw?oc=5",
   "research_score": 89,
