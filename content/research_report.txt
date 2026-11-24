@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-What Exactly Is AI? A Computer Science Professor Unpacks the Mystery
+Scientists make stunning discovery that could help explain why life exists
 
-SCORE: 89/100
+SCORE: 88/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMingFBVV95cUxNNWYtWGRjcHc2M1V1RmpDYk9UbEFzbkF5ZjNzMURkTVFQbm8yODZLWl8zQTlkMmh6Q2d1ZzBLU3M3UVdEVXI0NkhFaThhQkNhckpFcFZVeWs1ckpuZGg0a1d1cTZyM29NdVhIRUVGajluUVlZZm9JaGwwQ0JscklZODRRNGRSa3RRTWRBTDYtRENIQXgtODBhSC1rQVdldw?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 89/100 - What Exactly Is AI? A Computer Science Professor Unpacks the Mystery - Pomona College
-2. 88/100 - Scientists make stunning discovery that could help explain why life exists - ScienceDaily
-3. 85/100 - Who was buried in Westminster Abbey's Roman coffin? A 150-year mystery may be solved - ScienceDaily
-4. 84/100 - Microplastics may be more dangerous than we thought. Scientists just discovered why - ScienceDaily
-5. 82/100 - DNA’s secret sunscreen may have helped life survive on early Earth - ScienceDaily
-6. 81/100 - Will Open Technology or Restrictions Shape the Future of AI? Yann LeCun Calls Out Amodei’s Stance as ‘Medieval’ - The 420.in
-7. 81/100 - Could AI’s discovery of software flaws lead to more outages? - WLWT
-8. 80/100 - Scientists turn Moon dust into LEGO-like bricks for future lunar bases - ScienceDaily
-9. 80/100 - Motion under the ocean explains the depth of the world’s deepest spot - Science News
-10. 80/100 - After 8 years in space, a groundbreaking X-ray telescope finally opens its eyes - ScienceDaily
+1. 88/100 - Scientists make stunning discovery that could help explain why life exists - ScienceDaily
+2. 84/100 - NASA Space Technology Graduate Research Opportunities Released - NASA Science (.gov)
+3. 84/100 - Microplastics may be more dangerous than we thought. Scientists just discovered why - ScienceDaily
+4. 84/100 - A 194-year-old tortoise has a remarkable anti-aging secret hidden in its DNA - ScienceDaily
+5. 84/100 - IITs To Add 6,000 Seats In Robotics, AI And Space Technology - BW Education
+6. 84/100 - Earth’s ancient oceans may have fooled scientists about its oxygen history - ScienceDaily
+7. 83/100 - BepiColombo ends 8-year interplanetary journey to Mercury. What's next for the ambitious spacecraft? - Live Science
+8. 82/100 - Here’s how AI is impacting computer science student enrollment - FOX 8 Local First
+9. 82/100 - A concrete vision: Saint-Gobain and Microsoft Discovery build for the future - Microsoft Source
+10. 82/100 - Top 12 AI Drug Discovery Signals Of 2026 - Life Science Leader
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-23T10:59:21.858726+00:00",
-  "topic": "What Exactly Is AI? A Computer Science Professor Unpacks the Mystery",
-  "source": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNWYtWGRjcHc2M1V1RmpDYk9UbEFzbkF5ZjNzMURkTVFQbm8yODZLWl8zQTlkMmh6Q2d1ZzBLU3M3UVdEVXI0NkhFaThhQkNhckpFcFZVeWs1ckpuZGg0a1d1cTZyM29NdVhIRUVGajluUVlZZm9JaGwwQ0JscklZODRRNGRSa3RRTWRBTDYtRENIQXgtODBhSC1rQVdldw?oc=5",
-  "research_score": 89,
+  "created_at": "2026-11-24T12:46:28.479436+00:00",
+  "topic": "Scientists make stunning discovery that could help explain why life exists",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uZHA3SzlUY2F2Q251bXlfbUo5UzRYTWN3R0JlNE1TS196QkY5aExScldncHc1X2lHV0F4aHV6Q1pnVHJIWTRkc2J5WGt5d0ZmSmVuNXdSS3JGYm9tZmZWVUI3U2dUZnJHQVJlTEc1Yw?oc=5",
+  "research_score": 88,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
