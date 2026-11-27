@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Why Milankovitch (Orbital) Cycles Can’t Explain Earth’s Current Warming
+Why is Beijing Zhongke WengeAI Science and Technology stock surging today?
 
-SCORE: 86/100
+SCORE: 93/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMiwgFBVV95cUxPejgzRVZBZzJyLUZ4d3N1TnRXUGFrRjdUZ2p3V0cteS1pTmJzMFlzeHR5U3U0SU54TjZGR3NNa0k4V254TDFzeEd0UGtPbElySENNVjVya2R4V0R2TWtkWXNsSG9jSXlGNVVFQ0hOSGFxRHZBby1mMDREbnBWRXFxckltbFYwMHJlR1Y2SjZxOE4tNVJubl9nUmZOeTIxM05XN2hFbUlISk5jdUNZRU1rNUxhQXFzb3JQcTA4cWNzQzVVUQ?oc=5
+https://news.google.com/rss/articles/CBMizwFBVV95cUxQWkE3WDhMcVhzQ21UMVVjY2lzVWRmRE13UE4zTC02LWdfYnlvZTU5U1ZYdTFZZjhRTktfNGhia1V5V2xMR2pNSDJQT0ZFUVBjV1R3Nk9meFJYVDBRZlhnLXFxODNJdmdMelNJOUI0QlBCT1Vxc2FzLWJ4ZEI2d3lZR0xLM3pVZWtCRUtqdFFCRlN2dUZJZVR6UEFsRDFaRDI5NVNZdHphd2dxT0hYTHlYWFpfMWk5QjNmbGhpUV9VTmNjMkZONUdFMTVrUnFudUk?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 86/100 - Why Milankovitch (Orbital) Cycles Can’t Explain Earth’s Current Warming - NASA Science (.gov)
-2. 86/100 - A space telescope hunting for dark matter just discovered something unexpected - ScienceDaily
-3. 84/100 - IITs plan 6,000 seats in robotics, physical AI, space technology with private foundation support - Careers360
-4. 84/100 - Zoomlion Heavy Industry Science & Technology Co., Ltd. Launches AI Excavation Robot - TradingView
-5. 84/100 - Scientists discover a surprising twist in how the body burns calories - ScienceDaily
-6. 84/100 - Scientists solve 20-year mystery hidden in ancient stardust - Science in Poland
-7. 84/100 - Earth’s ancient oceans may have fooled scientists about its oxygen history - ScienceDaily
-8. 84/100 - Deep beneath Australia, hidden caves could unlock the secrets of alien worlds - ScienceDaily
-9. 83/100 - 'It’s a Mystery’: Why Has DEA Delayed Scheduling of 7-OH? - Pain News Network
-10. 82/100 - Leash Biosciences Raises $11M to Advance AI-Powered Drug Discovery - HLTH
+1. 93/100 - Why is Beijing Zhongke WengeAI Science and Technology stock surging today? - Investing.com India
+2. 87/100 - How Does DNA Continue to Replicate Despite Damage? Discovery Reveals Cancer Vulnerability - Technology Networks
+3. 86/100 - Scientists discover signs of a hidden extinction crisis deep beneath the ocean - Science Daily
+4. 86/100 - A space telescope hunting for dark matter just discovered something unexpected - Science Daily
+5. 85/100 - Why is Wuxi Delinhai Environmental Technology stock surging today? By Investing.com - Investing.com India
+6. 85/100 - Explainer: How is China exploring space together with the world? - People's Daily Online
+7. 84/100 - Scientists solve 20-year mystery hidden in ancient stardust - Science in Poland
+8. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - Science Daily
+9. 82/100 - Leash Biosciences Raises $11M to Advance AI-Powered Drug Discovery - HLTH
+10. 82/100 - Leash Biosciences Raises $11M to Expand AI-Driven Drug Discovery Research - Digital Health News
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-26T11:15:28.328538+00:00",
-  "topic": "Why Milankovitch (Orbital) Cycles Can’t Explain Earth’s Current Warming",
-  "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPejgzRVZBZzJyLUZ4d3N1TnRXUGFrRjdUZ2p3V0cteS1pTmJzMFlzeHR5U3U0SU54TjZGR3NNa0k4V254TDFzeEd0UGtPbElySENNVjVya2R4V0R2TWtkWXNsSG9jSXlGNVVFQ0hOSGFxRHZBby1mMDREbnBWRXFxckltbFYwMHJlR1Y2SjZxOE4tNVJubl9nUmZOeTIxM05XN2hFbUlISk5jdUNZRU1rNUxhQXFzb3JQcTA4cWNzQzVVUQ?oc=5",
-  "research_score": 86,
+  "created_at": "2026-11-27T11:09:34.330736+00:00",
+  "topic": "Why is Beijing Zhongke WengeAI Science and Technology stock surging today?",
+  "source": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWkE3WDhMcVhzQ21UMVVjY2lzVWRmRE13UE4zTC02LWdfYnlvZTU5U1ZYdTFZZjhRTktfNGhia1V5V2xMR2pNSDJQT0ZFUVBjV1R3Nk9meFJYVDBRZlhnLXFxODNJdmdMelNJOUI0QlBCT1Vxc2FzLWJ4ZEI2d3lZR0xLM3pVZWtCRUtqdFFCRlN2dUZJZVR6UEFsRDFaRDI5NVNZdHphd2dxT0hYTHlYWFpfMWk5QjNmbGhpUV9VTmNjMkZONUdFMTVrUnFudUk?oc=5",
+  "research_score": 93,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
