@@ -2,33 +2,33 @@ AI CONTENT RESEARCH
 ===================
 
 SELECTED TOPIC:
-Why is Beijing Zhongke WengeAI Science and Technology stock surging today?
+Scientists discover signs of a hidden extinction crisis deep beneath the ocean
 
-SCORE: 93/100
+SCORE: 86/100
 
 SOURCE:
-https://news.google.com/rss/articles/CBMizwFBVV95cUxQWkE3WDhMcVhzQ21UMVVjY2lzVWRmRE13UE4zTC02LWdfYnlvZTU5U1ZYdTFZZjhRTktfNGhia1V5V2xMR2pNSDJQT0ZFUVBjV1R3Nk9meFJYVDBRZlhnLXFxODNJdmdMelNJOUI0QlBCT1Vxc2FzLWJ4ZEI2d3lZR0xLM3pVZWtCRUtqdFFCRlN2dUZJZVR6UEFsRDFaRDI5NVNZdHphd2dxT0hYTHlYWFpfMWk5QjNmbGhpUV9VTmNjMkZONUdFMTVrUnFudUk?oc=5
+https://news.google.com/rss/articles/CBMib0FVX3lxTE41bDRFMDVXYUF1ZXlTTE9vY0ROQ3VDR2VYaEk5QUdzWTBBWWpjUl9BZjZwU0JIWEZEY2lEMHhfem0xZnRHdDNicjFZTHlEVnlacXItV25XOVhlVmNRZENIZW5tdDdLb1ZJR3NxbXctZw?oc=5
 
 TOP 10 CANDIDATES:
 
-1. 93/100 - Why is Beijing Zhongke WengeAI Science and Technology stock surging today? - Investing.com India
-2. 87/100 - How Does DNA Continue to Replicate Despite Damage? Discovery Reveals Cancer Vulnerability - Technology Networks
-3. 86/100 - Scientists discover signs of a hidden extinction crisis deep beneath the ocean - Science Daily
-4. 86/100 - A space telescope hunting for dark matter just discovered something unexpected - Science Daily
-5. 85/100 - Why is Wuxi Delinhai Environmental Technology stock surging today? By Investing.com - Investing.com India
-6. 85/100 - Explainer: How is China exploring space together with the world? - People's Daily Online
-7. 84/100 - Scientists solve 20-year mystery hidden in ancient stardust - Science in Poland
-8. 82/100 - New discovery reveals what may be holding back room-temperature superconductors - Science Daily
-9. 82/100 - Leash Biosciences Raises $11M to Advance AI-Powered Drug Discovery - HLTH
-10. 82/100 - Leash Biosciences Raises $11M to Expand AI-Driven Drug Discovery Research - Digital Health News
+1. 86/100 - Scientists discover signs of a hidden extinction crisis deep beneath the ocean - Science Daily
+2. 86/100 - A space telescope hunting for dark matter just discovered something unexpected - Science Daily
+3. 84/100 - Scientists discover a surprising twist in how the body burns calories - Science Daily
+4. 84/100 - John Wright’s ‘lucky’ discovery of Jasprit Bumrah: How Mumbai Indians unearthed India’s pace diamond - Moneycontrol.com
+5. 83/100 - Explainer: A million satellites? What SpaceX's Starmind could mean for Earth and space - Reuters
+6. 82/100 - 🐀 Discovery of the remains of a giant rodent - Techno-Science
+7. 81/100 - What happens to Earth’s environment if SpaceX launches 1 million satellites? - The Indian Express
+8. 80/100 - 2026 in photos: AI, robots and new technology - Reuters
+9. 80/100 - PAR Technology (PAR) Stock Looks Fairly Valued on Future Cash Flow - Yahoo Finance
+10. 80/100 - The store AI can’t see: How retailers are fighting for holiday discovery - CNBC
 
 FINAL VIDEO BRIEF:
 
 {
-  "created_at": "2026-11-27T11:09:34.330736+00:00",
-  "topic": "Why is Beijing Zhongke WengeAI Science and Technology stock surging today?",
-  "source": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWkE3WDhMcVhzQ21UMVVjY2lzVWRmRE13UE4zTC02LWdfYnlvZTU5U1ZYdTFZZjhRTktfNGhia1V5V2xMR2pNSDJQT0ZFUVBjV1R3Nk9meFJYVDBRZlhnLXFxODNJdmdMelNJOUI0QlBCT1Vxc2FzLWJ4ZEI2d3lZR0xLM3pVZWtCRUtqdFFCRlN2dUZJZVR6UEFsRDFaRDI5NVNZdHphd2dxT0hYTHlYWFpfMWk5QjNmbGhpUV9VTmNjMkZONUdFMTVrUnFudUk?oc=5",
-  "research_score": 93,
+  "created_at": "2026-11-28T10:42:47.395290+00:00",
+  "topic": "Scientists discover signs of a hidden extinction crisis deep beneath the ocean",
+  "source": "https://news.google.com/rss/articles/CBMib0FVX3lxTE41bDRFMDVXYUF1ZXlTTE9vY0ROQ3VDR2VYaEk5QUdzWTBBWWpjUl9BZjZwU0JIWEZEY2lEMHhfem0xZnRHdDNicjFZTHlEVnlacXItV25XOVhlVmNRZENIZW5tdDdLb1ZJR3NxbXctZw?oc=5",
+  "research_score": 86,
   "video_length": "40 seconds",
   "format": "vertical 9:16",
   "audience": "General worldwide audience",
